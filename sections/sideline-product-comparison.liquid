@@ -1,0 +1,139 @@
+<div class="neso-content-area">
+  <section class="camparison-area">
+    <div class="container">
+      <div class="title-head">
+        <div class="sec-title">
+          <h2>{{ section.settings['section-heading'] }}</h2>
+        </div>
+        <div class="head-img">
+          {{ section.settings['section-image'] | img_url: '966x232' | img_tag: 'table-img', 'img-fluid' }}
+        </div>
+      </div>
+
+      <div class="comparison-table">
+        <table class="table col-3-table">
+          <tbody>
+            <tr>
+              <td></td>
+              <td>
+                <h4>{{ section.settings['first-product-hd'] }}</h4>
+              </td>
+              <td>
+                <h4>{{ section.settings['second-product-hd'] }}</h4>
+              </td>
+            </tr>
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when 'comparison' %}
+                  <tr>
+                    <td>
+                      <h4>{{ block.settings['title-id'] }}:</h4>
+                    </td>
+                    <td>{{ block.settings['value-1'] }}</td>
+                    <td>{{ block.settings['value-2'] }}</td>
+                  </tr>
+              {% endcase %}
+            {% endfor %}
+            <tr>
+              <td></td>
+              <td>
+                <a class="green-btn" href="{{ section.settings.first-url-link }}">
+                  {{- section.settings['first-url-label'] -}}
+                </a>
+              </td>
+              <td>
+                <a class="green-btn" href="{{ section.settings.second-url-link  }}">
+                  {{- section.settings['second-url-label'] -}}
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</div>
+{% schema %}
+{
+  "name": "Comparison",
+  "blocks": [
+    {
+      "name": "comparison",
+      "type": "comparison",
+      "settings":[
+        {
+          "type": "text",
+          "id": "title-id",
+          "label": "Title",
+          "default": "Title"
+        },
+        {
+          "type": "text",
+          "id": "value-1",
+          "label": "First Value",
+          "default": "First Value"
+        },
+        {
+          "type": "text",
+          "id": "value-2",
+          "label": "Second Value",
+          "default": "Second Value"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "text",
+          "id": "section-heading",
+          "label": "Section Heading",
+          "default": "Product Comparison"
+    },
+    {
+      "type": "image_picker",
+          "id": "section-image",
+          "label": "Select Image"
+    },
+    {
+          "type": "text",
+          "id": "first-product-hd",
+          "label": "First Product heading",
+          "default": "First Product heading"
+        },
+    {
+          "type": "text",
+          "id": "second-product-hd",
+          "label": "Second Product heading",
+          "default": "Second Product heading"
+        },
+    {
+      "type": "text",
+      "id": "first-url-label",
+      "default": "Shop Now",
+      "label": "First Button Text"
+    },
+    {
+      "type": "url",
+      "id": "first-url-link",
+      "label": "First Button Link"
+    },
+    {
+      "type": "text",
+      "id": "second-url-label",
+      "default": "Shop Now",
+      "label": "Second Button Text"
+    },
+    {
+      "type": "url",
+      "id": "second-url-link",
+      "label": "Second Button Link"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

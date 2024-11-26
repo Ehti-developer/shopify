@@ -1,0 +1,97 @@
+<div class="neso-content-area">
+  <section class="feature-product-area">
+    <div class="container">
+      <div class="feature-products">
+        <div class="feature-product-left">
+          {% if section.settings.image != blank %}
+            {{ section.settings.image | img_url: '5000x5000' | img_tag: 'neso feature product img' }}
+          {% else %}
+            {{ 'feature-img.png' | asset_url | img_tag: 'neso feature product img' }}
+          {% endif %}
+        </div>
+        <div class="feature-product-details">
+          <h2>{{ section.settings['section-hd'] }}</h2>
+          <div class="prod-features">
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when 'feature' %}
+                  <div class="prod-feature-single">
+                    {{ block.settings['feature-icon'] | img_url: 'large' | img_tag: 'lightweight icon' }}
+                    <h4>{{ block.settings['feature-hd'] }}</h4>
+                    <p>{{ block.settings.description }}</p>
+                  </div>
+              {% endcase %}
+            {% endfor %}
+          </div>
+          {% if section.settings.btn_url != blank %}
+            {% assign button_link = section.settings.btn_url %}
+          {% else %}
+            {% assign button_link = routes.all_products_collection_url %}
+          {% endif %}
+          <a class="green-btn" href="{{ button_link }}">{{ section.settings['btn-label'] }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "Product Features",
+  "blocks": [
+    {
+      "name": "feature",
+      "type": "feature",
+      "settings":[
+        {
+          "type": "image_picker",
+          "id": "feature-icon",
+          "label": "Select Icon"
+        },
+        {
+          "type": "text",
+          "id": "feature-hd",
+          "label": "Heading",
+          "default": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "default": "Description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "image"
+    },
+    {
+      "type": "text",
+      "id": "btn-label",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "btn_url",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "section-hd",
+      "label": "Section Heading",
+      "default": "Product Features"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

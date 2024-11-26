@@ -1,0 +1,49 @@
+<div class="neso-content-area">
+  <section class="logo-area">
+    <div class="container">
+      <h2 class="sec-title center">{{ section.settings.heading }}</h2>
+      <div class="logo-inner">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'seen' %}
+              <div class="logo-img">
+                {{ block.settings.brand_img | img_url: 'large' | img_tag: 'seen img' }}
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</div>
+{% schema %}
+{
+  "name": "As Seen In",
+  "blocks":[
+    {
+      "name":"Brand",
+      "type": "seen",
+      "settings":[
+        {
+          "type":"image_picker",
+          "id":"brand_img",
+          "label": "Select Image"
+        }
+      ]
+    }
+  ],
+  "settings":[
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "As Seen In",
+      "label": "Heading"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

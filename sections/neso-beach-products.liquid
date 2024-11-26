@@ -1,0 +1,48 @@
+<div class="neso-content-area">
+  <section class="product-area">
+    <div class="container">
+      <h2 class="sec-title">{{ section.settings.heading }}</h2>
+      <div class="product-inner-area">
+        <div class="owl-carousel owl-theme product-slider">
+          {% for product in section.settings.product_collection.products %}
+            <div class="item">
+              <div class="product-tab">
+                <div class="product-img">
+                  <img src="{{ product.featured_image | img_url: 'large' }}" alt="">
+                  <div class="product-btn">
+                    <a class="green-btn" href="{{ product.url }}">Shop Now</a>
+                  </div>
+                </div>
+                <h4>{{ product.title }}</h4>
+                <span class="price">{{ product.price | money }}</span>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{% schema %}
+{
+  "name": "Product List",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Explore other products",
+      "label": "Heading"
+    }, {
+      "type": "collection",
+      "id": "product_collection",
+      "label": "Select Collection"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

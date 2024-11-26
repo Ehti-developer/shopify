@@ -1,0 +1,95 @@
+<div class="neso-content-area">
+  <section class="testimonial-area">
+    <div class="container">
+      <h2 class="sec-title center">{{ section.settings['main-heading'] }}</h2>
+      <div class="testimonial-slider-area">
+        <div class="owl-carousel owl-theme testimonial-slider">
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'review' %}
+                <div class="item">
+                  <div class="testimonial-tab">
+                    <div class="testimonial-tab-text">
+                      <div class="stars-icon">
+                        {% for item in (1..block.settings.no_of_stars) %}
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                        {% endfor %}
+                      </div>
+
+                      <h5>{{ block.settings['review-title'] }}</h5>
+                      <p>
+                        {{ block.settings['review-detail'] }}
+                      </p>
+                    </div>
+                    <div class="testimonial-tab-bottom">
+                      {{ block.settings['reviewer-dp'] | img_url: 'large' | img_tag: 'review icon' }}
+                      <h6>{{ block.settings['reviewer-name'] }}</h6>
+                    </div>
+                  </div>
+                </div>
+            {% endcase %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{% schema %}
+{
+  "name": "Testimonials",
+  "blocks":[
+    {
+      "name": "Review",
+      "type": "review",
+      "settings":[
+        {
+        "type": "range",
+        "id": "no_of_stars",
+        "max": 5,
+        "min": 1,
+        "label": "No. Of Stars",
+        "default": 5
+      },
+        {
+          "type": "text",
+          "id": "review-title",
+          "default": "Title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "review-detail",
+          "default": "Details",
+          "label": "Details"
+        },
+        {
+          "type": "image_picker",
+          "id": "reviewer-dp",
+          "label": "Select Reviewer Image"
+        },
+        {
+          "type": "text",
+          "id":"reviewer-name",
+          "label": "Reviewer Name",
+          "default": "Name"
+        }
+
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "main-heading",
+      "label": "Section Heading",
+      "default": "Customer Reviews"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

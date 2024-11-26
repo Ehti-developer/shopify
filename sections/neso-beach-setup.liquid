@@ -1,0 +1,70 @@
+<div class="neso-content-area">
+  <section class="setup-area">
+    <div class="container">
+      <h2 class="sec-title center">{{ section.settings['sec-heading'] }}</h2>
+      <div class="setup-detail-area">
+        {% assign count = 0 %}
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'setup' %}
+              <div class="setup-detail">
+                <div class="setup-detail-img">
+                  {{ block.settings['setup-icon'] | img_url: 'large' | img_tag: 'setup img' }}
+                </div>
+                {% assign count = count | plus: 1 %}
+                <span class="numb">{{ count }}</span>
+                <div class="setup-detail-text">
+                  <h6>{{ block.settings.title }}</h6>
+                  <p>{{ block.settings.description }}</p>
+                </div>
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</div>
+{% schema %}
+{
+  "name": "2 Minute Setup",
+  "blocks": [
+    {
+      "name": "setup",
+      "type": "setup",
+      "settings":[
+        {
+          "type": "image_picker",
+          "id": "setup-icon",
+          "label": "Select Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Title"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "Description"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id" : "sec-heading",
+      "label": "Section Heading",
+      "default": "2 Minutes Set Up"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

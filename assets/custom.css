@@ -1,0 +1,2441 @@
+/*
+.product-form__input input[type="radio"] + .color-swatch {
+  border: 3px solid #f4f5ff; 
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  margin: 1px;
+}
+
+.product-form__input input[type="radio"]:checked + .color-swatch,
+.product-form__input input[type="radio"]:hover + .color-swatch {
+  outline: 1px solid #000;
+}
+*/
+.product-form__input input[type="radio"] + .swatch {
+  border: 1px solid #f4f5ff;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  color: #000;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-form__input input[type="radio"]:checked + .swatch,
+.product-form__input input[type="radio"]:hover + .swatch {
+  outline: 1px solid #000;
+  background: none;
+}
+.product-form__input input[type='radio'] + label {
+  border: 1px solid #f4f5ff; 
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin: 1px;
+}
+.product-form__input input[type="radio"]:checked + label,
+.product-form__input input[type="radio"]:hover + label {
+  outline: 1px solid #000;
+  background: none;
+}
+.form_label_detail{
+  font-size: 1.3rem;
+  line-height: calc(1 + .5 / var(--font-body-scale));
+  letter-spacing: .04rem;
+}
+.form__label{
+  display: none !Important;
+}
+.multicolumn-card-spacing {
+  padding-top: 0rem !Important;
+  margin-left: 0rem !Important;
+  margin-right: 0rem !Important;
+  padding-bottom: 0rem !Important;
+}
+.product-media-container.constrain-height.media-fit-contain{
+  border:none;
+  background-color:#f3f3f3;
+}
+.product__media-item{
+  background-color:#f3f3f3;
+}
+
+/*---PR News Page---*/
+
+.pr-header {
+    max-width: 1350px;
+    margin: auto;
+}
+
+.pr-copy {
+    font-size: 16px;
+    margin: 0 0 20px;
+    padding: 40px;
+    text-align: center;
+}
+
+
+@media screen and (min-width: 870px){
+  .pr-copy {
+      float: left;
+      width: 34%;
+  }
+  
+  .insta-contain {
+      width: 66%;
+      float: right;
+  }
+
+}
+
+
+#insta-feed .container {
+    width: 100% !important;
+    height: 210px !important;
+}
+
+#insta-feed a {
+    display: inline-flex;
+    float: left;
+    width: 100%;
+}
+
+#insta-feed a img {
+    width: 100% !important;
+    height: 210px !important;
+}
+
+@media screen and (min-width: 360px){
+  #insta-feed a {
+      width: 50%;
+  }
+  
+}
+
+@media screen and (min-width: 520px){
+  #insta-feed a {
+      width: 33%;
+  }
+  
+}
+
+@media screen and (min-width: 620px){
+  #insta-feed a {
+      width: 25%;
+  }
+  
+}
+
+
+
+.pr-logo {
+    margin: 0 0 20px;
+}
+
+
+.pr-news-list{
+    padding: 0;
+    margin: 40px 0 0;
+    list-style: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.pr-news-list-item {
+    max-width: 190px;
+    min-height: 200px;
+    padding: 0 10px;
+}
+
+.pr-news-img {
+    margin: 0;
+}
+
+.pr-news--img img{
+    width: 100%;
+}
+
+.article__title.h2 {
+   font-size: 40px;
+}
+
+.pr-news-logos{
+    padding: 0;
+    margin: 40px 0 0;
+    list-style: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+
+.pr-news-logo {
+    display: block;
+    height: 120px;
+    line-height: 120px;
+    padding: 0 1.25em;
+    text-align: center;
+    max-width: 240px;
+}
+
+
+.pr-news-logos li img {
+    vertical-align: middle;
+}
+
+@media screen and (min-width: 300px){
+  .article__image+.article__content {
+      margin: 0;
+      padding: 0;
+  }
+
+}
+
+@media screen and (min-width: 880px){
+  .pr-news-logo {
+      padding: 0px 3.25em;
+      width: 100%;
+  }
+
+}
+
+@media screen and (min-width: 800px){
+  .article--full .article__image+.article__content {
+      margin: 20px 0 0 96px;
+  }
+}
+
+@media screen and (max-width: 799px){
+  .article--full .article__image+.article__content {
+      margin: 20px 0 0 0;
+  }
+  
+  .article__body {
+    padding-left: 0px;
+  }
+}
+
+.REI-locations{
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  display: none;
+  margin-bottom: 20px; 
+  padding-bottom: 20px;
+  text-indent: 20px;
+   
+}
+
+.REI-toggle {
+    cursor: pointer;
+}
+
+.instafeed-container {
+    width: 100% !important;
+    height: 210px !important;
+}
+/*---- Entire custom css from old site ______*/
+/* Shopify Theme Customizations*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Zen+Antique&display=swap');
+
+.homeday-font {
+    color: #fff;
+    font-family: 'Homeday Regular';
+    font-weight: normal;
+    font-size: 2em;
+}
+
+.hp-container{
+  overflow: hidden;
+
+}
+
+
+p.announcement-bar__content {
+  letter-spacing: 2px;
+}
+
+@media screen and (min-width: 801px){
+  .header {
+      padding: 15px 0;
+  }
+}
+.page__container--secondary .main {
+  background: #fff;
+}
+
+.header-top {
+  display: none;
+  padding: 0 0 20px;
+}
+
+
+@media (min-width: 768px) {
+  .header-top {
+    display: block;
+  }
+  
+  .page__container--secondary .main {
+    padding: 0 1rem;
+  }
+}
+
+
+header nav{
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+nav.header__main-nav.header__main-nav--stretched {
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+.header__main-nav .header__link {
+    font-size: 18px;
+}
+
+.header__links {
+    position: relative;
+}
+
+.mid-nav li,
+.right-nav li{
+    display: inline-block;
+}
+
+.mid-nav {
+  font-size: 18px;
+  text-align: center;
+}
+
+
+.mid-nav a {
+    border-bottom: 2px solid transparent;
+}
+
+.mid-nav a:hover {
+    border-bottom: 2px solid #10a5bd;
+}
+
+.mid-nav .header-logo a {
+    border: none;
+}
+
+@media screen and (min-width: 1025px){
+  .header__logo {
+    margin-right: 100px;
+    visibility: hidden;
+  }
+}
+
+nav.header__main-nav.header__main-nav--stretched {
+    text-align: center;
+}
+
+.header__link {
+    vertical-align: middle;
+}
+
+li.header__link.Home-link {
+  background: url(logo-horizontal.png) no-repeat center;
+  background-size: 100%;
+  height: 40px;
+  margin: 0 18px 0 40px;
+  width: 145px;
+}
+
+li.header__link.Home-link a, 
+li.header__link.Home-link a:hover {
+  color: transparent;
+  display: block;
+  height: 100%;
+  text-decoration: none !important;
+  width: 100%;
+}
+
+.nav-dropdown--first>.nav-dropdown__item>.nav-dropdown__link {
+    font-size: 14px;
+}
+
+.header-logo {
+    margin: 0 35px;
+}
+
+.header-logo a {
+    position: absolute;
+    top: -40px;
+    left: 20%;
+}
+
+.header-logo img{
+    position: relative;
+    top: 18px;
+    margin: 0 15px;
+}
+
+@media screen and (max-width: 1025px){
+
+  .header__logo {
+      margin: 0;
+      padding: 0px .5em;
+      width: 100px;
+  }
+
+  .header__logo-link {
+      background: url(https://cdn.shopify.com/s/files/1/2403/5817/t/5/assets/logo-horizontal.png) no-repeat 0 center / 75%;
+      width: 115px;
+  }
+
+  .header__logo-text {
+      color: transparent;
+  }
+
+}
+
+@media screen and (min-width: 430px) and (max-width: 1025px){
+
+  .header__logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 430px){
+  
+    .header__logo-link {
+        background: url(https://cdn.shopify.com/s/files/1/2403/5817/t/5/assets/logo-horizontal.png) no-repeat 0 center / cover;
+        width: 25px;
+    }
+
+    .header__logo {
+        left: 3em;
+        position: absolute;
+        width: 25px;
+    }
+}
+
+.right-nav {
+    font-size: 14px;
+}
+
+.right-nav ul li{
+  margin: 0 0 0 20px
+}
+
+@media screen and (min-width: 980px){
+  .header__secondary-nav a {
+      font-size: 18px;
+  }
+}
+
+.slide-one{
+  background:url(https://cdn.shopify.com/s/files/1/2403/5817/t/8/assets/neso-beach-tent-slide.jpg?v=1636516302) no-repeat center / cover;
+}
+
+.slide-two{
+  background:url(https://cdn.shopify.com/s/files/1/2403/5817/t/8/assets/neso-party-tent.jpg?v=1636237805) no-repeat center / cover;
+}
+
+.slide-three{
+  background:url(https://cdn.shopify.com/s/files/1/2403/5817/files/neso-sideline-series.jpg?v=1630374299) no-repeat center top / cover;
+}
+
+
+/* .slider-copy {
+    padding: 20px;
+}
+*/
+
+.slide-flex-wrap {
+    display: flex;
+    height: 100%;
+}
+
+.slider-copy-container {
+  text-shadow: 0 0px 40px rgb(51 51 51 / 50%);
+  cursor: pointer;
+}
+
+.slider-copy {
+    position: relative;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+}
+
+@media screen and (max-width: 980px){
+
+  .overlay-layer {
+      background-color: rgba(0,0,0,.2);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  }
+}
+
+@media screen and (min-width: 980px){
+/*   .slide-one .slider-copy {
+    max-width: 90%;
+    position: relative;
+    top: 55%;
+    margin: auto;
+    width: auto;
+    width: max-content;
+  }
+  
+  .slide-two .slider-copy {
+      float: right;
+      position: relative;
+      top: 25%;
+      right: 7%;
+  }
+
+  .slide-three .slider-copy {
+      max-width: 90%;
+      position: relative;
+      top: 70%;
+      margin: auto;
+      width: auto;
+      width: max-content;
+  } */
+
+}
+
+/* .slick-slide h1 {
+    color: #fff;
+    font-size: 40px;
+    line-height: 1;
+    margin: 0 0 10px;
+} */
+
+
+@media screen and (min-height: 600px){
+  #hero .slick-slide {
+      height: 80vh;
+  }
+}
+
+@media(max-width: 768px){
+  #hero .slick-slide {
+      height: calc(100vh - 200px);
+  }
+}
+/* @media screen and (max-height: 420px){
+  .slick-slide h1 {
+      font-size: 24px;
+  }
+  
+} */
+
+/* .slick-slide h3 {
+    color: #fff;
+    line-height: 1.25;
+    margin: 20px 0;
+} */
+
+/* .slider-link {
+    background-color: #f36f67;
+    color: #fff;
+    display: inline-block;
+    padding: 10px;
+}
+ */
+@media screen and (min-width: 980px){
+
+/*   .slide-three .slider-copy-container {
+      float: left;
+  }
+
+  .slide-three .slider-link{
+      float: left;
+      margin: 10px 25px;
+  }
+   */
+/*   .slick-slide.slide-three h1,
+  .slick-slide.slide-three h3{
+      margin: 0;
+  } */
+}
+
+.top-title {
+    font-size: 1.5em;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    border-bottom: 2px solid;
+    line-height: 1;
+    margin: 0 auto;
+    text-transform: uppercase;
+    width: max-content;
+    transition: all .25s ease-in-out;
+ }
+
+ .customer-love__title-head p.top-title {
+   font-size: 1.25em;
+ }
+
+.bottom-title {
+    font-size: 1em;
+    margin: 0;
+ }
+
+.sub-slider-title {
+    background: #ebebeb;
+    color: #000;
+    margin: 1em 0;
+    padding: 2em 0;
+    text-align: center;
+}
+
+.sub-slider-title h2 {
+    font-size: 1.25em;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    margin: 0 0 10px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.sub-slider-title h3{
+    font-size: 1em;
+}
+
+.sub-slider-container{
+    margin: auto;
+    max-width: 90%;
+}
+
+@media screen and (min-width: 640px){
+
+  .top-title {
+    font-size: 2.5em;
+  }
+
+  .bottom-title {
+    font-size: 1.5em;
+  }
+  
+  .customer-love__title-head p.top-title {
+     font-size: 1.5em;
+  }
+ 
+  #join-the-tribe .top-title {
+    font-size: 2em;
+  }
+
+  #join-the-tribe .bottom-title {
+    font-size: 1.25em;
+  }
+}
+
+@media screen and (min-width: 1280px){
+
+/*   .slide-one .slider-link{
+      float: left;
+      margin: 10px 25px;
+    top: 80px;
+    position: relative;
+  } */
+  
+  
+  .top-title {
+      font-size: 3.5em;
+   }
+  
+  .bottom-title {
+      font-size: 1.75em;
+   }
+
+
+  .sub-slider-title h2 {
+      font-size: 2em;
+  }
+  
+  .sub-slider-title h3{
+      font-size: 1.5em;
+  }
+}
+
+#neso-featured__products {}
+
+.neso-featured__products-wrap {
+	display: flex;
+  	flex-flow: row wrap;
+    gap: 1em;
+    color: #fff;
+}
+
+.neso-featured__box {
+    flex: 1 1 25em;
+    display: flex;
+    height: 50vh;
+    position: relative;
+    background-size: cover;
+}
+
+.neso-featured__box:not(#neso-featured__customer-love) {
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.neso-featured__box:not(#neso-featured__customer-love):after,
+.neso-featured__box:not(#neso-featured__customer-love):after {
+    background-color: rgba(0,0,0,.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    transition: all .25s ease-in-out;
+}
+
+.neso-featured__box:not(#neso-featured__customer-love):hover:after,
+.neso-featured__box:not(#neso-featured__customer-love):focus:after{
+    background-color: rgba(242,242,242,.2);
+    content: "";
+}
+
+#neso-featured__how-to[role="button"] {
+    cursor: pointer;
+}
+
+.neso-featured__box:nth-child(3n+1) {  
+  flex: 1 1 100%;
+  height: 80vh;
+}
+
+@media screen and (max-width: 960px){
+  .neso-featured__box {
+      max-height: 400px;
+  	  background-size: cover;
+  }
+}
+
+.neso-featured__box img {
+    width: 100%;
+    transition: all .25s ease-in-out;
+    height: 100%;
+    object-fit: cover;
+}
+
+.neso-featured__box:hover img{ 
+    transform: scale(1.025);
+} 
+
+.neso-featured__box video.thevideo {
+    height: 100%;
+}
+
+@media screen and (min-width: 760px){
+  .neso-featured__box video.thevideo {
+      height: 100%;
+      transform: scale(1.25);
+  }
+}
+
+
+.customer-love__title-head {
+    padding: 0 0 10px;
+}
+
+
+.neso-featured__product-title {
+    margin: auto;
+    text-align: center;
+    width: max-content;
+    text-shadow: 0 0px 40px rgb(51 51 51 / 50%);
+    cursor: pointer;
+    z-index: 1;
+    position: absolute;
+}
+
+button.neso-featured__product-title.js-video-button {
+    border: none;
+    background: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.customer-love-wrap{
+  margin: 0 auto;
+}
+
+#neso-featured__neso-chair {
+	background: url(https://cdn.shopify.com/s/files/1/2403/5817/t/8/assets/neso-chair-1121.jpg?v=1636238293) no-repeat center;
+}
+
+#neso-featured__image {
+    object-fit: cover;
+    width: 50%;
+}
+
+div#neso-featured__neso-tote {
+	background: url(https://cdn.shopify.com/s/files/1/2403/5817/t/8/assets/neso-tote-beach-adventure-bag.jpg?v=1635985759) no-repeat center;
+}
+
+div#neso-featured__neso-prints {
+	background: url(https://cdn.shopify.com/s/files/1/2403/5817/t/8/assets/Ikaika-Pidot-Slide.jpeg?v=1636238543) no-repeat center;
+}
+
+div#neso-featured__how-to {
+	background: url(https://cdn.shopify.com/s/files/1/2403/5817/t/4/assets/grande-teal-cross-setup.jpg?7750452888335194349) no-repeat center;
+}
+
+
+.content-links a {
+  display: block;
+}
+
+.content-links h2 {
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font-size: 36px;
+  font-weight: normal;
+  margin: 0 0 5px;
+  padding: 0 0 5px;
+  text-transform: capitalize;
+}
+
+.content-links span{
+  font-size: 18px;
+}
+
+
+
+.cl-link {
+  color: #fff;
+  margin: 0 0 20px 0;
+  padding: 30px;
+  position: relative;
+}
+
+.cl-links-right .cl-link {
+    margin: 0 0 20px 0;
+}
+
+.cl-m-link{
+  position: relative;
+}
+
+#setup-tips-neso-tents .cl-link {
+  margin: 0 0 20px 0;
+
+}
+
+@media (min-width: 860px) {
+
+  .cl-link {
+    margin: 0 20px 20px 0;
+
+  }
+  
+  .cl-links-left {
+    float: left;
+    width: 39%;
+  }
+
+  .cl-links-right {
+    float: right;
+    width: 61%;
+  }
+
+}
+
+@media (min-width: 660px) {
+
+  .cl-m-link{
+    float: left;
+    width: 49%;
+  }
+  
+  a.cl-m-link{
+    float: left;
+  }
+  
+  div.cl-m-link{
+    float: right;
+  }
+} 
+
+.neso-tote{
+  background: url(https://cdn.shopify.com/s/files/1/2403/5817/t/7/assets/neso-tote-beach-adventure-bag.jpg?v=1591482465) no-repeat center;
+  background-size: cover;
+  height: 375px;
+}
+
+.join-the-tribe{
+  background: #0ea3bb;
+  cursor: pointer;
+  height: 175px;
+}
+
+.neso-chair {
+    background: url(https://cdn.shopify.com/s/files/1/2403/5817/t/5/assets/neso_chair_photo.jpg?2130835266645382790) no-repeat 50% 65%;
+    background-size: 150%;
+    height: 350px;
+}
+
+@media (min-width: 860px) {
+
+  .about-us{
+    background: url(https://cdn.shopify.com/s/files/1/2403/5817/t/4/assets/neso-about-us.jpg) no-repeat 0px -210px;
+  }
+}
+
+.neso-grande{
+  background: url(https://cdn.shopify.com/s/files/1/2403/5817/t/4/assets/grande-family.jpg) no-repeat center;
+  background-size: cover;
+  height: 300px;
+}
+
+.neso-prints {
+    background: url(https://cdn.shopify.com/s/files/1/2403/5817/t/7/assets/neso-prints-on-beach.jpg?v=1591501918) no-repeat 0;
+    background-size: 125%;
+    height: 300px;
+}
+
+.customer-love {
+    background: #E6E6E6;
+    color: #000;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  
+}
+
+
+.cslider {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+/* .customer-love h2 {
+  font-size: 24px;
+  left: 10%;
+  position: absolute;
+  top: 10px;
+  z-index: 1;
+} */
+
+/* @media (min-width: 1140px) {
+   .customer-love h2 {
+      font-size: 36px;
+   } 
+}
+ */
+.setup-instructions{
+  background: url(https://cdn.shopify.com/s/files/1/2403/5817/t/4/assets/grande-teal-cross-setup.jpg?7750452888335194349) no-repeat center 66%;
+  background-size: cover;
+  height: 300px;
+}
+
+.windy-setup-instructions{
+  background: url(https://cdn.shopify.com/s/files/1/2403/5817/t/5/assets/windy-day-tips.jpg) no-repeat center 66%;
+  background-size: cover;
+  display: block;
+  height: 400px;
+}
+
+.party-tent-instructions{
+  background: url(https://cdn.shopify.com/s/files/1/2403/5817/files/Teaser-Neso-Party-Tent-Instructions.jpg?v=162969407) no-repeat center 66%;
+  background-size: cover;
+  display: block;
+  height: 400px;
+}
+
+.link-contain {
+    position: absolute;
+    bottom: 20px;
+}
+
+@media (min-width: 860px) {
+   .neso-grande .link-contain {
+      top: 20px;
+      right: 40px;
+   } 
+}
+
+.play-button {
+    left: 50%;
+    margin: -55px 0 0 -55px;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+}
+
+.slick-slide {
+  position: relative;
+}
+
+.template-index .slick-slide img{
+  width: 100%;
+  margin: auto;
+}
+
+.input-group {
+    padding: .3em;
+    background: #fff;
+}
+
+input.input-group__submit.button.button--secondary {
+    background: #F36F67;
+}
+
+#join-the-tribe {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: 1em;
+    padding: 2em 0;
+}
+
+#join-the-tribe .top-title {
+  border: none;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 640px){
+  #join-the-tribe .top-title {
+    text-align: left;
+    width: max-content;
+  }
+  
+  .newsletter__inner {
+      justify-content: end;
+      padding: 1em 0;
+  }
+}
+
+#shopify-section-footer {
+    background: #e6e6e6;
+    margin-top: 1em;
+    color: #000;
+}
+
+footer{
+  border-top: 1px solid #666;
+  padding: 3em 0;
+}
+
+footer h3{
+  font-weight: bold;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+
+
+.footer-widget {
+  font-size: 14px;
+  margin: 0 0 20px;
+  padding-right: 2em;
+}
+
+.footer-widget li {
+  margin: 3px 0;
+}
+
+@media (min-width: 460px) {
+ .footer-widget {
+    float: left;
+    width: 50%;
+  } 
+}
+
+@media (min-width: 860px) {
+ .footer-widget {
+    width: 25%;
+  } 
+}
+
+.contact-info p {
+    margin: 0;
+}
+
+.contact-info input {
+    background: #ebebeb;
+    border: 1px solid #000;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+.contact-info input[type="submit"] {
+    background: none;
+    border: 1px solid rgba(0,0,0,0);
+    color: #000;
+    position: absolute;
+    right: 0;
+}
+
+.contact-info input[type="submit"]:hover {
+    background: #000;
+    border: 1px solid #000;
+    color: #fff;
+    transition: all 0.25s ease-in-out;  
+}
+
+/* .contact-info input[type="submit"]:focus {
+    outline: none;
+} */
+
+.contact-info .input-group__field--expand {
+    min-width: initial;
+}
+
+/* @media screen and (min-width: 560px){
+  .input-group {
+      max-width: 215px;
+  }
+}
+ */
+/* a:focus,
+select:focus,
+button:focus,
+input:focus{
+    outline: none;
+} */
+
+.footer-widget ul{
+    list-style-image: url('https://cdn.shopify.com/s/files/1/2403/5817/t/4/assets/list-item.svg');
+}
+
+.footer-widget li {
+    list-style: none;
+    text-indent: 10px;
+}
+
+.footer-widget ul li a:hover,
+.footer-widget ul li a:focus{
+  color: #0ea3bb;
+}
+
+.contact-us a:hover,
+.contact-us a:focus{
+  color: #0ea3bb;
+  text-decoration: underline;
+}
+
+.social-links {
+    margin: 15px 0;
+}
+
+.social-links li {
+    display: inline-block;
+    height: 26px;
+}
+
+.social-links li a {
+    display: block;
+    height: 100%;
+}
+
+.facebook{
+  background: url('https://cdn.shopify.com/s/files/1/2403/5817/t/4/assets/facebook-icon-dark.png') no-repeat;
+  width: 15px;
+}
+
+.facebook a{
+  background: url('https://cdn.shopify.com/s/files/1/2403/5817/t/4/assets/facebook-icon-hover.png') no-repeat;
+  opacity: 0;
+  transition: all 0.25s ease-in-out;  
+}
+
+.facebook a:hover,
+.facebook a:focus{
+  opacity: 1;
+}
+
+.instagram{
+  background: url(https://cdn.shopify.com/s/files/1/2403/5817/t/4/assets/instagram-icon-dark.png) no-repeat;
+  width: 30px;
+}
+
+.instagram a{
+  background: url(https://cdn.shopify.com/s/files/1/2403/5817/t/4/assets/instagram-icon-hover.png) no-repeat;
+  opacity: 0;
+  transition: all 0.25s ease-in-out;  
+}
+
+.instagram a:hover,
+.instagram a:focus{
+  opacity: 1;
+}
+
+.pinterest{
+  background: url(https://cdn.shopify.com/s/files/1/2403/5817/t/4/assets/pinterest-icon-dark.png?) no-repeat;
+  width: 30px;
+  transition: all 0.25s ease-in-out;  
+  
+}
+
+.pinterest a{
+  background: url(https://cdn.shopify.com/s/files/1/2403/5817/t/4/assets/pinterest-icon-hover.png) no-repeat;
+  opacity: 0;
+  transition: all 0.25s ease-in-out;  
+  
+}
+
+.pinterest a:hover,
+.pinterest a:focus{
+  opacity: 1;
+  
+}
+
+.youtube{
+  background: url('https://cdn.shopify.com/s/files/1/2403/5817/t/8/assets/youtube-icon-dark.png') no-repeat;
+  width: 30px;
+}
+
+.youtube a{
+  background: url('https://cdn.shopify.com/s/files/1/2403/5817/t/4/assets/youtube-icon-hover.png') no-repeat;
+  opacity: 0;
+  transition: all 0.25s ease-in-out;  
+}
+
+.youtube a:hover,
+.youtube a:focus{
+  opacity: 1;
+}
+
+.hoverbox {
+  background: transparent;
+  bottom: 0px;
+  left: 0;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+
+}
+
+.hoverbox:before{
+    content: "";
+    height: 0%;
+    left: 0;
+    opacity: 0.1;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 50%;
+    -webkit-transition: 0.85s;
+    -moz-transition: 0.85s;
+    -o-transition: 0.85s;
+    transition: 0.85s;
+    width: 100%;
+    z-index: 0;
+}
+
+.cl-link:hover .hoverbox:before,
+.setup-list-item:hover .hoverbox:before{
+    background: rgba(16,165,189,1);
+    content: "";
+    height: 100%;
+    left: 0;
+    margin: 0;
+    opacity: 0.7;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+    width: 100%;
+}
+
+/*.cl-link.neso-grande:hover .hoverbox:before,
+.cl-link.setup-instructions:hover .hoverbox:before{
+    background: rgba(16,165,189,1);
+}
+
+.cl-link.about-us:hover .hoverbox:before,
+.cl-link.neso-prints:hover .hoverbox:before{
+    background: rgba(243,112,103,1);
+}*/
+
+.how-did-you-hear-about-us {
+    margin: 40px 0;
+}
+
+p.newsletter__cta {
+  float: left;
+  font-size: 16px;
+}
+
+.shopify-challenge__container {
+    margin: 50px auto;
+}
+
+.hoverbox:after{
+    content: "";
+    left: 0;
+    height: 0%;
+    opacity: 0.1;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 50%;
+    -webkit-transition: 0.65s;
+    -moz-transition: 0.65s;
+    -o-transition: 0.65s;
+    transition: 0.65s;
+    width: 100%;
+    z-index: 0;
+}
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.mega-nav__title {
+  color:#a1a1a6;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.mega-nav__title:hover {
+  color:#0ea3bb;
+
+}
+
+
+/*.collection__image {
+    -webkit-filter: initial;
+    filter: initial;
+    mix-blend-mode: initial;
+}*/
+
+@media screen and (min-width: 1025px){
+  .page__title.h1,
+  .product__title.h2{
+      font-size: 2.222rem;
+  }
+
+}
+
+
+/*----- Modal Video -----*/
+
+@keyframes modal-video {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes modal-video-inner {
+    from {
+        transform: translate(0, 100px)
+    }
+    to {
+        transform: translate(0, 0)
+    }
+}
+
+.modal-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000000;
+    cursor: pointer;
+    opacity: 1;
+    animation-timing-function: ease-out;
+    animation-duration: .3s;
+    animation-name: modal-video;
+    -webkit-transition: opacity .3s ease-out;
+    -moz-transition: opacity .3s ease-out;
+    -ms-transition: opacity .3s ease-out;
+    -o-transition: opacity .3s ease-out;
+    transition: opacity .3s ease-out
+}
+
+.modal-video-close {
+    opacity: 0
+}
+
+.modal-video-close .modal-video-movie-wrap {
+    -webkit-transform: translate(0, 100px);
+    -moz-transform: translate(0, 100px);
+    -ms-transform: translate(0, 100px);
+    -o-transform: translate(0, 100px);
+    transform: translate(0, 100px)
+}
+
+.modal-video-body {
+    max-width: 940px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: table
+}
+
+.modal-video-inner {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%
+}
+
+.modal-video-movie-wrap {
+    width: 100%;
+    height: 0;
+    position: relative;
+    padding-bottom: 56.25%;
+    background-color: #333;
+    animation-timing-function: ease-out;
+    animation-duration: .3s;
+    animation-name: modal-video-inner;
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    -webkit-transition: -webkit-transform .3s ease-out;
+    -moz-transition: -moz-transform .3s ease-out;
+    -ms-transition: -ms-transform .3s ease-out;
+    -o-transition: -o-transform .3s ease-out;
+    transition: transform .3s ease-out
+}
+
+.modal-video-movie-wrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.modal-video-close-btn {
+    position: absolute;
+    z-index: 2;
+    top: -35px;
+    right: -35px;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    overflow: hidden;
+    border: none;
+    background: transparent
+}
+
+.modal-video-close-btn:before {
+    transform: rotate(45deg)
+}
+
+.modal-video-close-btn:after {
+    transform: rotate(-45deg)
+}
+
+.modal-video-close-btn:before,
+.modal-video-close-btn:after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: -6px
+}
+
+/*----- Carousel -----*/
+
+
+ul.cslides {
+    position: relative;
+    width: 100%;
+    height: 60%;
+}
+
+.cslide.ccurrent {
+    display: block;
+    opacity: 1;
+}
+
+li.cslide {
+    height: 100%;
+    list-style: none;
+    opacity: 0;
+    position: absolute;
+    padding: 0;
+    transition: all .3s ease;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    font-size: 1em;
+}
+
+span.quote-name {
+    padding-left: 4em;
+}
+
+
+.content-links blockquote{
+  font-size: 18px;
+  margin: 0 0 0 30px;
+  padding: 0;
+  position: relative;
+
+}
+
+.content-links blockquote span{
+  display: block;
+  font-size: 14px;
+
+}
+
+@media (min-width: 1140px) {
+  .content-links blockquote{
+	  padding: 0 30px 0 0;
+	}
+  
+}
+
+@media screen and (min-width: 1280px){
+
+  li.cslide {
+    font-size: 1.25em;
+    padding: 0;
+  }
+  
+  .cslide blockquote {
+      padding-left: 3em;
+  }
+  .cslide blockquote:before {
+    content: "\201C";
+    font-family: 'Zen Antique', serif;
+    font-size: 3.5em;
+    left: 60px;
+    position: absolute;
+    top: 40px;
+  }
+}
+
+@media screen and (min-width: 1620px){
+
+  .customer-love__title-head h2.top-title {
+     font-size: 2.5em;
+  }
+ 
+  .cslide blockquote:before {
+    top: 60px;
+  }
+}
+
+/* li.cslide:nth-child(1) {
+  background:#708eca;
+
+}
+
+li.cslide:nth-child(2) {
+  background:#f37067;
+
+}
+
+li.cslide:nth-child(3) {
+  background:#0ea3bb;
+} */
+
+@media screen and (min-width: 1025px){
+  .section__title.h3{ 
+    font-size: 32px;
+  }
+}
+
+/*---Page Headers---*/
+
+.template-page-image-header .page__content-wrapper,
+#once-used.template-collection .page__content-wrapper{
+    padding: 0 0 50px;
+}
+
+
+#once-used.template-collection .collection__top {
+  min-height: 500px;
+}
+
+.template-page-image-header .cl-link{
+    height: 300px; 
+    margin: 0;
+  height: 60vh;
+}
+
+#contact-neso-tents .cl-link {
+    background: url(contact-us-header.jpg) no-repeat center 80%;
+    background-size: cover;
+}
+
+#contact-neso-tents .link-contain {
+    top: 40px;
+}
+
+#neso-tents-story-neso-tents .cl-link {
+    background: url(https://cdn.shopify.com/s/files/1/2403/5817/files/our-story-header.jpg?v=1511328539) no-repeat center center;
+    background-size: cover;
+}
+
+#neso-tents-in-store-locations-neso-tents .cl-link {
+    background: url(find-a-store-header.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+#neso-tents-in-store-locations-neso-tents .link-contain {
+  top: 40px;
+  right: 40px;
+}
+
+
+/*---Neso Set Up Page---*/
+
+#setup-tips-neso-tents .vheader.box--shrinked {
+    height: 100%;
+}
+
+#setup-tips-neso-tents .link-contain {
+    right: 40px;
+    top: 40px;
+}
+
+#setup-tips-neso-tents .setup-instructions {
+    height: 60vh;
+}
+
+#setup-tips-neso-tents .setup-instructions{
+  background: url(https://cdn.shopify.com/s/files/1/2403/5817/t/4/assets/neso-video-setup.jpg?7259301179359266026) no-repeat center 66%;
+  background-size: cover;
+
+}
+
+.setup-container {
+    padding-top: 36px;
+}
+
+.setup-list{
+    padding: 0;
+    margin: 20px 0 0 !important;
+    list-style: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.setup-list-item {
+    margin: 0 0 20px;
+    max-width: 250px;
+    padding: 0;
+    position: relative;
+
+}
+
+.setup-img {
+    margin: 0;
+}
+
+.setup-img img{
+    width: 100%;
+}
+
+.setup-copy h2 {
+    border-bottom: 1px solid;
+    color: #66656e;
+    font-size: 26px;
+    font-weight: normal;
+    padding: 0 0 5px;
+    text-transform: initial;
+}
+
+.setup-copy h3 {
+    color: #66656e;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 15px 0 10px;
+}
+
+#neso-tents-setup-tips-neso-tents .hoverbox{
+    display: none; 
+}
+
+
+@media screen and (min-width: 858px){
+  .setup-list{
+      justify-content: space-between;
+  }
+  
+  .setup-list-item {
+      max-width: 288px;
+      height: 204px;
+      padding: 0;
+      position: relative;
+  }
+  
+  .setup-copy h2,
+  .setup-copy h3 {
+      color: #fff;
+  }
+
+  .setup-copy {
+      position: absolute;
+      top: 0;
+      padding: 10px;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      color: #fff;
+      transition: all 0.25s ease-in-out;
+  }
+
+  .setup-list-item .setup-copy {
+      opacity: 1;
+  }
+  
+  .setup-list-item .setup-copy h3{
+      opacity: 0;
+      transition: all 0.25s ease-in-out;
+  }
+  
+  .setup-list-item:hover .setup-copy h3{
+      opacity: 1;
+  }
+  
+  .setup-list-item:hover .setup-copy {
+      opacity: 1;
+  }
+  
+#neso-tents-setup-tips-neso-tents .hoverbox{
+      display: block; 
+  }
+}
+
+/*---PR News Page---*/
+
+.pr-header {
+    max-width: 1350px;
+    margin: auto;
+}
+
+.pr-copy {
+    font-size: 16px;
+    margin: 0 0 20px;
+    padding: 40px;
+    text-align: center;
+}
+
+
+@media screen and (min-width: 870px){
+  .pr-copy {
+      float: left;
+      width: 34%;
+  }
+  
+  .insta-contain {
+      width: 66%;
+      float: right;
+  }
+
+}
+
+
+#insta-feed .container {
+    width: 100% !important;
+    height: 210px !important;
+}
+
+#insta-feed a {
+    display: inline-flex;
+    float: left;
+    width: 100%;
+}
+
+#insta-feed a img {
+    width: 100% !important;
+    height: 210px !important;
+}
+
+@media screen and (min-width: 360px){
+  #insta-feed a {
+      width: 50%;
+  }
+  
+}
+
+@media screen and (min-width: 520px){
+  #insta-feed a {
+      width: 33%;
+  }
+  
+}
+
+@media screen and (min-width: 620px){
+  #insta-feed a {
+      width: 25%;
+  }
+  
+}
+
+
+
+.pr-logo {
+    margin: 0 0 20px;
+}
+
+
+.pr-news-list{
+    padding: 0;
+    margin: 40px 0 0;
+    list-style: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.pr-news-list-item {
+    max-width: 190px;
+    min-height: 200px;
+    padding: 0 10px;
+}
+
+.pr-news-img {
+    margin: 0;
+}
+
+.pr-news--img img{
+    width: 100%;
+}
+
+.article__title.h2 {
+   font-size: 40px;
+}
+
+.pr-news-logos{
+    padding: 0;
+    margin: 40px 0 0;
+    list-style: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+
+.pr-news-logo {
+    display: block;
+    height: 120px;
+    line-height: 120px;
+    padding: 0 1.25em;
+    text-align: center;
+    max-width: 240px;
+}
+
+
+.pr-news-logos li img {
+    vertical-align: middle;
+}
+
+@media screen and (min-width: 300px){
+  .article__image+.article__content {
+      margin: 0;
+      padding: 0;
+  }
+
+}
+
+@media screen and (min-width: 880px){
+  .pr-news-logo {
+      padding: 0px 3.25em;
+      width: 100%;
+  }
+
+}
+
+@media screen and (min-width: 800px){
+  .article--full .article__image+.article__content {
+      margin: 20px 0 0 96px;
+  }
+}
+
+@media screen and (max-width: 799px){
+  .article--full .article__image+.article__content {
+      margin: 20px 0 0 0;
+  }
+  
+  .article__body {
+    padding-left: 0px;
+  }
+}
+
+.REI-locations{
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  display: none;
+  margin-bottom: 20px; 
+  padding-bottom: 20px;
+  text-indent: 20px;
+   
+}
+
+.REI-toggle {
+    cursor: pointer;
+}
+
+.instafeed-container {
+    width: 100% !important;
+    height: 210px !important;
+}
+
+
+/*---------- Contact Modal ----------*/
+
+
+
+#contact-modal {
+    background: #fff;
+    display: none;
+    padding: 30px 30px 55px;
+    width: 90%;
+    max-width: 680px;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    position: relative;
+    margin: auto;
+
+}
+
+
+.modal-overlay {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.61); /* Black w/ opacity */
+    display: none;
+    height: 100%;
+    left: 0;
+    overflow: auto; /* Enable scroll if needed */
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 99;
+}
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:50px; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0px; opacity:1}
+}
+
+@media (min-width: 1130px) {
+    #contact-modal {
+        top: 100px;
+        width: 90%;
+    }
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:100px; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:100px; opacity:1}
+}
+
+}
+
+.modal-close {
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 900;
+    left: 90%;
+    position: absolute;
+    top: 12px;
+    transition: all 0.25s ease-in-out; 
+}
+
+.modal-close:hover {
+    color: #800;
+}
+
+@media (min-width: 968px) {
+    .modal-close {
+        left: 95%;
+    }
+
+}
+
+.modal-top {
+    width: 100%;
+}
+
+.modal-top h3, {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+@media (min-width: 640px) {
+    .modal-top h3 {
+        font-size: 28px;
+    }
+}
+
+.modal-top p {
+    font-size: 18px;
+    margin: 0;
+}
+
+#contact-modal form p label {
+    float: left;
+    margin: 1.5%;
+    width: 47%;
+}
+
+#contact-modal .input-group {
+    max-width: 100%;
+}
+
+#contact-modal form input {
+    border: 1px solid rgba(89,89,89,0.3);
+    font-size: 15px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+
+#contact-modal form p label.txtarea {
+    width: 97%;
+    margin: 1.5%;
+}
+
+#contact-modal textarea.textarea {
+    border: 1px solid rgba(89,89,89,0.3);
+    font-size: 18px;
+    height: 160px;
+    margin: 5px 0 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+#contact-modal form input[type="submit"] {
+    background: #0ea3bb;
+    border: none;
+    color: #fff;
+    display: block;
+    width: 73px
+}
+
+#contact-modal form input[type="submit"]:hover {
+    background: #096574;
+}
+
+.modal-overlay.show {
+    display: block;
+}
+
+.box--shrinked {
+    position: relative;
+    height: 100%;
+}
+
+
+/*---------- Blog Sidebar ----------*/
+
+.sidebar-post-table-titles {
+    font-size: 14px;
+    margin: 50px 0 15px;
+}
+
+.spt-title {
+    padding: 0 0 0 50px;
+}
+
+.spt-date {
+    padding: 0 0 0 130px;
+}
+
+.blog-sidebar-thumb{
+}
+
+.blog-sidebar-title {
+    color: #3d8fc7;
+    display: inline-block;
+    padding: 10px 0 10px 15px;
+    vertical-align: top;
+    width: 165px;
+
+}
+
+.no-bullets time{
+    display: inline-block;
+    padding: 10px 0 10px 0;
+    vertical-align: top;
+}
+
+@media screen and (max-width: 1154px){
+    .blog-sidebar-thumb{
+       display: none;
+    } 
+  
+    .spt-title {
+        padding: 0;
+    }
+  
+   .blog-sidebar-title {
+       padding: 10px 0 10px 0px;
+    }
+
+}
+
+@media screen and (max-width: 1010px){
+    .spt-date,
+  	.no-bullets time{
+        display: none;
+
+    }
+}
+
+@media screen and (min-width: 300px){
+
+
+}
+.no-bullets li a img{
+    height: 40px;
+    width: 40px;
+
+}
+
+.no-bullets li {
+    border-top: 1px solid rgba(0,0,0,.1);
+    display: block;
+    font-size: 14px;
+    height: 60px;  
+    list-style: none;
+    padding: 10px 0;
+}
+
+/*---------- No Image Mega Menu ----------*/
+
+
+.Shop-link:hover .no-image-mega-menu{
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out, visibility 0s ease-in-out;
+    column-count: 4;
+}
+
+ul.no-image-mega-menu {
+    background: #fff;
+    border-top: 2px solid #0c0c0d;
+    border: 1px solid rgba(161,161,166,0.4);
+    box-shadow: 0 2px 3px rgba(102,101,110,0.1);
+    font-family: Lato;
+    font-size: 18px;
+    left: 50%;
+	min-height: 400px;
+    min-width: 980px;
+    opacity: 0;
+    padding: 35px;
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    transform: translateX(-50%);
+    transition: opacity 0.2s ease-in-out, visibility 0s 0.2s ease-in-out;
+    visibility: hidden;
+    width: 80%;
+    /* white-space: nowrap; */
+}
+
+.no-image-mega-menu li {
+    list-style: none;
+    margin: 2%;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+li.ni-sl.sl-Products {
+    margin-top: 0;
+}
+
+.no-image-mega-menu li a:hover {
+    color: #0ea3bb;
+}
+
+li.ni-sl {
+/*     float: left; */
+    font-size: 16px;
+/* 	width: 19%; */
+}
+
+li.ni-sl a {
+    display: block;
+}
+
+li.ni-sl > a {
+    margin-bottom: 10px;
+    display: block;
+}
+
+li.ni-ssl {
+    margin-bottom: 10px;
+}
+
+li.ni-ssl a{
+    color: #a1a1a6;
+    font-size: 14px;
+}
+
+ul.no-image-mega-sub {
+    padding-left: 5px;
+}
+
+a.tl-Products,
+a.sidebar-nav__link--level-2.tl-Products {
+    display: none !important;
+}
+
+ul.Products-mega-sub.no-image-mega-sub {
+    padding: 0 !important;
+}
+
+ul.Products-mega-sub.no-image-mega-sub a {
+    color: #000;
+    font-size: 16px;
+}
+
+ul.Products-mega-sub.no-image-mega-sub a:hover {
+    color: #32a4bc;
+}
+
+ul.Products-mobile-sub.sidebar-nav__sub-links {
+  	display: block !important;
+    margin: 0;
+}
+
+ul.Products-mobile-sub.sidebar-nav__sub-links a {
+    color: #32a4bc;
+}
+
+/*---------- Gift Card ----------*/
+
+
+.skt_gc_preview_button_container,
+.skt_gc_button_container {
+    margin-bottom: 10px;
+}
+
+h1.giftcard__subtext.h1 {
+    font-size: 1.75rem;
+}
+
+/*---------- Find A Store ----------*/
+
+
+#neso-tents-in-store-locations-neso-tents .box__content.box__content--large-padding.rte {
+    padding: 50px 0;
+}
+
+#neso-tents-in-store-locations-neso-tents .box.box--shrinked {
+    max-width: 100%;
+}
+
+.hidden{
+    display: none !important;
+}
+
+/*---------- Region Dropdown ----------*/
+
+
+#region,
+#region-mobile{
+    margin: 0 1rem;
+    border: 1px solid rgb(0 0 0 / 55%);
+    background: #ebebeb;
+    font-size: 14px;
+    padding: 5px 10px;
+    width: max-content;
+}
+
+#region.region-desktop {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#region-select,
+#region-select-mobile{
+    border: none;
+    background: transparent;
+}
+
+#region:focus-within,
+#region-mobile:focus-within{
+    border: 1px solid #0ea3bb;
+}
+
+@media screen and (min-width: 1024px){
+  #region.region-desktop {
+      display: block;
+  }
+  
+  #region-mobile.region-mobile{
+   	  display: none; 
+    
+  }
+}
+
+address {
+    font-style: normal;
+}
+
+svg.icon.icon-tick {
+    width: 25px;
+    height: 25px;
+    left: calc(50% - 12.5px);
+    top: calc(50% - 12.5px);
+}
+
+.product__color input:checked~.color-swatch {
+    border: 4px solid #fff;
+    padding: 22px;
+    box-shadow: 0 0 0 5px #32a3bb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#skip {
+    left:-999px;
+    position:absolute;
+    top:auto;
+    overflow:hidden;
+    z-index:-999;
+}
+
+#skip:focus, 
+#skip:active {
+	color: #000;
+    font-weight: bold;
+    background-color: #e6e6e6;
+    left: 0;
+    height: auto;
+    overflow: auto;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    border: 3px solid #0ea3bb;
+    text-align: center;
+    z-index: 999;
+}
+
+.sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+button.slick-prev:focus {
+    left: 25px;
+    background: url(https://cdn.shopify.com/s/files/1/2403/5817/t/8/assets/arrow-prev.svg);
+}
+
+button.slick-next:focus {
+    right: 25px;
+    background: url(https://cdn.shopify.com/s/files/1/2403/5817/t/8/assets/arrow-next.svg);
+}
+
+.slick-prev:before,
+.slick-next:before { 
+  color: transparent;
+}
+
+/* end of css for old site */
+.product__text.caption-with-letter-spacing {
+  display:none;
+}
+.visually_hidden{
+  display:none !Important;
+}
+.card--horizontal{
+    gap: 3.5rem !Important;
+    margin: 1em 0em;
+}
+.page-width{
+  max-width: 1400px;
+}
+.mega-menu__link--level-2 {
+  font-size: 1.7rem !Important;
+  color:#000 !Important;
+}
+@media only screen and (min-width: 750px)
+h1.collection-hero__title {
+    font-size: calc(var(--font-heading-scale) * 3rem) !Important;
+}
+select > .placeholder {
+
+}
+details[open] .modal-overlay {
+  display: contents !Important;
+
+.setup-block-images{
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section-template--19300359897397__main-padding{
+  max-width: 1000px !Important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+

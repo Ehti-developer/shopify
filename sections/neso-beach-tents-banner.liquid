@@ -1,0 +1,94 @@
+{{ 'owl.carousel.min.css' | asset_url | stylesheet_tag }}
+{{ 'owl.theme.default.min.css' | asset_url | stylesheet_tag }}
+{{ 'bootstrap.css' | asset_url | stylesheet_tag }}
+{{ 'neso-style.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'owl.carousel.min.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'neso-beach-custom.js' | asset_url }}" defer="defer"></script>
+
+<div class="neso-content-area">
+  <div class="colors-bg-area">
+    <div class="colors-bg"></div>
+    <!--
+      <div class="colors-bg pink"></div>
+      <div class="colors-bg orange"></div>
+      <div class="colors-bg light-orange"></div>
+      <div class="colors-bg green"></div>
+      <div class="colors-bg light-blue"></div>
+      <div class="colors-bg purple"></div>
+    -->
+  </div>
+  <section class="main-banner">
+    {% if section.settings['bg-img'] != blank %}
+      <div class="desktop-img">
+        {{ section.settings['bg-img'] | img_url: '5000x4000' | img_tag: 'neso banner', 'banner-img' }}
+      </div>
+      <div class="mobile-img">
+        {{ section.settings['bg-img-mobile'] | img_url: '5000x4000' | img_tag: 'neso banner', 'banner-img' }}
+      </div>
+    {% else %}
+      {{ 'beach-banner-img.png' | asset_url | img_tag: 'neso banner', 'banner-img' }}
+    {% endif %}
+    <div class="banner-content">
+      <div class="container">
+        <div class="banner-text">
+          <h1>{{ section.settings.heading }}</h1>
+          <p>{{ section.settings.description }}</p>
+          {% if section.settings['btn-url'] != blank %}
+            {% assign button_link = section.settings['btn-url'] %}
+          {% else %}
+            {% assign button_link = routes.all_products_collection_url %}
+          {% endif %}
+          <a class="green-btn" href="{{ button_link }}">{{ section.settings['btn-label'] }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "Banner",
+  "settings": [
+    {
+      "type":"image_picker",
+      "id":"bg-img",
+      "label": "Background Image"
+    },
+    {
+      "type":"image_picker",
+      "id":"bg-img-mobile",
+      "label": "Background Image Mobile"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Main Heading",
+      "default": "The World’s Most Innovative Beach Tent"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "Stop struggling with cheap umbrellas or clunky canopy tents that can be difficult to set up, hard to transport, & susceptible to wind. Neso tents have revolutionized the way we enjoy shade."
+    },
+    {
+      "type":"text",
+      "id": "btn-label",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "btn-url",
+      "label": "Button Link"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

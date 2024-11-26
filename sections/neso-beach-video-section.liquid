@@ -1,0 +1,35 @@
+<div class="neso-content-area">
+  <section class="video-area">
+    <div class="container">
+      <div class="video tent-one" id="vimeo-main-vid">
+        <iframe
+          src="{{ section.settings.video-url }}"
+          width="1000"
+          height="480"
+          allow="autoplay"
+          style="border-radius:10px;"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+</div>
+<script src="https://player.vimeo.com/api/player.js"></script>
+
+{% schema %}
+{
+  "name": "Video",
+  "settings": [
+    {
+      "type": "url",
+      "id": "video-url",
+      "label": "Video Link"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,36 @@
+<div class="neso-content-area">
+  <section class="instagram-feed-area">
+    <div class="container">
+      <div class="title-head center">
+        <h2 class="sec-title">{{ section.settings.heading }}</h2>
+        <p>{{ section.settings.description }}</p>
+      </div>
+      <div id="insta-feed"></div>
+    </div>
+  </section>
+</div>
+{% schema %}
+{
+  "name": "Insta Feed",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "@nesotents",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "default": "Follow us on Instagram to see how our customers are enjoying their Neso!",
+      "label": "Description"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

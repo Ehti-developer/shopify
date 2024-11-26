@@ -1,0 +1,646 @@
+ul.form-section.page-section {
+/*   width: 90%;
+  max-width: 690px; */
+  margin: auto;
+  padding: 0;
+}
+
+.warranty-form-header {
+  margin: 50px auto; 
+  text-align: center;
+}
+
+.template-page-warranty .rte h3 {
+    font-size: 1.5rem;
+}
+
+ul.form-section.page-section li {
+  display: inline-block;
+  list-style: none;
+  margin-bottom: 20px;
+  width: 100%;
+  position: relative;
+}
+
+ul.form-section.page-section li input,
+textarea#input_10 {
+  border: 1px solid rgba(89, 89, 89, 0.3);
+  font-size: 15px;
+  margin-top: 5px;
+  padding: 14px 0;
+  text-indent: 14px;
+  width: 100%;
+}
+
+select#input_3_country,
+select#input_24 {
+  display: inline-block;
+  height: 48px;
+  margin-top: 5px;
+  text-indent: 14px;
+  width: 100%;
+  font-size: 18px;
+  background: #fff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+}
+
+#cid_13 button {
+  padding: 20px 30px;
+  font-size: 18px;
+  background: #0ea3bb;
+  color: #fff;
+  border: none;
+  margin: 10px;
+  transition: color 0.25s ease-in-out, background 0.25s;
+}
+
+#cid_13 button:hover {
+  background: #096574;
+}
+.form-sub-label {
+  display: block;
+  font-size: 10px;
+}
+
+.form-label,
+.form-sub-label {
+  font-family: Lato;
+  color: #66656e;
+}
+
+.field-full {
+  display: block;
+  width: 100%;
+}
+.field-half {
+  display: block;
+  position: relative;
+  width: 48%;
+}
+
+.field-half.left {
+  margin-right: 1%;
+  float: left;
+}
+
+.field-half.right {
+  margin-left: 1%;
+  float: right;
+}
+.field-two-third {
+  display: block;
+  width: 66%;
+  float: left;
+}
+.field-one-third {
+  display: block;
+  width: 31%;
+  float: left;
+  margin-right: 3%;
+}
+
+/* Uploader */
+
+.filePicker-button {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 9px 24px;
+  margin-bottom: 0;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background: #0074cc;
+  background: -moz-linear-gradient(top, #08c 0%, #05c 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #0088cc),
+    color-stop(100%, #0055cc)
+  );
+  background: -webkit-linear-gradient(top, #08c 0%, #05c 100%);
+  background: -o-linear-gradient(top, #08c 0%, #05c 100%);
+  background: -ms-linear-gradient(top, #08c 0%, #05c 100%);
+  background: linear-gradient(to bottom, #08c 0%, #05c 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#0088cc', endColorstr='#0055cc', GradientType=0);
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset,
+    0 1px 2px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset,
+    0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset,
+    0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.filePicker-button:hover {
+  background: #00a0f0;
+  background: -moz-linear-gradient(top, #00a0f0 0%, #0064f0 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #00a0f0),
+    color-stop(100%, #0064f0)
+  );
+  background: -webkit-linear-gradient(top, #00a0f0 0%, #0064f0 100%);
+  background: -o-linear-gradient(top, #00a0f0 0%, #0064f0 100%);
+  background: -ms-linear-gradient(top, #00a0f0 0%, #0064f0 100%);
+  background: linear-gradient(to bottom, #00a0f0 0%, #0064f0 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00a0f0', endColorstr='#0064f0', GradientType=0);
+}
+
+.filePicker-button:active {
+  background: #0064f0;
+  background: -moz-linear-gradient(top, #0064f0 0%, #00a0f0 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #0064f0),
+    color-stop(100%, #00a0f0)
+  );
+  background: -webkit-linear-gradient(top, #0064f0 0%, #00a0f0 100%);
+  background: -o-linear-gradient(top, #0064f0 0%, #00a0f0 100%);
+  background: -ms-linear-gradient(top, #0064f0 0%, #00a0f0 100%);
+  background: linear-gradient(to bottom, #0064f0 0%, #00a0f0 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#0064f0', endColorstr='#00a0f0', GradientType=0);
+}
+
+.qq-uploader {
+  position: relative;
+  width: 224px;
+}
+
+.qq-upload-button {
+  color: inherit;
+  display: block;
+  font-size: 16px;
+  padding: 8px 0;
+  text-align: center;
+  border: 3px dashed #0ea3bb;
+  -moz-border-radius: 5px 5px;
+  -webkit-border-radius: 5px 5px;
+  border-radius: 5px 5px;
+  transition: color 0.25s ease-in-out, background 0.25s;
+}
+
+.qq-upload-button-hover {
+  background: #0ea3bb;
+  color: #fff;
+}
+
+.qq-upload-button-focus {
+  outline: 1px dotted black;
+}
+
+.qq-upload-delete {
+  display: none;
+  top: 0px;
+  position: absolute;
+  background: #f37067;
+  width: 20px;
+  height: 100%;
+  right: 0px;
+  color: #fff;
+  line-height: 20px;
+  text-align: center;
+  -moz-border-radius: 0px 5px 5px 0px;
+  -webkit-border-radius: 0px 5px 5px 0px;
+  border-radius: 0px 5px 5px 0px;
+  border-left: 1px solid #aaa;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.qq-upload-delete:hover {
+  background: #5d110b;
+}
+
+.qq-upload-list li:hover {
+  border: 1px solid #aaa;
+}
+
+.qq-upload-success:hover .qq-upload-delete {
+  display: block;
+}
+
+.qq-upload-fail:hover .qq-upload-delete {
+  display: block;
+}
+
+.qq-upload-drop-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 54px;
+  z-index: 2;
+  background: #f5f5f5;
+  background: rgba(240, 240, 240, 0.9);
+  text-align: center;
+  color: #b1b1b1;
+  border: 2px dashed #c5c5c5;
+  -moz-border-radius: 5px 5px;
+  -webkit-border-radius: 5px 5px;
+  border-radius: 5px 5px;
+}
+
+.qq-upload-drop-area span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: -10px;
+  font-size: 16px;
+}
+
+.qq-upload-drop-area-active {
+  background: lightyellow;
+  background: rgba(222, 255, 210, 0.9);
+}
+
+.qq-upload-list {
+  margin: 10px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.qq-upload-list li {
+  position: relative;
+  font-size: 11px;
+  margin: 8px 0;
+  color: #5e5b5b;
+  padding: 2px 4px;
+  background: #eee;
+  -moz-border-radius: 5px 5px;
+  -webkit-border-radius: 5px 5px;
+  border-radius: 5px 5px;
+  white-space: normal;
+  border: 1px solid transparent;
+}
+
+.qq-upload-file,
+.qq-upload-spinner,
+.qq-upload-size,
+.qq-upload-cancel,
+.qq-upload-failed-text {
+  font-size: 0.8em;
+  line-height: 16px;
+}
+
+.qq-file-uploading {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 80px;
+}
+
+.qq-upload-failed-text {
+  float: right;
+}
+
+.qq-upload-fail {
+  background: #ff927d !important;
+  color: #fff !important;
+}
+
+.qq-upload-fail .qq-upload-size {
+  display: none !important;
+}
+
+.qq-upload-file {
+}
+
+.qq-upload-spinner {
+  display: inline-block;
+  background: url("/images/loading.gif");
+  width: 15px;
+  height: 15px;
+  vertical-align: text-bottom;
+  margin-bottom: 3px;
+  margin-left: 2px;
+}
+
+.qq-upload-size,
+.qq-upload-cancel {
+  float: right;
+  margin-left: 4px;
+}
+
+.qq-upload-failed-text {
+  display: none;
+}
+
+.qq-upload-fail .qq-upload-failed-text {
+  display: inline;
+}
+
+.form-description {
+  z-index: 1000;
+  position: absolute;
+  right: 7px;
+  max-width: 150px;
+  top: 6px;
+  border: 4px solid #ccc;
+  border-radius: 6px 6px;
+  box-shadow: 0px 2px 4px #666;
+  background: #f5f5f5;
+  white-space: normal;
+}
+
+.form-description-content {
+  padding: 10px;
+  font-size: 10px;
+  color: #333;
+}
+
+.form-description-arrow {
+  border-color: transparent #ccc transparent transparent;
+  border-style: solid;
+  border-width: 10px;
+  height: 0;
+  width: 0;
+  left: -24px;
+  top: 7px;
+  position: absolute;
+}
+
+.form-description-arrow-small {
+  border-color: transparent #f5f5f5 transparent transparent;
+  border-style: solid;
+  border-width: 7px;
+  height: 0;
+  width: 0;
+  left: -14px;
+  top: 10px;
+  position: absolute;
+}
+
+/* Calendar */
+
+div.calendar {
+  color: #000;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+}
+
+div.calendar.popup {
+  margin-left: -40px;
+  margin-top: -100px;
+  z-index: 100000;
+}
+
+div.calendar td.weekend {
+  background: #b5cfe9;
+}
+
+div.calendar .today {
+  background: #f9621a !important;
+}
+
+div.calendar .title,
+div.calendar .button {
+  color: #f9621a;
+}
+
+div.calendar table {
+  background-color: #eee;
+  border: 1px solid #aaa;
+  border-collapse: collapse;
+}
+
+div.calendar thead {
+  background-color: white;
+}
+
+div.calendar td,
+div.calendar th {
+  font-size: 11px;
+  padding: 3px;
+  text-align: center;
+}
+
+div.calendar td.title {
+  font-weight: bold;
+}
+
+div.calendar td.button {
+  display: table-cell;
+}
+
+div.calendar th {
+  background: #ddd;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  font-weight: bold;
+  color: #555;
+}
+
+div.calendar tr.days td {
+  width: 2em;
+  color: #555;
+  text-align: center;
+  cursor: pointer;
+}
+
+div.calendar tr.days td:hover:not(.unselectable),
+div.calendar td.button:hover:not(.unselectable) {
+  background-color: #34abfa;
+  cursor: pointer;
+}
+
+.unselectable {
+  cursor: default !important;
+}
+
+div.calendar tr.days td:active div.calendar td.button:active {
+  background-color: #cde;
+}
+
+div.calendar tr.days td.selected {
+  font-weight: bold;
+  background-color: #fff;
+  color: #000;
+}
+
+div.calendar tr.days td.today {
+  font-weight: bold;
+  color: #d50000;
+}
+
+div.calendar tr.days td.otherDay {
+  color: #bbb;
+}
+
+img#input_21_pick {
+  /*Calender Icon */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+}
+/* CAPTCHA */
+
+.form-captcha {
+  border: 1px solid #ccc;
+  background: #f5f5f5;
+  padding: 15px;
+  margin: 15px auto;
+  width: 180px;
+}
+
+.underlined {
+  text-decoration: underline;
+}
+
+.form-captcha:hover {
+  border: 1px solid #aaa;
+}
+
+.form-captcha-image {
+  border: 1px solid #aaa;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px 4px 4px 4px;
+}
+
+li#id_8 {
+  text-align: center;
+  background: #ebebeb;
+  padding: 15px;
+}
+
+/* Form Error */
+
+.form-button-error {
+  color: #ff4e5d;
+  display: inline;
+  text-align: center;
+}
+
+.form-pagebreak > .form-button-error {
+  padding: 14px 10px 10px;
+  display: block;
+}
+
+.form-line-error {
+  background: #f37067;
+  color: #333;
+}
+
+li.form-line-error input:not(#coupon-input),
+li.form-line-error select,
+li.form-line-error textarea,
+li.form-line-error .form-validation-error {
+  border: 1px solid #f37067;
+  box-shadow: none;
+}
+
+.form-validation-error.form-input {
+  border: none;
+}
+
+.form-line-active .form-error-message {
+  display: none;
+}
+
+.form-error-message {
+  z-index: 900;
+  position: absolute;
+  max-width: 130px;
+  right: 0px;
+  top: 0px;
+  color: #333;
+  padding: 3px;
+  font-size: 10px;
+  border: 4px solid #d88;
+  box-shadow: 0px 2px 4px rgba(102, 102, 102, 0.5);
+  border-radius: 6px 6px;
+  background: #f37067;
+}
+
+.form-error-arrow {
+  position: absolute;
+  top: -16px;
+  left: 10px;
+  height: 0px;
+  width: 0px;
+  border: 8px solid transparent;
+  border-bottom-color: #666;
+  border-bottom: 8px solid rgba(102, 102, 102, 0.3);
+}
+
+.form-error-arrow-inner {
+  position: absolute;
+  top: 1px;
+  height: 0px;
+  width: 0px;
+  border: 10px solid transparent;
+  border-bottom-color: #fcc;
+  border-bottom-width: 11px;
+  left: -10px;
+  top: -10px;
+}
+
+.form-input .form-error-message,
+.form-input-wide .form-error-message {
+  bottom: -5px;
+  font-size: 11px;
+  position: relative;
+  z-index: 900;
+  right: auto;
+  top: auto;
+  color: #333;
+  padding: 3px;
+  max-width: 200px;
+  padding-bottom: 3px;
+  font-size: 12px;
+  border: none;
+  box-shadow: 0px 2px 4px rgba(102, 102, 102, 0.5);
+  border-radius: 6px 6px;
+  background: #fcc;
+  margin: auto;
+}
+
+.form-error-message img {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 15px;
+}
+
+.button--warranty-form{
+  color: #fff;
+  background: #0ea3bb;
+  transition: color 0.25s ease-in-out, background 0.25s;
+
+}
+
+.button--warranty-form:hover{
+  background: #096574;
+}
+
+
+/* Clearfix */
+
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
