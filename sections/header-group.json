@@ -1,1 +1,64 @@
-{"name":"t:sections.header.name","type":"header","sections":{"announcement-bar":{"type":"announcement-bar","blocks":{"announcement-bar-0":{"type":"announcement","settings":{"text":"FREE U.S. SHIPPING ON ORDERS OVER $75","text_alignment":"center","color_scheme":"background-1","link":""}},"announcement_qRnjgV":{"type":"announcement","settings":{"text":"BLACK FRIDAY SALE 20% OFF | DISCOUNT AUTOMATICALLY APPLIES TO CART","text_alignment":"center","color_scheme":"accent-1","link":""}}},"block_order":["announcement-bar-0","announcement_qRnjgV"],"settings":{}},"header":{"type":"header","settings":{"logo_position":"middle-center","menu":"main-menu","menu_type_desktop":"mega","sticky_header_type":"always","show_line_separator":true,"color_scheme":"background-1","enable_country_selector":false,"enable_language_selector":false,"mobile_logo_position":"center","margin_bottom":0,"padding_top":20,"padding_bottom":20}}},"order":["announcement-bar","header"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement-bar-0": {
+          "type": "announcement",
+          "settings": {
+            "text": "FREE U.S. SHIPPING ON ORDERS OVER $75",
+            "text_alignment": "center",
+            "color_scheme": "background-1",
+            "link": ""
+          }
+        },
+        "announcement_qRnjgV": {
+          "type": "announcement",
+          "settings": {
+            "text": "BLACK FRIDAY SALE 20% OFF | DISCOUNT AUTOMATICALLY APPLIES TO CART",
+            "text_alignment": "center",
+            "color_scheme": "accent-1",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement-bar-0",
+        "announcement_qRnjgV"
+      ],
+      "settings": {}
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo_position": "middle-center",
+        "menu": "main-primary-menu",
+        "menu_type_desktop": "mega",
+        "sticky_header_type": "always",
+        "show_line_separator": true,
+        "color_scheme": "background-1",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "mobile_logo_position": "center",
+        "margin_bottom": 0,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}
