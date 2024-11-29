@@ -1,0 +1,88 @@
+<!-- Include the CSS file -->
+<link rel="stylesheet" href="{{ 'home-updated.css' | asset_url }}" type="text/css">
+
+<section id="how-it-works-section">
+  <div class="page-width">
+    <div class="how-it-works-section__text">
+      <p>
+        {{ section.settings.subtitle }}
+      </p>
+      <h1>
+        {{ section.settings.title }}
+      </h1>
+    </div>
+    <div class="how-it-works-section__boxes">
+      {% for block in section.blocks %}
+        <div class="setup-guide__box">
+          <img src="{{block.settings.image| img_url: 'original'}}" alt="Guide Image" class="img-fluid" width="" height="">
+          <div class="setup-guide-box__text">
+            <div class="step-info__wrap">
+              <span class="steps_count">{{block.settings.count}}</span>
+              <h1>{{block.settings.heading}}</h1>
+            </div>
+            <p>{{block.settings.description}}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="shop-tents-btn__wrap">
+      <a href="{{section.settings.link}}">SHOP ALL TENTS</a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "How It Works",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Section Subtitle"
+    },
+    {
+        "type": "url",
+        "id": "link",
+        "label": "Link"
+      }
+  ],
+  "blocks": [
+    {
+      "type": "setup",
+      "name": "Setup",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Tent Image"
+        },
+        {
+          "type": "text",
+          "id": "count",
+          "label": "Count"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Tent Heading",
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Tent Description",
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "How It Works"
+    }
+  ]
+}
+{% endschema %}

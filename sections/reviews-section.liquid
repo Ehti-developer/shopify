@@ -1,0 +1,68 @@
+<!-- Include the CSS file -->
+<link rel="stylesheet" href="{{ 'home-updated.css' | asset_url }}" type="text/css">
+<!-- Include the Carousel CSS file -->
+<link rel="stylesheet" href="{{ 'owl.carousel.min.css' | asset_url }}" type="text/css">
+<!-- Include the Carousel CSS file -->
+<link rel="stylesheet" href="{{ 'owl.theme.default.min.css' | asset_url }}" type="text/css">
+
+
+<section id="reviews-section">
+  <div class="page-width">
+    <div class="owl-carousel reviews-carousel owl-theme">
+      {% for block in section.blocks %}
+        <div class="reviews-section__text">
+          <p>
+            {{ block.settings.description }}
+          </p>
+          <img src="{{ block.settings.image | img_url: 'grande' }}" alt="Logo" class="img-fluid" width="205" height="33">
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+  $(document).ready(function () {
+    $('.reviews-carousel').owlCarousel({
+      items: 1, // Number of items to show
+      loop: true, // Infinite loop
+      autoplay: true, // Enable autoplay
+      autoplayTimeout: 3000, // Autoplay interval
+      nav: false, // Navigation arrows
+      dots: true, // Pagination dots
+    });
+  });
+</script>
+
+<!-- Include the Carousel JS file -->
+<script src="{{'owl.carousel.min.js'|asset_url}}" defer="defer"></script> 
+
+{% schema %}
+{
+  "name": "Slideshow Section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Slide Image"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Slide Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Slideshow Section",
+    }
+  ]
+}
+{% endschema %}
