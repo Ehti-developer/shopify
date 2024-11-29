@@ -154,7 +154,7 @@
   <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}">
     {%- liquid
       if section.settings.menu != blank
-        render 'header-drawer'
+        render 'header-drawer-mobile'
       endif
 
       if section.settings.logo_position == 'top-center' or section.settings.menu == blank
@@ -295,14 +295,21 @@
 </style>
 
  
+<div class="header-additional__links">
+<a href="/pages/find-a-store" class="header__icon find-store" id="find_store_wrap">
+  {% comment %} {%- liquid
+      render 'icon-map'
+  -%} {% endcomment %}
+  <span class="">Find A Store</span>
+</a>
 <div id="region_selector" class="dropdown">
-  <button class="dropbtn">Region: USA/Rest of World </button>
+  <button class="web-icon header__icon"><img src="https://cdn.shopify.com/s/files/1/2403/5817/files/countries.svg?v=1732734450"> </button>
   <div class="dropdown-content">
     <a href="#">USA/Rest of World</a>
     <a href="https://eu.neso.com">Europe</a>
   </div>
 </div>
-      
+
       {% render 'header-search', input_id: 'Search-In-Modal' %}
 
       {%- if shop.customer_accounts_enabled -%}
@@ -345,13 +352,9 @@
           </div>
         {%- endif -%}
       </a>
-      <a href="/pages/find-a-store" class="header__icon header__icon--cart link focus-inset">
-        {%- liquid
-            render 'icon-map'
-        -%}
-        <span class="visually-hidden">Find A Store</span>
-      </a>
+
     </div>
+  </div>
   </header>
 </{% if section.settings.sticky_header_type != 'none' %}sticky-header{% else %}div{% endif %}>
 
@@ -541,6 +544,12 @@
       "default": "middle-left",
       "label": "t:sections.header.settings.logo_position.label",
       "info": "t:sections.header.settings.logo_help.content"
+    },
+    {
+      "type": "text",
+      "id": "sale_label",
+      "label": "Label for SALE menu item",
+      "default": "Limited Time!"
     },
     {
       "type": "link_list",
