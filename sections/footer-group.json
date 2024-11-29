@@ -1,1 +1,66 @@
-{"name":"t:sections.footer.name","type":"footer","sections":{"footer":{"type":"footer","blocks":{"45704d75-87a7-43c3-a2f3-57f04abb3ed7":{"type":"link_list","settings":{"heading":"<strong>Shop<\/strong>","menu":"shop"}},"footer-0":{"type":"link_list","settings":{"heading":"<strong>Resources<\/strong>","menu":"footer"}},"587c38ca-0453-4afa-a3af-3c4f14dfa3cb":{"type":"text","settings":{"heading":"<strong>Contact<\/strong>","subtext":"<h4><strong>Phone:<\/strong> 1-888-267-8188<\/h4><h4><strong>Email:<\/strong> info@neso.com<\/h4><h4><strong>Flagship Store: <\/strong>948 N. Coast Hwy 101, Encinitas, CA 92024<\/h4>"}}},"block_order":["45704d75-87a7-43c3-a2f3-57f04abb3ed7","footer-0","587c38ca-0453-4afa-a3af-3c4f14dfa3cb"],"custom_css":["footer.footer .field:after {border: 1px solid; border-radius: 10px; box-shadow: none;}"],"settings":{"color_scheme":"background-1","newsletter_enable":true,"newsletter_heading":"CONNECT WITH US","enable_follow_on_shop":true,"show_social":true,"enable_country_selector":false,"enable_language_selector":false,"payment_enable":true,"show_policy":false,"margin_top":48,"padding_top":36,"padding_bottom":36}}},"order":["footer"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "45704d75-87a7-43c3-a2f3-57f04abb3ed7": {
+          "type": "link_list",
+          "settings": {
+            "heading": "<strong>Shop</strong>",
+            "menu": "shop"
+          }
+        },
+        "footer-0": {
+          "type": "link_list",
+          "settings": {
+            "heading": "<strong>Resources</strong>",
+            "menu": "footer"
+          }
+        },
+        "587c38ca-0453-4afa-a3af-3c4f14dfa3cb": {
+          "type": "text",
+          "settings": {
+            "heading": "<strong>Contact</strong>",
+            "subtext": "<h4><strong>Phone:</strong> 1-888-267-8188</h4><h4><strong>Email:</strong> info@neso.com</h4><h4><strong>Flagship Store: </strong>948 N. Coast Hwy 101, Encinitas, CA 92024</h4>"
+          }
+        }
+      },
+      "block_order": [
+        "45704d75-87a7-43c3-a2f3-57f04abb3ed7",
+        "footer-0",
+        "587c38ca-0453-4afa-a3af-3c4f14dfa3cb"
+      ],
+      "custom_css": [
+        "footer.footer .field:after {border: 1px solid; border-radius: 10px; box-shadow: none;}"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "newsletter_enable": false,
+        "newsletter_heading": "CONNECT WITH US",
+        "enable_follow_on_shop": true,
+        "show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": true,
+        "show_policy": false,
+        "margin_top": 48,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}
