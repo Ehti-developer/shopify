@@ -292,6 +292,12 @@ section#how-it-works-section {
     margin: 10px 0;
 }
 
+.collections-box__outer-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
 .setup-guide-box__text p {
     font-size: 16px;
     color: #000;
@@ -333,13 +339,14 @@ section#more-collections {
     color: #0F0F0F;
     font-size: 16px;
     text-transform: uppercase;
-    margin-bottom: 5px;
+    margin: 0;
 }
 
 .collection-description__section p {
     font-size: 12px;
     color: #C3C3C3;
     text-transform: uppercase;
+    margin: 5px 0 0 0;
 }
 
 .collections-box__wrap a {
@@ -348,7 +355,7 @@ section#more-collections {
 
 .collection-description__section {
     text-align: center;
-    padding-top: 10px;
+    padding-top: 0;
 }
 
 .collections-box__wrap a:hover h3 {
@@ -359,6 +366,7 @@ section#more-collections {
     padding-bottom: 40px;
     margin: 0;
     text-transform: uppercase;
+    font-size: 36px;
 }
 
 /* User Reviews */
@@ -597,6 +605,139 @@ section#newsletter__section {
 }
 
 
+/* Homepage Reviews */
+
+a.jdgm-carousel-item__product.jdgm--shop-review-has-image {
+    display: flex;
+    align-items: center;
+}
+
+.jdgm-carousel-item {
+    margin: 0 10px 0 0 !important;
+}
+
+a.jdgm-carousel-item__product.jdgm--shop-review-has-image img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    background-color: #eaeaea;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin: 0;
+}
+
+.jdgm-carousel-item {
+    border: 1px solid #e5e5e3;
+    margin: 0 5px;
+    padding: 0 !important;
+}
+
+.jdgm-star {
+    color: #99cfe2 !important;
+}
+
+.jdgm-carousel-item__review-rating {
+    font-size: 13px !important;
+}
+
+.jdgm-carousel-item__review {
+    height: auto !important;
+    text-align: left;
+    padding: 20px 20px 0;
+}
+
+.jdgm-carousel-wrapper .jdgm-carousel-item__review {
+    height: auto;
+}
+
+.jdgm-carousel-item__review {
+    text-align: left !important;
+}
+
+.jdgm-carousel-item__reviewer-name-wrapper {
+    text-align: left !important;
+    padding: 0 20px;
+}
+
+.jdgm-carousel-item__review-title.jdgm-line-clamp {
+    margin: 13px 0;
+}
+
+.jdgm-carousel-item__reviewer-name.jdgm-ellipsis {
+    padding-top: 10px;
+}
+
+.jdgm-carousel-item__review-rating {
+    margin-bottom: 10px !important;
+}
+
+.jdgm-carousel-item__product-title {
+    width: auto;
+    font-size: 15px !important;
+}
+
+.jdgm-carousel-item__product-title {
+    width: auto !important;
+    margin-left: 10px !important;
+}
+
+a.jdgm-carousel-item__product.jdgm--shop-review-has-image {
+    background-color: #F9F9F9;
+    padding: 20px;
+    border-top: 1px solid #E5E5E3;
+    position: relative;
+}
+
+a.jdgm-carousel-item__product.jdgm--shop-review-has-image::after {
+    position: absolute;
+    content: '';
+    top: 40px;
+    right: 20px;
+    background-image: url(../assets/arrow-right.svg);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 10px;
+}
+
+.jdgm-carousel-item__product {
+    height: auto !important;
+}
+
+.jdgm-carousel-item__reviewer-name {
+    font-size: 13px;
+    opacity: 1 !important;
+    padding-bottom: 10px !important;
+    color: #1C1D1D;
+}
+
+.jdgm-carousel-wrapper .jdgm-carousel__item-wrapper {
+    height: 355px !important;
+}
+
+.jdgm-carousel-item__review-body.jdgm-line-clamp p {
+    font-size: 16px;
+    color: #1C1D1D;
+}
+
+.jdgm-carousel-item__product-title.jdgm-ellipsis {
+    color: #000;
+}
+
+.jdgm-carousel-item__review-title.jdgm-line-clamp {
+    color: #000;
+}
+
+.jdgm-carousel-wrapper .jdgm-carousel__left-arrow, .jdgm-carousel-wrapper .jdgm-carousel__right-arrow {
+    margin-top: -195px !important;
+} 
+
+.jdgm-carousel-item__review-body.jdgm-line-clamp {
+    height: 134px !important;
+}
+
 /* Media query */
 
 
@@ -825,7 +966,7 @@ section#newsletter__section {
 
     /* Collections */
 
-    .colletions-box__outer-wrap {
+    .collections-box__outer-wrap {
         grid-template-columns: 1fr;
     }
 
@@ -847,6 +988,7 @@ section#newsletter__section {
         padding-bottom: 30px;
         margin: 0;
         text-align: center;
+        font-size: 24px;
     }
 
     /* Location */

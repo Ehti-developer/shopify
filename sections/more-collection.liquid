@@ -2,47 +2,69 @@
 <link rel="stylesheet" href="{{ 'home-updated.css' | asset_url }}" type="text/css">
 
 <section id="more-collections">
-    <div class="container">
-        <div class="collections-wrap__section">
-            <div class="more-collection__text">
-                <h1>More Collections</h1>
-            </div>
-            <div class="colletions-box__outer-wrap">
-                <div class="collections-box__wrap">
-                    <a href="#">
-                        <div class="collection-image__section">
-                            <img src="images/beach.png" alt="Beach Image" class="img-fluid">
-                        </div>
-                        <div class="collection-description__section">
-                            <h3>Beach furniture</h3>
-                            <p>4 products</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="collections-box__wrap">
-                    <a href="#">
-                        <div class="collection-image__section">
-                            <img src="images/tents-parts.png" alt="Tents Parts Image" class="img-fluid">
-                        </div>
-                        <div class="collection-description__section">
-                            <h3>tent parts</h3>
-                            <p>4 products</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="collections-box__wrap">
-                    <a href="#">
-                        <div class="collection-image__section">
-                            <img src="images/accessories.png" alt="Accessories Image" class="img-fluid">
-                        </div>
-                        <div class="collection-description__section">
-                            <h3>accessories</h3>
-                            <p>5 PRODUCTS</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
+    <div class="page-width">
+      <div class="collections-wrap__section">
+        <div class="more-collection__text">
+          <h1>{{ section.settings.title }}</h1>
         </div>
+        <div class="collections-box__outer-wrap">
+          {% for block in section.blocks %}
+            {% assign collection = collections[block.settings.collection_handle] %}
+            {% if collection %}
+              <div class="collections-box__wrap">
+                <a href="{{ collection.url }}">
+                  <div class="collection-image__section">
+                    {% if collection.image %}
+                      <img src="{{ collection.image | img_url: 'master' }}" alt="{{ collection.title }}" class="img-fluid" width="" height="">
+                    {% else %}
+                      <img src="https://via.placeholder.com/300" alt="{{ collection.title }}" class="img-fluid" width="" height="">
+                    {% endif %}
+                  </div>
+                  <div class="collection-description__section">
+                    <h3>{{ collection.title }}</h3>
+                    <p>{{ collection.products_count }} product</p>
+                  </div>
+                </a>
+              </div>
+            {% else %}
+              <p>Collection not found for handle: {{ block.settings.collection_handle }}</p>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
     </div>
-</section>
+  </section>
+  
+  {% schema %}
+  {
+    "name": "More Collections",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Section Title",
+        "default": "More Collections"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "collection",
+        "name": "Collection",
+        "settings": [
+          {
+            "type": "collection",
+            "id": "collection_handle",
+            "label": "Select Collection"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "More Collections",
+        "category": "Collections",
+      }
+    ]
+  }
+  {% endschema %}
+  

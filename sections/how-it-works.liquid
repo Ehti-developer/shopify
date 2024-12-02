@@ -14,7 +14,7 @@
     <div class="how-it-works-section__boxes">
       {% for block in section.blocks %}
         <div class="setup-guide__box">
-          <img src="{{block.settings.image| img_url: 'original'}}" alt="Guide Image" class="img-fluid" width="" height="">
+          <img src="{{block.settings.image| img_url: 'master'}}" alt="Guide Image" class="img-fluid" width="" height="">
           <div class="setup-guide-box__text">
             <div class="step-info__wrap">
               <span class="steps_count">{{block.settings.count}}</span>
