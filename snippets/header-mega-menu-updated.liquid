@@ -33,14 +33,130 @@
                 tabindex="-1"
               >
                 <div
-                  class="mega-menu__list {% if   link.title != "More"  %} mega-menu__list-grid {% endif  %} page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
+                  class="mega-menu__list  mega-menu__list-grid   page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
                   role="list"
                 >
-                  {% if link.title == 'More' %}
-                    <div class="mega-menu-more___links">
+                {% if link.title == 'More' %}
+                  <div class="mega-menu-more___links">
+                    <div>
+                      <h2>Accesories</h2>
+                      {%- for childlink in link.links limit: 7 -%}
+                        {% assign product_url = childlink.url %}
+                        {% assign product_slug_parts = product_url | split: '/' %}
+                        {% assign product_slug = product_slug_parts.last %}
+
+                        <div class="child-menu-item-{{ product_slug }}">
+                          <div>
+                            <a
+                              href="{{ childlink.url }}"
+                              class="mega-menu__link mega-menu-updated__link mega-menu__link--level-2 link link_{{ product_slug }}{% if childlink.current %} mega-menu__link--active{% endif %}"
+                              {% if childlink.current %}
+                                aria-current="page"
+                              {% endif %}
+                            >
+                              <span>{{ childlink.title | escape }}</span>
+                            </a>
+                          </div>
+                          {%- if childlink.links != blank -%}
+                            <ul class="list-unstyled" role="list">
+                              {% assign neso_increment = 0 %}
+                              {%- for grandchildlink in childlink.links -%}
+                                {% assign neso_increment = 0 %}
+                                <li class="grandchild-menu-item-{{ product_slug }}-{% increment neso_increment %}">
+                                  <a
+                                    href="{{ grandchildlink.url }}"
+                                    class="mega-menu__link link link_{{ product_slug }}-{% increment neso_increment %}{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
+                                    {% if grandchildlink.current %}
+                                      aria-current="page"
+                                    {% endif %}
+                                  >
+                                    {{ grandchildlink.title | escape }}
+                                  </a>
+                                </li>
+                              {%- endfor -%}
+                            </ul>
+                          {%- endif -%}
+                        </div>
+                      {%- endfor -%}
+                    </div>
+
+                    <div>
+                      <h2>Setup Tips</h2>
+                      <div class="mega-menu-inner___grid">
+                        {%- for childlink in link.links limit: 3 offset: 7 -%}
+                          {% assign page_url = childlink.url %}
+                          {% assign page_slug_parts = page_url | split: '/' %}
+                          {% assign page_slug = page_slug_parts.last %}
+
+                          <div class="child-menu-item-{{ page_slug }}">
+                            <div>
+                              <a
+                                href="{{ childlink.url }}"
+                                class="mega-menu__link mega-menu-updated__link mega-menu__link--level-2 link link_{{ page_slug }}{% if childlink.current %} mega-menu__link--active{% endif %}"
+                                {% if childlink.current %}
+                                  aria-current="page"
+                                {% endif %}
+                              >
+                                {% if childlink.url contains '/pages/' %}
+                                  {% comment %} {% assign page_handle = childlink.url | split: '/pages/' | last %}
+                                  {% assign page = all_pages[page_handle] %}
+                                     {{ page }} {% endcomment %}
+                                  {% comment %}
+                                    {% if product %}
+                                      <!-- Display product image -->
+
+                                      
+                                    {% endif %}
+                                  {% endcomment %}
+                                  {% assign page_handle = childlink.url | split: '/pages/' | last %}
+                                 
+                                  {% assign mega_menu_page_image =  pages[page_handle].metafields.custom.mega_menu_page_featured_image %}
+                                  {% if mega_menu_page_image %}
+                                    <div class="mega-menu-img__wrapper ">
+                                      <img
+                                        src="{{ mega_menu_page_image | img_url: 'large' }}"
+                                        alt="Mega Menu Image"
+                                        class="child-menu-meta-image"
+                                      >
+                                    </div>
+                                  {% endif %}
+                                {% endif %}
+                                <span>{{ childlink.title | escape }}</span>
+                              </a>
+                              <div class="child-menu-product___desc">
+                                {% assign page_description = pages[page_handle].metafields.custom.mega_menu_page_description %}
+                                {% if page_description %}
+                                  {{ page_description | strip_html | truncate: 80 }}
+                                {% endif %}
+                              </div>
+                            </div>
+                            {%- if childlink.links != blank -%}
+                              <ul class="list-unstyled" role="list">
+                                {% assign neso_increment = 0 %}
+                                {%- for grandchildlink in childlink.links -%}
+                                  {% assign neso_increment = 0 %}
+                                  <li class="grandchild-menu-item-{{ page_slug }}-{% increment neso_increment %}">
+                                    <a
+                                      href="{{ grandchildlink.url }}"
+                                      class="mega-menu__link link link_{{ page_slug }}-{% increment neso_increment %}{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
+                                      {% if grandchildlink.current %}
+                                        aria-current="page"
+                                      {% endif %}
+                                    >
+                                      {{ grandchildlink.title | escape }}
+                                    </a>
+                                  </li>
+                                {%- endfor -%}
+                              </ul>
+                            {%- endif -%}
+                          </div>
+                        {%- endfor -%}
+                      </div>
+                    </div>
+                    <div>
                       <div>
-                        <h2>Accesories</h2>
-                        {%- for childlink in link.links limit: 7 -%}
+                        <h2>Helpful links</h2>
+                        {%- for childlink in link.links limit: 6 offset: 10 -%}
                           {% assign product_url = childlink.url %}
                           {% assign product_slug_parts = product_url | split: '/' %}
                           {% assign product_slug = product_slug_parts.last %}
@@ -79,265 +195,187 @@
                           </div>
                         {%- endfor -%}
                       </div>
-
                       <div>
-                        <h2>Setup Tips</h2>
-                        <div class="mega-menu-inner___grid">
-                          {%- for childlink in link.links limit: 3 offset: 7 -%}
-                            {% assign page_url = childlink.url %}
-                            {% assign page_slug_parts = page_url | split: '/' %}
-                            {% assign page_slug = page_slug_parts.last %}
+                        <h2>Exclusive Offers</h2>
+                        {%- for childlink in link.links limit: 2 offset: 16 -%}
+                          {% assign product_url = childlink.url %}
+                          {% assign product_slug_parts = product_url | split: '/' %}
+                          {% assign product_slug = product_slug_parts.last %}
 
-                            <div class="child-menu-item-{{ page_slug }}">
-                              <div>
-                                <a
-                                  href="{{ childlink.url }}"
-                                  class="mega-menu__link mega-menu-updated__link mega-menu__link--level-2 link link_{{ page_slug }}{% if childlink.current %} mega-menu__link--active{% endif %}"
-                                  {% if childlink.current %}
-                                    aria-current="page"
-                                  {% endif %}
-                                >
-                                  {% if childlink.url contains '/pages/' %}
-                                    {% comment %} {% assign page_handle = childlink.url | split: '/pages/' | last %}
-                                    {% assign page = all_pages[page_handle] %}
-                                       {{ page }} {% endcomment %}
-                                    {% comment %}
-                                      {% if product %}
-                                        <!-- Display product image -->
-
-                                        
+                          <div class="child-menu-item-{{ product_slug }}">
+                            <div>
+                              <a
+                                href="{{ childlink.url }}"
+                                class="mega-menu__link mega-menu-updated__link mega-menu__link--level-2 link link_{{ product_slug }}{% if childlink.current %} mega-menu__link--active{% endif %}"
+                                {% if childlink.current %}
+                                  aria-current="page"
+                                {% endif %}
+                              >
+                                <span>{{ childlink.title | escape }}</span>
+                              </a>
+                            </div>
+                            {%- if childlink.links != blank -%}
+                              <ul class="list-unstyled" role="list">
+                                {% assign neso_increment = 0 %}
+                                {%- for grandchildlink in childlink.links -%}
+                                  {% assign neso_increment = 0 %}
+                                  <li class="grandchild-menu-item-{{ product_slug }}-{% increment neso_increment %}">
+                                    <a
+                                      href="{{ grandchildlink.url }}"
+                                      class="mega-menu__link link link_{{ product_slug }}-{% increment neso_increment %}{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
+                                      {% if grandchildlink.current %}
+                                        aria-current="page"
                                       {% endif %}
-                                    {% endcomment %}
-                                    {% assign page_handle = childlink.url | split: '/pages/' | last %}
-                                   
-                                    {% assign mega_menu_page_image =  pages[page_handle].metafields.custom.mega_menu_page_featured_image %}
-                                    {% if mega_menu_page_image %}
-                                      <div class="mega-menu-img__wrapper ">
-                                        <img
-                                          src="{{ mega_menu_page_image | img_url: 'large' }}"
-                                          alt="Mega Menu Image"
-                                          class="child-menu-meta-image"
-                                        >
-                                      </div>
-                                    {% endif %}
-                                  {% endif %}
-                                  <span>{{ childlink.title | escape }}</span>
-                                </a>
-                                <div class="child-menu-product___desc">
-                                  {% assign page_description = pages[page_handle].metafields.custom.mega_menu_page_description %}
-                                  {% if page_description %}
-                                    {{ page_description | strip_html | truncate: 80 }}
-                                  {% endif %}
-                                </div>
-                              </div>
-                              {%- if childlink.links != blank -%}
-                                <ul class="list-unstyled" role="list">
-                                  {% assign neso_increment = 0 %}
-                                  {%- for grandchildlink in childlink.links -%}
-                                    {% assign neso_increment = 0 %}
-                                    <li class="grandchild-menu-item-{{ page_slug }}-{% increment neso_increment %}">
-                                      <a
-                                        href="{{ grandchildlink.url }}"
-                                        class="mega-menu__link link link_{{ page_slug }}-{% increment neso_increment %}{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
-                                        {% if grandchildlink.current %}
-                                          aria-current="page"
-                                        {% endif %}
-                                      >
-                                        {{ grandchildlink.title | escape }}
-                                      </a>
-                                    </li>
-                                  {%- endfor -%}
-                                </ul>
-                              {%- endif -%}
-                            </div>
-                          {%- endfor -%}
-                        </div>
-                      </div>
-                      <div>
-                        <div>
-                          <h2>Helpful links</h2>
-                          {%- for childlink in link.links limit: 6 offset: 10 -%}
-                            {% assign product_url = childlink.url %}
-                            {% assign product_slug_parts = product_url | split: '/' %}
-                            {% assign product_slug = product_slug_parts.last %}
-
-                            <div class="child-menu-item-{{ product_slug }}">
-                              <div>
-                                <a
-                                  href="{{ childlink.url }}"
-                                  class="mega-menu__link mega-menu-updated__link mega-menu__link--level-2 link link_{{ product_slug }}{% if childlink.current %} mega-menu__link--active{% endif %}"
-                                  {% if childlink.current %}
-                                    aria-current="page"
-                                  {% endif %}
-                                >
-                                  <span>{{ childlink.title | escape }}</span>
-                                </a>
-                              </div>
-                              {%- if childlink.links != blank -%}
-                                <ul class="list-unstyled" role="list">
-                                  {% assign neso_increment = 0 %}
-                                  {%- for grandchildlink in childlink.links -%}
-                                    {% assign neso_increment = 0 %}
-                                    <li class="grandchild-menu-item-{{ product_slug }}-{% increment neso_increment %}">
-                                      <a
-                                        href="{{ grandchildlink.url }}"
-                                        class="mega-menu__link link link_{{ product_slug }}-{% increment neso_increment %}{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
-                                        {% if grandchildlink.current %}
-                                          aria-current="page"
-                                        {% endif %}
-                                      >
-                                        {{ grandchildlink.title | escape }}
-                                      </a>
-                                    </li>
-                                  {%- endfor -%}
-                                </ul>
-                              {%- endif -%}
-                            </div>
-                          {%- endfor -%}
-                        </div>
-                        <div>
-                          <h2>Exclusive Offers</h2>
-                          {%- for childlink in link.links limit: 2 offset: 16 -%}
-                            {% assign product_url = childlink.url %}
-                            {% assign product_slug_parts = product_url | split: '/' %}
-                            {% assign product_slug = product_slug_parts.last %}
-
-                            <div class="child-menu-item-{{ product_slug }}">
-                              <div>
-                                <a
-                                  href="{{ childlink.url }}"
-                                  class="mega-menu__link mega-menu-updated__link mega-menu__link--level-2 link link_{{ product_slug }}{% if childlink.current %} mega-menu__link--active{% endif %}"
-                                  {% if childlink.current %}
-                                    aria-current="page"
-                                  {% endif %}
-                                >
-                                  <span>{{ childlink.title | escape }}</span>
-                                </a>
-                              </div>
-                              {%- if childlink.links != blank -%}
-                                <ul class="list-unstyled" role="list">
-                                  {% assign neso_increment = 0 %}
-                                  {%- for grandchildlink in childlink.links -%}
-                                    {% assign neso_increment = 0 %}
-                                    <li class="grandchild-menu-item-{{ product_slug }}-{% increment neso_increment %}">
-                                      <a
-                                        href="{{ grandchildlink.url }}"
-                                        class="mega-menu__link link link_{{ product_slug }}-{% increment neso_increment %}{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
-                                        {% if grandchildlink.current %}
-                                          aria-current="page"
-                                        {% endif %}
-                                      >
-                                        {{ grandchildlink.title | escape }}
-                                      </a>
-                                    </li>
-                                  {%- endfor -%}
-                                </ul>
-                              {%- endif -%}
-                            </div>
-                          {%- endfor -%}
-                        </div>
+                                    >
+                                      {{ grandchildlink.title | escape }}
+                                    </a>
+                                  </li>
+                                {%- endfor -%}
+                              </ul>
+                            {%- endif -%}
+                          </div>
+                        {%- endfor -%}
                       </div>
                     </div>
-                  {% else %}
-                    {% if link.title == 'TENTS' %}
-                      <div class="mega-menu__info">
-                        <div>
-                          <h2>Durable, versatile, longer lasting tents.</h2>
-                          <p>lightweight • Compact • Travel-friendly</p>
-                        </div>
-                        <div class="mega-menu__btn-wrapper">
-                          <a href="" class="shop-all___btn">Shop all Tents</a>
-                        </div>
-                      </div>
+                  </div>
+                {% else %}
 
-                    {% elsif link.title == 'Furniture' %}
-                      <div class="mega-menu__info">
-                        <div>
-                          <h2>Sleek, portable and functional.</h2>
-                          <p>Ergonomic • Waterproof • Lightweight</p>
-                        </div>
-                        <div class="mega-menu__btn-wrapper">
-                          <a href="" class="shop-all___btn">shop all Furniture</a>
-                        </div>
+                  {% if link.title == 'TENTS' %}
+                    <div class="mega-menu__info">
+                      <div>
+                        <h2>Durable, versatile, longer lasting tents.</h2>
+                        <p>lightweight • Compact • Travel-friendly</p>
                       </div>
-                    {% endif %}
-                    {%- for childlink in link.links limit: 3 -%}
-                      {% assign product_url = childlink.url %}
-                      {% assign product_slug_parts = product_url | split: '/' %}
-                      {% assign product_slug = product_slug_parts.last %}
+                      <div class="mega-menu__btn-wrapper">
+                        <a href="" class="shop-all___btn">Shop all Tents</a>
+                      </div>
+                    </div>
 
-                      <div class="child-menu-item-{{ product_slug }}">
+                  {% elsif link.title == 'Furniture' %}
+                    <div class="mega-menu__info">
+                      <div>
+                        <h2>Sleek, portable and functional.</h2>
+                        <p>Ergonomic • Waterproof • Lightweight</p>
+                      </div>
+                      <div class="mega-menu__btn-wrapper">
+                        <a href="" class="shop-all___btn">shop all Furniture</a>
+                      </div>
+                    </div>
+                  {% endif %}
+                  {%- for childlink in link.links -%}
+                    {% assign product_url = childlink.url %}
+                    {% assign product_slug_parts = product_url | split: '/' %}
+                    {% assign product_slug = product_slug_parts.last %}
+
+                    <div class="child-menu-item-{{ product_slug }} child__main-wrapper">
+                      <div class="child-main__inner-wrapper">
                         <div>
                           <a
                             href="{{ childlink.url }}"
-                            class="mega-menu__link mega-menu-updated__link mega-menu__link--level-2 link link_{{ product_slug }}{% if childlink.current %} mega-menu__link--active{% endif %}"
+                            class="mega-menu__link mega-menu__link--level-2 link link_{{ product_slug }}{% if childlink.current %} mega-menu__link--active{% endif %}"
                             {% if childlink.current %}
                               aria-current="page"
                             {% endif %}
                           >
-                            {% if childlink.url contains '/products/' %}
-                              {% assign product_handle = childlink.url | split: '/products/' | last %}
-                              {% assign product = all_products[product_handle] %}
-                           
-                              {% comment %}
-                                {% if product %}
-                                  <!-- Display product image -->
-
-
-                                {% endif %}
-                              {% endcomment %}
-                              {% assign mega_menu_image = product.metafields.custom.mega_menu_image %}
-                              {% if mega_menu_image %}
-                                <div class="mega-menu-img__wrapper">
-                                  <img
-                                    src="{{ mega_menu_image | img_url: 'large' }}"
-                                    alt="Mega Menu Image"
-                                    class="child-menu-meta-image"
-                                  >
-                                </div>
-                              {% else %}
-                                <div class="mega-menu-img__wrapper">
-                                  <img
-                                    src="{{ product.featured_image | img_url: 'medium' }}"
-                                    alt="{{ product.title | escape }}"
-                                    class="child-menu-item-image"
-                                  >
-                                </div>
-                              {% endif %}
-                            {% endif %}
                             <span>{{ childlink.title | escape }}</span>
                           </a>
-                          <div class="child-menu-product___desc">
-                            {% assign product_description = product.metafields.custom.mega_menu_description %}
-                            {% if product_description %}
-                              {{ product_description | strip_html | truncate: 80 }}
-                            {% else %}
-                              {{ product.description | strip_html | truncate: 80 }}
-                            {% endif %}
-                          </div>
                         </div>
                         {%- if childlink.links != blank -%}
-                          <ul class="list-unstyled" role="list">
+                          <ul
+                            class=" list-unstyled   {% if forloop.index == 1 and forloop.length == 2 or forloop.length == 1 %}
+                                  grandchild-menu__grid
+                              {% endif %}
+                            "
+
+                            role="list"
+                          >
                             {% assign neso_increment = 0 %}
                             {%- for grandchildlink in childlink.links -%}
                               {% assign neso_increment = 0 %}
-                              <li class="grandchild-menu-item-{{ product_slug }}-{% increment neso_increment %}">
-                                <a
-                                  href="{{ grandchildlink.url }}"
-                                  class="mega-menu__link link link_{{ product_slug }}-{% increment neso_increment %}{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
-                                  {% if grandchildlink.current %}
-                                    aria-current="page"
-                                  {% endif %}
+                              {% if forloop.parentloop.index >= 2 %}
+                                <li
+                                  class="grandchild-menu-item-{{ product_slug }}-{% increment neso_increment %}"
                                 >
-                                  {{ grandchildlink.title | escape }}
-                                </a>
-                              </li>
+                                  <div
+                                    class="child-menu-item__collection"
+                                  >
+                                    <a
+                                      href="{{ grandchildlink.url }}"
+                                      class="mega-menu__link  mega-menu-updated__link link link_{{ product_slug }}-{% increment neso_increment %}{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
+                                      {% if grandchildlink.current %}
+                                        aria-current="page"
+                                      {% endif %}
+                                      style="
+                                        {% if grandchildlink.url contains '/products/' %}
+                                          {% assign mega_menu_image = product.metafields.custom.mega_menu_image %}
+                                          {% assign product_handle = grandchildlink.url | split: '/products/' | last %}
+                                          {% assign product = all_products[product_handle] %}
+                                          {% if mega_menu_image %}
+                                            background-image: url('{{ mega_menu_image | img_url: 'medium' }}');
+                                             {% else %}
+                                               background-image: url('{{ product.featured_image | img_url: 'medium' }}');
+                                          {% endif %}
+                                        {% endif %}
+                                      "
+                                    >
+                                      <span>{{ grandchildlink.title | escape }}</span>
+                                    </a>
+                                  </div>
+                                </li>
+                               
+
+                              {% else  %}
+                                <li class=" grandchild-menu-item-{{ product_slug }}-{% increment neso_increment %}">
+                                  <a
+                                    href="{{ grandchildlink.url }}"
+                                    class="mega-menu__link  mega-menu-updated__link link link_{{ product_slug }}-{% increment neso_increment %}{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
+                                    {% if grandchildlink.current %}
+                                      aria-current="page"
+                                    {% endif %}
+                                  >
+                                    {% if grandchildlink.url contains '/products/' %}
+                                      {% assign product_handle = grandchildlink.url | split: '/products/' | last %}
+                                      {% assign product = all_products[product_handle] %}
+
+                                      {% assign mega_menu_image = product.metafields.custom.mega_menu_image %}
+                                      {% if mega_menu_image %}
+                                        <div class="mega-menu-img__wrapper">
+                                          <img
+                                            src="{{ mega_menu_image | img_url: 'large' }}"
+                                            alt="Mega Menu Image"
+                                            class="child-menu-meta-image"
+                                          >
+                                        </div>
+                                      {% else %}
+                                        <div class="mega-menu-img__wrapper">
+                                          <img
+                                            src="{{ product.featured_image | img_url: 'medium' }}"
+                                            alt="{{ product.title | escape }}"
+                                            class="child-menu-item-image"
+                                          >
+                                        </div>
+                                      {% endif %}
+                                    {% endif %}
+                                    <span>{{ grandchildlink.title | escape }}</span>
+                                  </a>
+                                  <div class="child-menu-product___desc">
+                                    {% assign product_description = product.metafields.custom.mega_menu_description %}
+                                    {% if product_description %}
+                                      {{ product_description | strip_html | truncate: 80 }}
+                                    {% else %}
+                                      {{ product.description | strip_html | truncate: 80 }}
+                                    {% endif %}
+                                  </div>
+                                </li>
+                              {% endif %}
                             {%- endfor -%}
                           </ul>
                         {%- endif -%}
                       </div>
-                    {%- endfor -%}
+                    </div>
+                  {%- endfor -%}
 
+                  {% comment %}
                     <div class="child-menu-item__collection-main">
                       <h2>MORE TENTS</h2>
                       {%- for childlink in link.links limit: 3 offset: 3 -%}
@@ -393,8 +431,10 @@
                         </div>
                       {%- endfor -%}
                     </div>
-                  {% endif %}
+                  {% endcomment %}
+                {% endif %}
                 </div>
+               
               </div>
             </details>
           </header-menu>
