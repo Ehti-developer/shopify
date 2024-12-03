@@ -1,3 +1,6 @@
+.header__active-menu-item {
+    color: #65A0B5 !important;
+}
 .mega-menu-updated__links .list-menu {
     align-items: center;
 }
@@ -157,6 +160,8 @@ a.mega-menu-updated__link span {
     width: 100%;
     color: #9E9E9E !important;
     font-weight: 700 !important;
+    text-transform: uppercase;
+    text-decoration: none;
 }
 .mega-menu-more___links {
     display: grid;
