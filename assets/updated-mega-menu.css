@@ -28,16 +28,33 @@
     flex-direction: column;
     align-items: center;
 }
+.inner-child__link {
+    font-size: 20px;
+}
 .mega-menu__list-grid {
     display: grid !important;
     grid-template-columns: 293px 1fr 274px !important;
     gap: 15px !important;
 }
-.child__main-wrapper .child-main__inner-wrapper .grandchild-menu__grid {
+.grandchild-menu__grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr !important;
     gap: 15px;
 }
+.mega-menu-more___links .mega-menu-updated__link {
+  align-items: flex-start;
+}
+.mega-menu-more___links .mega-menu-updated__link h2 {
+    margin-top: 0px;
+    margin-bottom: 22px;
+}
+.mega-menu-more___links h2 {
+    margin-top: 0px;
+    margin-bottom: 22px;
+}
+.mega-menu-more___links .grandchild-menu__grid img {
+    width: 100%;
+} 
 .child__main-wrapper .child-main__inner-wrapper  .grandchild-menu-last__grid  {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr !important;
