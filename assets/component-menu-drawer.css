@@ -262,3 +262,59 @@ details[open].menu-opening > .menu-drawer__submenu {
 .menu-drawer .list-social__link {
   padding: 1.3rem 1.25rem;
 }
+
+
+
+
+
+.js .menu-drawer__navigation .submenu-open {
+  visibility: visible !important;
+}
+.header-drawer__mobile .menu-drawer__navigation {
+ padding-top: 20px;
+ padding-bottom: 20px;
+}
+.header-drawer__mobile .menu-drawer__menu-item {
+justify-content: space-between;
+}
+.header-drawer__mobile details[open] .menu-drawer__menu-item  svg {
+  transform: rotate(180deg);
+}
+.header-drawer__mobile  .menu-drawer__menu-item {
+ padding: 1rem  1.6rem !important;
+}
+.mobile-footer-menu____links {
+ margin: 0px;
+ padding: 0px;
+ list-style: none;
+}
+.mobile-footer-menu____links li  {
+  margin-bottom: 8px;
+}
+.mobile-footer-menu____links li  a {
+ color: gray;
+ text-decoration: none;
+ font-size: 13px;
+}
+.mobile-footer-menu____links li  a:hover {
+ text-decoration: underline;
+ 
+}
+.menu-drawer__account {
+ color: gray;
+ text-decoration: none;
+ font-size: 13px;
+ padding: 0px;
+}
+.mobile-menu____btn  {
+  margin-top: 120px;
+}
+.mobile-menu____btn .shop-all___btn {
+  width: 100%;
+  text-transform: capitalize;
+}
+.menu-drawer__inner-submenu a {
+  font-size: 14px !important;
+  padding-left: 5px;
+  font-weight: 400;
+}

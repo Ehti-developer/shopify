@@ -1,0 +1,114 @@
+{{ 'newsletter-footer.css' | asset_url | stylesheet_tag }}
+
+<section style="background: {{ section.settings.color_scheme }};">
+  <div class="page-width newsletter-container__wrapper">
+    <div class="newsletter-section__text-wrapper">
+      <h2 class="newletter-section__title">{{ section.settings.newsletter_section_heading }}</h2>
+      <p>{{ section.settings.newsletter_section_desc }}</p>
+    </div>
+    <div>
+      {%- if section.settings.newsletter_heading != blank -%}
+        <h2 class="footer-block__heading inline-richtext">{{ section.settings.newsletter_heading }}</h2>
+      {%- endif -%}
+      {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        <div class="">
+          <div>
+            <input
+              id="NewsletterForm--{{ section.id }}"
+              type="email"
+              name="contact[email]"
+              class="field__input"
+              value="{{ form.email }}"
+              aria-required="true"
+              autocorrect="off"
+              autocapitalize="off"
+              autocomplete="email"
+              {% if form.errors %}
+                autofocus
+                aria-invalid="true"
+                aria-describedby="ContactFooter-error"
+              {% elsif form.posted_successfully? %}
+                aria-describedby="ContactFooter-success"
+              {% endif %}
+              placeholder="{{ 'newsletter.label' | t }}"
+              required
+            >
+            <label class="field__label" for="NewsletterForm--{{ section.id }}">
+              {{ 'newsletter.label' | t }}
+            </label>
+            <button
+              type="submit"
+              class="custom-primary__btn"
+              name="commit"
+              id="Subscribe"
+              aria-label="{{ 'newsletter.button_label' | t }}"
+            >
+              {{ section.settings.newsletter_button_label }}
+            </button>
+          </div>
+          {%- if form.errors -%}
+            <small class="newsletter-form__message form__message" id="ContactFooter-error">
+              {%- render 'icon-error' -%}
+              {{- form.errors.translated_fields.email | capitalize }}
+              {{ form.errors.messages.email -}}
+            </small>
+          {%- endif -%}
+        </div>
+        {%- if form.posted_successfully? -%}
+          <h3
+            class="newsletter-form__message newsletter-form__message--success form__message"
+            id="ContactFooter-success"
+            tabindex="-1"
+            autofocus
+          >
+            {% render 'icon-success' -%}
+            {{- 'newsletter.success' | t }}
+          </h3>
+        {%- endif -%}
+      {%- endform -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "FooterNewsletter",
+
+  "settings": [
+    {
+      "type": "color",
+      "id": "color_scheme",
+      "label": "Background Color",
+      "default": "#f1f1f1",
+      "info": "Choose a background color for the newsletter section"
+    },
+
+    {
+      "type": "inline_richtext",
+      "id": "newsletter_section_heading",
+      "default": "Subscribe to our emails",
+      "label": "Section Heading"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_section_desc",
+      "default": "Join our newsletter and gain privileged access to exclusive offers, sneak peeks, and 10% off your first order!",
+      "label": "Description"
+    },
+
+    {
+      "type": "text",
+      "id": "newsletter_button_label",
+      "default": "Subscribe to our emails",
+      "label": "Newsletter Button Label"
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "FooterNewsletter"
+    }
+  ]
+}
+{% endschema %}

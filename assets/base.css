@@ -283,8 +283,8 @@ html.no-js .no-js-hidden {
 
 @media screen and (min-width: 990px) {
   .header:not(.drawer-menu).page-width {
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
   }
 
   .page-width--narrow {
@@ -652,7 +652,7 @@ h6:empty {
   text-underline-offset: 0.3rem;
   color: rgb(var(--color-link));
   background-color: transparent;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-family: inherit;
 }
 
