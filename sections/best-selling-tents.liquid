@@ -1,0 +1,83 @@
+<!-- Include the CSS file -->
+<link rel="stylesheet" href="{{ 'home-updated.css' | asset_url }}" type="text/css">
+
+<section id="best-seller">
+  <div class="page-width">
+    <div class="best-seller__text">
+      <!-- Section Title -->
+      <h1>{{ section.settings.title }}</h1>
+      <p>{{ section.settings.subtitle }}</p>
+    </div>
+    <!-- Tent Cards -->
+    <div class="best-seller-wrap__tents">
+      {% for block in section.blocks %}
+        <a
+          href="{{  block.settings.link }}"
+          class="top-tents__box"
+          style="background-image: url({{ block.settings.image | img_url: 'master' }})"
+        >
+          <div class="tents-description__section">
+            <h1>{{ block.settings.heading }}</h1>
+            <p>{{ block.settings.description }}</p>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Best Selling Tents",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Best Selling Tents"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Section Subtitle",
+      "default": "No matter where you are, or who you're with, we've got a tent for you."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tent",
+      "name": "Best Selling Tents",
+      "settings": [
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Tent Image"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Tent Heading",
+          "default": "Tent Name"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Tent Description",
+          "default": "Tent description goes here."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Best Selling Tents",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,82 @@
+<!-- Include the CSS file -->
+<link rel="stylesheet" href="{{ 'home-updated.css' | asset_url }}" type="text/css">
+
+<section id="topbar-mobile__banner" class="hero-section__text">
+  <div class="page-width">
+    <span>
+      <img src="{{ section.settings['tagline-stars'] | img_url: 'master' }}" 
+           alt="Stars" 
+           class="img-fluid" 
+           width="76" height="12"> 
+      {{ section.settings['tagline-text'] }}
+    </span>
+  </div>
+</section>
+
+<section id="hero-section" 
+  style="background-image: url({{ section.settings['banner-image'] | img_url: 'master' }})">
+  <div class="page-width">
+    <div class="banner-text__wrap">
+      <div class="hero-section__text">
+        <span>
+          <img src="{{ section.settings['tagline-stars'] | img_url: 'master' }}" 
+               alt="Stars" 
+               class="img-fluid" 
+               width="76" height="12"> 
+          {{ section.settings['tagline-text'] }}
+        </span>
+        <h1>{{ section.settings['banner-heading'] }}</h1>
+      </div>
+      <div class="hero-btn__shop">
+        <a href="{{ routes.collections['beach-tents'] }}">Shop Beach Tents</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="banner-text__mobile">
+    <div class="page-width">
+        <h1>{{ section.settings['banner-heading'] }}</h1>
+        <div class="hero-btn__shop">
+            <a href="{{ routes.collections['beach-tents'] }}">Shop Beach Tents</a>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Banner Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "banner-image",
+      "label": "Banner Image"
+    },
+    {
+      "type": "text",
+      "id": "banner-heading",
+      "label": "Banner Heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "tagline-stars",
+      "label": "Stars"
+    },
+    {
+      "type": "text",
+      "id": "tagline-text",
+      "label": "Tagline"
+    },
+    {
+      "type": "url",
+      "id": "button-url-banner",
+      "label": "Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner Section"
+    }
+  ]
+}
+{% endschema %}

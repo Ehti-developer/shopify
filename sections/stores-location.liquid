@@ -1,0 +1,47 @@
+<!-- Include the CSS file -->
+<link rel="stylesheet" href="{{ 'home-updated.css' | asset_url }}" type="text/css">
+
+
+<section id="stores-location__wrap">
+    <div class="office-wrap__stores">
+        <div class="store-location__image">
+            <img src="{{section.settings.image | img_url: 'master'}}" alt="Store Image" class="img-fluid" width="" height="">
+        </div>
+        <div class="store-location__text">
+            <h1>
+                {{section.settings.heading}}
+            </h1>
+            <div class="find-store__btn">
+                <a href="{{section.settings.link}}">Find a store</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Stores Location",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Location Heading",
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Location",
+    }
+  ],
+  "presets": [
+    {
+      "name": "Stores Location",
+    }
+  ]
+}
+{% endschema %}

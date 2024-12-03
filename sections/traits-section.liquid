@@ -1,0 +1,24 @@
+<!-- Include the CSS file -->
+<link rel="stylesheet" href="{{ 'home-updated.css' | asset_url }}" type="text/css">
+
+<section id="traits-marquee-section">
+    <marquee class="slide-text__marquee">{{ section.settings.traits }} </marquee>
+</section>
+
+{% schema %}
+{
+  "name": "Traits Section",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "traits",
+      "label": "Traits"
+    },
+  ],
+  "presets": [
+    {
+      "name": "Traits Section"
+    }
+  ]
+}
+{% endschema %}
