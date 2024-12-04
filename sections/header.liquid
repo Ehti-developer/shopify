@@ -66,7 +66,7 @@
   }
 
   summary.list-menu__item {
-    padding-right: 2.7rem;
+    padding-right: 1.8rem;
   }
 
   .list-menu__item {
@@ -296,14 +296,16 @@
 
  
 <div class="header-additional__links">
+<div class="store-text__wrap">
 <a href="/pages/find-a-store" class="header__icon find-store" id="find_store_wrap">
   {% comment %} {%- liquid
       render 'icon-map'
   -%} {% endcomment %}
   <span class="">Find A Store</span>
 </a>
+</div>
 <div id="region_selector" class="dropdown">
-  <button class="web-icon header__icon"><img src="https://cdn.shopify.com/s/files/1/2403/5817/files/countries.svg?v=1732734450"> </button>
+  <button class="web-icon header__icon"> {% render 'icon-web' %} <span> {% render 'icon-chev' %} </span> </button>
   <div class="dropdown-content">
     <a href="#">USA/Rest of World</a>
     <a href="https://eu.neso.com">Europe</a>
@@ -337,9 +339,9 @@
       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
         {%- liquid
           if cart == empty
-            render 'icon-cart-empty'
+            render 'cart-icon'
           else
-            render 'icon-cart'
+            render 'cart-icon'
           endif
         -%}
         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>

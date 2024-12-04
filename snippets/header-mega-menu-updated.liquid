@@ -94,6 +94,12 @@
                                     {% endif %}
                                      <h2 class="inner-child__link"> {{ grandchildlink.title | escape }} </h2>
                                     </a>
+                                    <div class="child-menu-product___desc">
+                                      {% assign page_description = pages[page_handle].metafields.custom.mega_menu_page_description %}
+                                      {% if page_description %}
+                                        {{ page_description | strip_html | truncate: 80 }}
+                                      {% endif %}
+                                    </div>
                                   </li>
 
                               {%- endfor -%}
@@ -265,7 +271,7 @@
                                 aria-current="page"
                               {% endif %}
                             >
-                              <span>{{ childlink.title | escape }}</span>
+                             <h2 class="second-collection___title"> {{ childlink.title | escape }} </h2>
                             </a>
                           </div>
                           {% endif %}
@@ -308,7 +314,7 @@
                                           {% endif %}
                                         "
                                       >
-                                        <span>{{ grandchildlink.title | escape }}</span>
+                                        <h2>{{ grandchildlink.title | escape }}</h2>
                                       </a>
                                     </div>
                                   </li>
@@ -345,7 +351,7 @@
                                           </div>
                                         {% endif %}
                                       {% endif %}
-                                      <span>{{ grandchildlink.title | escape }}</span>
+                                      <h2 class="grand-child___title">{{ grandchildlink.title | escape }}</h2>
                                     </a>
                                     <div class="child-menu-product___desc">
                                       {% assign product_description = product.metafields.custom.mega_menu_description %}
