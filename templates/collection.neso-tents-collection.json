@@ -108,14 +108,24 @@
             "heading": "SIDELINES SERIES TENTS",
             "description": "Versatile sunshades for any setting, with multiple anchoring options—ideal for parks, fields, and beyond."
           }
+        },
+        "tent_4bAwMr": {
+          "type": "tent",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/neso-party-tent.png",
+            "heading": "neso party tents",
+            "description": "Spacious sunshade for large groups, with flexible anchoring for any terrain—perfect for beach days and outdoor gatherings."
+          }
         }
       },
       "block_order": [
-        "tent_xYwbqG"
+        "tent_xYwbqG",
+        "tent_4bAwMr"
       ],
       "settings": {
-        "title": "Best Selling Tents",
-        "subtitle": "No matter where you are, or who you're with, we've got a tent for you."
+        "title": "More Tents",
+        "subtitle": ""
       }
     }
   },
