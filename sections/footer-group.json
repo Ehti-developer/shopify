@@ -11,6 +11,15 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "footer_newsletter_8DF9Qw": {
+      "type": "footer-newsletter",
+      "settings": {
+        "color_scheme": "#99cfe2",
+        "newsletter_section_heading": "Subscribe to our emails",
+        "newsletter_section_desc": "Join our newsletter and gain privileged access to exclusive offers, sneak peeks, and 10% off your first order!",
+        "newsletter_button_label": "Subscribe to our emails"
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -61,6 +70,7 @@
     }
   },
   "order": [
+    "footer_newsletter_8DF9Qw",
     "footer"
   ]
 }

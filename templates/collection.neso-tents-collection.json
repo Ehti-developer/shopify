@@ -28,7 +28,7 @@
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": true,
-        "enable_quick_add": true,
+        "enable_quick_add": false,
         "enable_filtering": false,
         "filter_type": "horizontal",
         "enable_sorting": false,
@@ -97,6 +97,35 @@
         "padding_bottom": 36
       }
     },
+    "statisfied_customers_kdxqDD": {
+      "type": "statisfied-customers",
+      "settings": {
+        "title": "50,000+ Reviews from Satisfied Customers",
+        "rating_stars": "shopify://shop_images/satisfied.svg"
+      }
+    },
+    "17333349688d355799": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_featured_carousel_phpNa7": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1440
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_featured_carousel_phpNa7"
+      ],
+      "custom_css": [],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "compare_product_GRYz4D": {
+      "type": "compare-product",
+      "settings": {}
+    },
     "best_selling_tents_iNd96C": {
       "type": "best-selling-tents",
       "blocks": {
@@ -124,7 +153,7 @@
         "tent_rbDTqB"
       ],
       "settings": {
-        "title": "Best Selling Tents",
+        "title": "More Tents",
         "subtitle": ""
       }
     }
@@ -133,6 +162,9 @@
     "banner",
     "product-grid",
     "multicolumn_kVHmM9",
+    "statisfied_customers_kdxqDD",
+    "17333349688d355799",
+    "compare_product_GRYz4D",
     "best_selling_tents_iNd96C"
   ]
 }
