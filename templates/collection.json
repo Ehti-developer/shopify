@@ -1,1 +1,106 @@
-{"sections":{"banner":{"type":"main-collection-banner","custom_css":[],"settings":{"show_collection_description":true,"show_collection_image":false,"color_scheme":"background-2"}},"product-grid":{"type":"main-collection-product-grid","settings":{"products_per_page":20,"columns_desktop":4,"image_ratio":"square","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":true,"enable_quick_add":true,"enable_filtering":false,"filter_type":"horizontal","enable_sorting":false,"columns_mobile":"1","padding_top":36,"padding_bottom":36}},"multicolumn_kVHmM9":{"type":"multicolumn","blocks":{"column_nPM8MT":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/Neso-1-Collections-Web.jpg","title":"NESO 1","text":"<p>$104.99 USD<\/p><p>7 ft x 7 ft<\/p><p>Fits 2-4 people<\/p>","link_label":"SHOP NOW","link":"shopify:\/\/products\/neso-tent","image_link":"shopify:\/\/products\/neso-tent"}},"column_6XHzzq":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/Neso-Grande-Collections-Web2.jpg","title":"neso grande","text":"<p>$139.99<\/p><p>9 ft x 9 ft<\/p><p>Fits 3-6 people<\/p>","link_label":"SHOP NOW","link":"shopify:\/\/products\/neso-grande","image_link":"shopify:\/\/products\/neso-grande"}},"column_LWdn8m":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/Neso-Gigante-Collections-Web.jpg","title":"neso gigante","text":"<p>$169.99<\/p><p>11 ft x 11 ft<\/p><p>Fits 5+ people<\/p>","link_label":"SHOP NOW","link":"shopify:\/\/products\/the-neso-gigante","image_link":"shopify:\/\/products\/the-neso-gigante"}}},"block_order":["column_nPM8MT","column_6XHzzq","column_LWdn8m"],"disabled":true,"settings":{"title":"","heading_size":"h1","image_width":"full","image_ratio":"adapt","columns_desktop":3,"column_alignment":"left","background_style":"primary","button_label":"","button_link":"","color_scheme":"background-1","columns_mobile":"1","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}}},"order":["banner","product-grid","multicolumn_kVHmM9"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "custom_css": [],
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-2"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 20,
+        "columns_desktop": 3,
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "enable_filtering": false,
+        "filter_type": "horizontal",
+        "enable_sorting": false,
+        "columns_mobile": "1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_kVHmM9": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_nPM8MT": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Neso-1-Collections-Web.jpg",
+            "title": "NESO 1",
+            "text": "<p>$104.99 USD</p><p>7 ft x 7 ft</p><p>Fits 2-4 people</p>",
+            "link_label": "SHOP NOW",
+            "link": "shopify://products/neso-tent",
+            "image_link": "shopify://products/neso-tent"
+          }
+        },
+        "column_6XHzzq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Neso-Grande-Collections-Web2.jpg",
+            "title": "neso grande",
+            "text": "<p>$139.99</p><p>9 ft x 9 ft</p><p>Fits 3-6 people</p>",
+            "link_label": "SHOP NOW",
+            "link": "shopify://products/neso-grande",
+            "image_link": "shopify://products/neso-grande"
+          }
+        },
+        "column_LWdn8m": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Neso-Gigante-Collections-Web.jpg",
+            "title": "neso gigante",
+            "text": "<p>$169.99</p><p>11 ft x 11 ft</p><p>Fits 5+ people</p>",
+            "link_label": "SHOP NOW",
+            "link": "shopify://products/the-neso-gigante",
+            "image_link": "shopify://products/the-neso-gigante"
+          }
+        }
+      },
+      "block_order": [
+        "column_nPM8MT",
+        "column_6XHzzq",
+        "column_LWdn8m"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "multicolumn_kVHmM9"
+  ]
+}

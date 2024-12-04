@@ -616,6 +616,15 @@
         "heading": "<p>Find us in 1,000 Stores Globally</p>",
         "link": "shopify://pages/find-a-store"
       }
+    },
+    "footer_newsletter_bBGwPA": {
+      "type": "footer-newsletter",
+      "settings": {
+        "color_scheme": "#99cfe2",
+        "newsletter_section_heading": "Subscribe to our emails",
+        "newsletter_section_desc": "Join our newsletter and gain privileged access to exclusive offers, sneak peeks, and 10% off your first order!",
+        "newsletter_button_label": "Subscribe to our emails"
+      }
     }
   },
   "order": [
@@ -640,6 +649,7 @@
     "168253692104d38f3d",
     "statisfied_customers_m9rtKT",
     "1733154814d5b292d7",
-    "stores_location_BahFbr"
+    "stores_location_BahFbr",
+    "footer_newsletter_bBGwPA"
   ]
 }
