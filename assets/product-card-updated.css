@@ -12,7 +12,6 @@ ul.product-metafield__features {
     list-style: none;
     padding: 0; /* Optional: Removes extra space from default list styling */
     display: flex;
-    justify-content: space-between;
     gap: 12px;
   }
   
@@ -24,6 +23,11 @@ ul.product-metafield__features {
     align-items: center;
     gap: 5px;
     text-transform: uppercase;
+    
+    padding-right: 10px;
+  }
+  ul.product-metafield__features li:not(:last-child) {
+    border-right: 1px solid #EFEFEF;
   }
   .product-metafield__features {
     margin: 0px !important;
@@ -34,6 +38,7 @@ ul.product-metafield__features {
     max-height: 318px;
     height: 100%;
     object-fit: cover;
+    display: block;
   }
  .product-metafield___image {
     display: block !important;
