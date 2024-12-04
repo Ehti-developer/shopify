@@ -25,6 +25,7 @@
         },
         "announcement_qRnjgV": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "BLACK FRIDAY SALE 20% OFF | DISCOUNT AUTOMATICALLY APPLIES TO CART",
             "text_alignment": "center",
@@ -43,6 +44,7 @@
       "type": "header",
       "settings": {
         "logo_position": "middle-center",
+        "sale_label": "Limited Time!",
         "menu": "main-primary-menu",
         "menu_type_desktop": "mega",
         "sticky_header_type": "always",

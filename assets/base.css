@@ -283,8 +283,8 @@ html.no-js .no-js-hidden {
 
 @media screen and (min-width: 990px) {
   .header:not(.drawer-menu).page-width {
-    padding-left: 1.6rem;
-    padding-right: 1.6rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .page-width--narrow {
@@ -801,7 +801,7 @@ summary .icon-caret {
   position: absolute;
   height: 0.6rem;
   right: 1.5rem;
-  top: calc(50% - 0.2rem);
+  /* top: calc(50% - 0.2rem); */
 }
 
 summary::-webkit-details-marker {
@@ -2834,7 +2834,7 @@ details[open] > .header__menu-item .icon-caret {
 }
 
 .header__menu-item .icon-caret {
-  right: 0.8rem;
+  right: 0.2rem;
 }
 
 .header__submenu .icon-caret {
