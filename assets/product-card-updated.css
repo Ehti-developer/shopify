@@ -1,0 +1,101 @@
+.card-title____wrapper {
+    font-size: 2.4rem !important;
+    margin-bottom: 10px;
+}
+.caption-large {
+    font-size: 1.6rem !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px;
+}
+
+ul.product-metafield__features {
+    list-style: none;
+    padding: 0; /* Optional: Removes extra space from default list styling */
+    display: flex;
+    gap: 12px;
+  }
+  
+  ul.product-metafield__features li {
+    list-style: none; /* Ensures no markers are shown for individual items */
+    font-size: 14px !important;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-transform: uppercase;
+    
+    padding-right: 10px;
+  }
+  ul.product-metafield__features li:not(:last-child) {
+    border-right: 1px solid #EFEFEF;
+  }
+  .product-metafield__features {
+    margin: 0px !important;
+  }
+
+  .product-meta___image {
+    width: 100% !important;
+    max-height: 318px;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+ .product-metafield___image {
+    display: block !important;
+ } 
+  .card__content {
+    padding: 0;
+  } 
+
+  .card__information{
+    padding: 13px 0px;
+  } 
+
+  /* #product-grid {
+    gap: 15px;
+    flex-wrap: nowrap;
+  }
+
+  @media (max-width: 990px) {
+    #product-grid {
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+  } */
+
+
+  @media (max-width: 1260px) {
+    .product-metafield__features {
+        flex-wrap: wrap;
+    }
+  }
+
+
+  a.jdgm-carousel-item__product.jdgm--shop-review-has-image {
+    display: none;
+  }
+ 
+  .jdgm-carousel-item__review-rating,
+  .jdgm-carousel-item__review-content,
+  .jdgm-carousel-item__review-title,
+  .jdgm-carousel-item__reviewer-name  {
+    text-align: left;
+    margin-top: 15px;
+  }
+  .best-seller__text {
+    margin-bottom: 30px;
+  }
+
+  .color-swatches__product {
+    display: flex;
+    gap: 9px;
+    margin-top: 13px;
+  }
+
+  .variant-color__code {
+    display: block !important;
+    border-radius: 50%;
+  }
+  .grid__item:not(:last-child) {
+    padding-right: 14px !important;
+  }

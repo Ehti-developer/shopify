@@ -13,7 +13,7 @@
       "type": "main-collection-banner",
       "custom_css": [],
       "settings": {
-        "show_collection_description": true,
+        "show_collection_description": false,
         "show_collection_image": false,
         "color_scheme": "background-2"
       }
@@ -28,7 +28,7 @@
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": true,
-        "enable_quick_add": true,
+        "enable_quick_add": false,
         "enable_filtering": false,
         "filter_type": "horizontal",
         "enable_sorting": false,
@@ -97,10 +97,39 @@
         "padding_bottom": 36
       }
     },
-    "best_selling_tents_NwMyjm": {
+    "statisfied_customers_kdxqDD": {
+      "type": "statisfied-customers",
+      "settings": {
+        "title": "50,000+ Reviews from Satisfied Customers",
+        "rating_stars": "shopify://shop_images/satisfied.svg"
+      }
+    },
+    "17333349688d355799": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_featured_carousel_phpNa7": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1440
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_featured_carousel_phpNa7"
+      ],
+      "custom_css": [],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "compare_product_GRYz4D": {
+      "type": "compare-product",
+      "settings": {}
+    },
+    "best_selling_tents_iNd96C": {
       "type": "best-selling-tents",
       "blocks": {
-        "tent_xYwbqG": {
+        "tent_RbcyeK": {
           "type": "tent",
           "settings": {
             "link": "",
@@ -109,7 +138,7 @@
             "description": "Versatile sunshades for any setting, with multiple anchoring options—ideal for parks, fields, and beyond."
           }
         },
-        "tent_4bAwMr": {
+        "tent_rbDTqB": {
           "type": "tent",
           "settings": {
             "link": "",
@@ -120,8 +149,8 @@
         }
       },
       "block_order": [
-        "tent_xYwbqG",
-        "tent_4bAwMr"
+        "tent_RbcyeK",
+        "tent_rbDTqB"
       ],
       "settings": {
         "title": "More Tents",
@@ -133,6 +162,9 @@
     "banner",
     "product-grid",
     "multicolumn_kVHmM9",
-    "best_selling_tents_NwMyjm"
+    "statisfied_customers_kdxqDD",
+    "17333349688d355799",
+    "compare_product_GRYz4D",
+    "best_selling_tents_iNd96C"
   ]
 }

@@ -124,7 +124,8 @@
                                   </a>
                                 </li>
                               {%- endfor -%}
-                              <h2>Exclusive Links</h2>
+                              
+                              <h2 class="exclusive-title">Exclusive Links</h2>
                               {%- for grandchildlink in childlink.links limit: 2 offset: 6 -%}
 
                                 <li class="grandchild-menu-item-{{ product_slug }}-{% increment neso_increment %}">
