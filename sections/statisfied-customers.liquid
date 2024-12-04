@@ -1,0 +1,38 @@
+<!-- Include the CSS file -->
+<link rel="stylesheet" href="{{ 'home-updated.css' | asset_url }}" type="text/css">
+
+
+<section id="customers_reviews">
+    <div class="page-width">
+        <div class="customer_reviews__description">
+            <span class="user_ratings__stars"> <img src="{{ section.settings['rating_stars'] | img_url: 'master' }}" alt="Stars"
+                    class="img-fluid" width="" height=""></span>
+            <h1 class="border-highligted__count">
+                {{ section.settings['title'] }}
+            </h1>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Satisfied Customer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "rating_stars",
+      "label": "Stars"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Satisfied Customer"
+    }
+  ]
+}
+{% endschema %}

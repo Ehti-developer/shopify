@@ -585,6 +585,13 @@
         "include_margins": true
       }
     },
+    "statisfied_customers_m9rtKT": {
+      "type": "statisfied-customers",
+      "settings": {
+        "title": "50,000+ Reviews from Satisfied Customers",
+        "rating_stars": "shopify://shop_images/satisfied.svg"
+      }
+    },
     "1733154814d5b292d7": {
       "type": "apps",
       "blocks": {
@@ -640,6 +647,7 @@
     "09dc7a98-e9b9-4e0b-ab53-292c3db44adb",
     "0e9328ca-dd48-4ce3-bd96-180e0260858b",
     "168253692104d38f3d",
+    "statisfied_customers_m9rtKT",
     "1733154814d5b292d7",
     "stores_location_BahFbr",
     "footer_newsletter_bBGwPA"
