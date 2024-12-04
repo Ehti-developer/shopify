@@ -2253,15 +2253,13 @@ product-info .loading-overlay:not(.hidden) ~ *,
 }
 
 .announcement-bar__link {
-  display: block;
-  width: 100%;
-  padding: 1rem 0;
+
+  padding: 0;
   text-decoration: none;
 }
 
 .announcement-bar__link:hover {
   color: rgb(var(--color-foreground));
-  background-color: rgba(var(--color-card-hover), 0.06);
 }
 
 .announcement-bar__link .icon-arrow {

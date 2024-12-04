@@ -1,0 +1,62 @@
+.compare-product___grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0px 30px 30px 55px;
+}
+.comparison-product___table img {
+    width: 100%;
+}
+.compare-product___grid  .attribute {
+    text-align: center;
+    padding: 15px 20px;
+   
+}
+.comparison-section__title h2 {
+    font-size: 36px !important;
+    text-align: center;
+    margin: 0px;
+}
+.compare-product___grid  .attribute:not(:last-child) {
+    border-bottom: 1px solid #ECE2D7;
+}
+.compare-product___grid  .attribute  span  {
+    color: #A5774D;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.compare-product___grid  .attribute  div  {
+    color: #000;
+}
+.compare-product___grid .column:not(:last-child) {
+    border-right: 1px solid #ECE2D7;
+}
+.comparison-product___table {
+    max-width: 907px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    border-radius:17px;
+    overflow: hidden;
+    padding-top: 40px;
+}
+
+.comparison-product___table::before {
+    background: #BFDDFA;
+    content: '';
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    height:345px;
+    width: 100%;
+    z-index: -1;
+}
+.comparison-product___table::after {
+    background: #F5F1DE;
+    content: '';
+    position:absolute;
+    top: 345px;
+    left: 0px;
+    height:100%;
+    width: 100%;
+    z-index: -1;
+}

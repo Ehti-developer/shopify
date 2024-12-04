@@ -20,7 +20,6 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
-      "disabled": true,
       "settings": {
         "products_per_page": 20,
         "columns_desktop": 3,
@@ -80,6 +79,7 @@
         "column_6XHzzq",
         "column_LWdn8m"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -96,11 +96,43 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "best_selling_tents_iNd96C": {
+      "type": "best-selling-tents",
+      "blocks": {
+        "tent_RbcyeK": {
+          "type": "tent",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/image.png",
+            "heading": "SIDELINES SERIES TENTS",
+            "description": "Versatile sunshades for any setting, with multiple anchoring options—ideal for parks, fields, and beyond."
+          }
+        },
+        "tent_rbDTqB": {
+          "type": "tent",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/neso-party-tent.png",
+            "heading": "neso party tents",
+            "description": "Spacious sunshade for large groups, with flexible anchoring for any terrain—perfect for beach days and outdoor gatherings."
+          }
+        }
+      },
+      "block_order": [
+        "tent_RbcyeK",
+        "tent_rbDTqB"
+      ],
+      "settings": {
+        "title": "Best Selling Tents",
+        "subtitle": ""
+      }
     }
   },
   "order": [
     "banner",
     "product-grid",
-    "multicolumn_kVHmM9"
+    "multicolumn_kVHmM9",
+    "best_selling_tents_iNd96C"
   ]
 }

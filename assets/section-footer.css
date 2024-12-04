@@ -139,7 +139,7 @@
 @media screen and (min-width: 750px) {
   .footer-block--newsletter {
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: end;
   }
 }
 
@@ -201,7 +201,7 @@
   /* Follow on shop is the first button but it has siblings*/
   .footer__follow-on-shop:first-child:not(:last-child) {
     justify-content: flex-start;
-    margin-right: auto;
+
     text-align: left;
   }
 
