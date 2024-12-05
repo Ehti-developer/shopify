@@ -5,8 +5,12 @@
 <section id="customers_reviews">
     <div class="page-width">
         <div class="customer_reviews__description">
+          {% if section.settings['rating_stars'] != blank %}
+
             <span class="user_ratings__stars"> <img src="{{ section.settings['rating_stars'] | img_url: 'master' }}" alt="Stars"
                     class="img-fluid" width="" height=""></span>
+                  {% endif %}
+
             <h1 class="border-highligted__count">
                 {{ section.settings['title'] }}
             </h1>

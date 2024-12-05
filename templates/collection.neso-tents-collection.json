@@ -124,7 +124,53 @@
     },
     "compare_product_GRYz4D": {
       "type": "compare-product",
-      "settings": {}
+      "blocks": {
+        "product_bmqzmN": {
+          "type": "product",
+          "settings": {
+            "size": "7 x 7 ft.",
+            "fits_people": "2-4 People",
+            "weight": "4 lbs (134\" x 134\")",
+            "upf_rating": "UPF 50+",
+            "setup_time": "2 minutes",
+            "anchoring_system": "Sand/rock anchors",
+            "ideal_for": "Compact shade for individuals or couples"
+          }
+        },
+        "product_CMNPqY": {
+          "type": "product",
+          "settings": {
+            "size": "9 X 9 ft.",
+            "fits_people": "3-6 People",
+            "weight": "6.5 lbs (110” x 110”)",
+            "upf_rating": "UPF 50+",
+            "setup_time": "2 minutes",
+            "anchoring_system": "Sand/rock anchors",
+            "ideal_for": "Small group shade at the beach or park"
+          }
+        },
+        "product_qgzpJU": {
+          "type": "product",
+          "settings": {
+            "size": "11 X 11 ft.",
+            "fits_people": "5+ People",
+            "weight": "10 lbs (82” x 80”)",
+            "upf_rating": "UPF 50+",
+            "setup_time": "2 minutes",
+            "anchoring_system": "Sand/rock anchors",
+            "ideal_for": "Larger group shade for family or friends"
+          }
+        }
+      },
+      "block_order": [
+        "product_bmqzmN",
+        "product_CMNPqY",
+        "product_qgzpJU"
+      ],
+      "settings": {
+        "sec_title": "compare our tents",
+        "sec_image_x": "shopify://shop_images/Neso-Tent-Illustration-V5_1_a3e3769c-d2ac-456d-86e3-cb9437293bb5.png"
+      }
     },
     "best_selling_tents_iNd96C": {
       "type": "best-selling-tents",

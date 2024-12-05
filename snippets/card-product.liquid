@@ -14,6 +14,7 @@
   - section_id: {String} The ID of the section that contains this card.
   - horizontal_class: {Boolean} Add a card--horizontal class if set to true. Default: false (optional)
   - horizontal_quick_add: {Boolean} Changes the quick add button styles when set to true. Default: false (optional)
+  - enable_metafields: {Boolean} Show Product Metafields (Colors etc). Default: false (optional)
 
   Usage:
   {% render 'card-product', show_vendor: section.settings.show_vendor %}
@@ -250,6 +251,7 @@
               <p class="caption-large dark">{{ card_product.metafields.custom.mega_menu_description | escape }}</p>
             {%- endif -%}
           </div>
+          {%- if  enable_metafields -%}
           <div class="product-features___wrapper">
             {% if card_product.metafields.custom.features_product_details
               and card_product.metafields.custom.features_product_details.value.size > 0
@@ -272,6 +274,8 @@
               </ul>
             {% endif %}
           </div>
+      
+         
           <div class="color-swatches__product">
             {% assign shown_colors = 0 %}
             {% assign total_colors = card_product.variants.size %}
@@ -296,6 +300,7 @@
               <div class="more-text">+{{ remaining_count }} more</div>
             {% endif %}
           </div>
+        {%- endif -%}
         </div>
         {%- if show_quick_add -%}
           <div class="quick-add no-js-hidden">

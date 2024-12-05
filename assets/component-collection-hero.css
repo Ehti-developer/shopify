@@ -135,7 +135,7 @@ ul.collection-metafields__features li {
     gap: 15px !important;
   }
   ul.collection-metafields__features {
-    gap: 20px;
+    gap: 10px;
   }
   .collection-hero___wrapper h1 {
     margin-bottom: 0px !important;
@@ -149,4 +149,11 @@ ul.collection-metafields__features li {
   .collection-metafields__features {
     margin-top: 0px !important;
   }
+  .collection-hero___wrapper h1 {
+    font-size: 20px !important;
+  }
+}
+
+.collection-hero__description {
+  margin-bottom: 0px !important;
 }
