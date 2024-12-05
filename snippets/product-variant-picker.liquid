@@ -27,18 +27,18 @@
           {% render 'product-variant-options', product: product, option: option, block: block %}
       </fieldset>
        
-      <script>
+      {% comment %} <script>
          var allOptions = $(".option_wrapper");
          allOptions.sort(function (op1, op2) {
             var text1 = $(op1).data("option-style");
             var text2 = $(op2).data("option-style");  
             return (text1 < text2) ? -1 : 1; 
          });
-         allOptions.appendTo(".product-form__input");
-         $('span[data-option-style="color"]').first().prepend('<div class="form_label_detail">Solid Colors - {{ product.price_min | money }}</div>');
-         $('span[data-option-style="swatch"]').first().prepend('<div class="form_label_detail">Prints - {{ product.price_max | money }}</div>');
+        //  allOptions.appendTo(".product-form__input");
+        //  $('span[data-option-style="color"]').first().prepend('<div class="form_label_detail">Solid Colors - {{ product.price_min | money }}</div>');
+        //  $('span[data-option-style="swatch"]').first().prepend('<div class="form_label_detail">Prints - {{ product.price_max | money }}</div>');
 
-      </script>
+      </script> {% endcomment %}
 
       {%- endfor -%}
 

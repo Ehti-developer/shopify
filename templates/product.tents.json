@@ -69,8 +69,8 @@
             "block_heading": "Pairs well with:",
             "make_collapsible_row": false,
             "icon": "price_tag",
-            "product_list_limit": 4,
-            "products_per_page": 2,
+            "product_list_limit": 1,
+            "products_per_page": 1,
             "pagination_style": "counter",
             "image_ratio": "square",
             "enable_quick_add": true
