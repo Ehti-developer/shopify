@@ -43,3 +43,6 @@ button.custom-primary__btn {
     width: 100% !important;
     max-width: 100%;
 }
+.form-inner___section {
+    width: 100%;
+}

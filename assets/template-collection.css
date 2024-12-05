@@ -78,3 +78,6 @@
 .collection__view-all a:not(.link) {
   margin-top: 1rem;
 }
+.tents-description__section {
+  padding: clamp(16px, 2.6vw, 40px) !important;
+}

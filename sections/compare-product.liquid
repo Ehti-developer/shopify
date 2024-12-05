@@ -1,118 +1,122 @@
 {{ 'compare-product.css' | asset_url | stylesheet_tag }}
-
+<section class="compare-product__container">
 <div class="comparison-product___table">
-    <div class="comparison-section__title">
-    <h2>Compare Our Tents</h2>
-    </div>
-    <img src="https://cdn.shopify.com/s/files/1/2403/5817/files/Neso-Tent-Illustration-V5_1_a3e3769c-d2ac-456d-86e3-cb9437293bb5.png?v=1733344336">
-    <div class="compare-product___grid">
-        <div class="column">
-            <div class="attribute">
-              <span>Size:</span>
-              <div>7 x 7 ft.</div>
-            </div>
-            <div class="attribute">
-              <span>Fits People:</span>
-              <div>2-4 People</div>
-            </div>
-            <div class="attribute">
-              <span>Weight & Dimensions:</span>
-              <div>4 lbs (134" x 134")</div>
-            </div>
-            <div class="attribute">
-              <span>UPF Rating:</span>
-              <div>UPF 50+</div>
-            </div>
-            <div class="attribute">
-              <span>Setup Time:</span>
-              <div>2 minutes</div>
-            </div>
-            <div class="attribute">
-              <span>Anchoring System:</span>
-              <div>Sand/rock anchors</div>
-            </div>
-            <div class="attribute">
-              <span>Ideal For:</span>
-              <div>Compact shade for individuals or couples</div>
-            </div>
-          </div>
-          
-          <div class="column">
-            <div class="attribute">
-              <span>Size:</span>
-              <div>9 x 9 ft.</div>
-            </div>
-            <div class="attribute">
-              <span>Fits People:</span>
-              <div>3-6 People</div>
-            </div>
-            <div class="attribute">
-              <span>Weight & Dimensions:</span>
-              <div>6.5 lbs (110" x 110")</div>
-            </div>
-            <div class="attribute">
-              <span>UPF Rating:</span>
-              <div>UPF 50+</div>
-            </div>
-            <div class="attribute">
-              <span>Setup Time:</span>
-              <div>2 minutes</div>
-            </div>
-            <div class="attribute">
-              <span>Anchoring System:</span>
-              <div>Sand/rock anchors</div>
-            </div>
-            <div class="attribute">
-              <span>Ideal For:</span>
-              <div>Small group shade at the beach or park</div>
-            </div>
-          </div>
-          
-          <div class="column">
-            <div class="attribute">
-              <span>Size:</span>
-              <div>11 x 11 ft.</div>
-            </div>
-            <div class="attribute">
-              <span>Fits People:</span>
-              <div>5+ People</div>
-            </div>
-            <div class="attribute">
-              <span>Weight & Dimensions:</span>
-              <div>10 lbs (82" x 80")</div>
-            </div>
-            <div class="attribute">
-              <span>UPF Rating:</span>
-              <div>UPF 50+</div>
-            </div>
-            <div class="attribute">
-              <span>Setup Time:</span>
-              <div>2 minutes</div>
-            </div>
-            <div class="attribute">
-              <span>Anchoring System:</span>
-              <div>Sand/rock anchors</div>
-            </div>
-            <div class="attribute">
-              <span>Ideal For:</span>
-              <div>Larger group shade for family or friends</div>
-            </div>
-          </div>
-          
-    </div>
+  <div class="comparison-section__title">
+    <h2> {{ section.settings.sec_title   }}</h2>
   </div>
+<div class="compare-product__responsive ">
+<div class="scrollable-wrapper">
+  <img src="{{ section.settings.sec_image_x | img_url: 'master' }}" >
 
-
+  <div class="compare-product___grid">
+    {% for block in section.blocks %}
+      <div class="column">
+        <div class="attribute">
+          <p>Size:</p>
+          <div>{{ block.settings.size }}</div>
+        </div>
+        <div class="attribute">
+          <p>Fits People:</p>
+          <div>{{ block.settings.fits_people }}</div>
+        </div>
+        <div class="attribute">
+          <p>Weight & Dimensions:</p>
+          <div>{{ block.settings.weight }}</div>
+        </div>
+        <div class="attribute">
+          <p>UPF Rating:</p>
+          <div>{{ block.settings.upf_rating }}</div>
+        </div>
+        <div class="attribute">
+          <p>Setup Time:</p>
+          <div>{{ block.settings.setup_time }}</div>
+        </div>
+        <div class="attribute">
+          <p>Anchoring System:</p>
+          <div>{{ block.settings.anchoring_system }}</div>
+        </div>
+        <div class="attribute">
+          <p>Ideal For:</p>
+          <div>{{ block.settings.ideal_for }}</div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  </div>
+  </div>
+</div>
+</section>
 {% schema %}
 {
   "name": "Compare Product",
   "settings": [
-   
+    {
+      "type": "text",
+      "label": "Section Heading",
+      "id": "sec_title",
+     
+    },
+    {
+        "type": "image_picker",
+      "label": "Image",
+      "id": "sec_image_x",
+    }
+  
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Size",
+          "id": "size",
+          "default": "7 x 7 ft."
+        },
+        {
+          "type": "text",
+          "label": "Fits People",
+          "id": "fits_people",
+          "default": "2-4 People"
+        },
+        {
+          "type": "text",
+          "label": "Weight & Dimensions",
+          "id": "weight",
+          "default": "4 lbs (134\" x 134\")"
+        },
+        {
+          "type": "text",
+          "label": "UPF Rating",
+          "id": "upf_rating",
+          "default": "UPF 50+"
+        },
+        {
+          "type": "text",
+          "label": "Setup Time",
+          "id": "setup_time",
+          "default": "2 minutes"
+        },
+        {
+          "type": "text",
+          "label": "Anchoring System",
+          "id": "anchoring_system",
+          "default": "Sand/rock anchors"
+        },
+        {
+          "type": "text",
+          "label": "Ideal For",
+          "id": "ideal_for",
+          "default": "Compact shade for individuals or couples"
+        }
+      ]
+    },
+ 
   ],
   "presets": [
     {
-      "name": "Compare Product",
-
+      "name": "Compare Product"
     }
   ]
 }

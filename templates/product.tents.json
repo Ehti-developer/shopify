@@ -77,7 +77,7 @@
             "make_collapsible_row": false,
             "icon": "price_tag",
             "product_list_limit": 1,
-            "products_per_page": 2,
+            "products_per_page": 1,
             "pagination_style": "counter",
             "image_ratio": "square",
             "enable_quick_add": true
@@ -151,7 +151,6 @@
         "caption",
         "judge_me_reviews_preview_badge_NdzPUr",
         "price",
-        "text_kbVWCy",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
@@ -180,6 +179,79 @@
         "padding_bottom": 12
       }
     },
+    "statisfied_customers_8RwKpx": {
+      "type": "statisfied-customers",
+      "settings": {
+        "title": "See 15k+ Fans Enjoying Their Shade"
+      }
+    },
+    "17334333313dae8628": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_ugc_media_grid_EVkFLh": {
+          "type": "shopify://apps/judge-me-reviews/blocks/ugc_media_grid/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_ugc_media_grid_EVkFLh"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "how_it_works_C6ckyT": {
+      "type": "how-it-works",
+      "blocks": {
+        "setup_tDha8R": {
+          "type": "setup",
+          "settings": {
+            "image": "shopify://shop_images/lay.png",
+            "count": "1",
+            "heading": "lay",
+            "description": "Lay the tent flat."
+          }
+        },
+        "setup_UKffji": {
+          "type": "setup",
+          "settings": {
+            "image": "shopify://shop_images/fill.png",
+            "count": "2",
+            "heading": "Fill",
+            "description": "Fill bags with sand or rocks."
+          }
+        },
+        "setup_4D9RxP": {
+          "type": "setup",
+          "settings": {
+            "image": "shopify://shop_images/pull.png",
+            "count": "3",
+            "heading": "Pull",
+            "description": "Pull bags apart to make a large \"X\"."
+          }
+        },
+        "setup_jmAnVX": {
+          "type": "setup",
+          "settings": {
+            "image": "shopify://shop_images/prop.png",
+            "count": "4",
+            "heading": "PROP",
+            "description": "Prop the tent with poles 1-2 feet from corners."
+          }
+        }
+      },
+      "block_order": [
+        "setup_tDha8R",
+        "setup_UKffji",
+        "setup_4D9RxP",
+        "setup_jmAnVX"
+      ],
+      "settings": {
+        "title": "Easy setup in 2 minutes",
+        "subtitle": "HOW IT WORKS",
+        "link": ""
+      }
+    },
     "1683923822c8175181": {
       "type": "apps",
       "blocks": {
@@ -193,6 +265,37 @@
       ],
       "settings": {
         "include_margins": true
+      }
+    },
+    "best_selling_tents_QMT7YC": {
+      "type": "best-selling-tents",
+      "blocks": {
+        "tent_8jAiXE": {
+          "type": "tent",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/image.png",
+            "heading": "SIDELINES SERIES TENTS",
+            "description": "Versatile sunshades for any setting, with multiple anchoring options—ideal for parks, fields, and beyond."
+          }
+        },
+        "tent_BNGE9T": {
+          "type": "tent",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/neso-party-tent.png",
+            "heading": "neso party tents",
+            "description": "Spacious sunshade for large groups, with flexible anchoring for any terrain—perfect for beach days and outdoor gatherings."
+          }
+        }
+      },
+      "block_order": [
+        "tent_8jAiXE",
+        "tent_BNGE9T"
+      ],
+      "settings": {
+        "title": "More Tents",
+        "subtitle": ""
       }
     },
     "related-products": {
@@ -222,7 +325,11 @@
     "shogun-helper",
     "shogun-above",
     "main",
+    "statisfied_customers_8RwKpx",
+    "17334333313dae8628",
+    "how_it_works_C6ckyT",
     "1683923822c8175181",
+    "best_selling_tents_QMT7YC",
     "related-products",
     "shogun-below"
   ]
