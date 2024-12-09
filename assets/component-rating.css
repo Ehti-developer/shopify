@@ -65,3 +65,24 @@
   -webkit-text-fill-color: transparent;
   font-size: 18px;
 }
+
+
+
+.card__information .rating span.rating-star.color-icon-text {
+  --letter-spacing: 0.2 !important;
+}
+
+
+.card-information .price.price--no-compare {
+  color: #373737 !important;
+}
+
+.product-features___wrapper .product-metafield__features li {
+  font-size: 14px !important;
+  color: #000;
+  font-weight: 500;
+}
+
+.color-swatches__product .more-text {
+  color: #000;
+}

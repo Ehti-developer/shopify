@@ -15,9 +15,9 @@
       "type": "footer-newsletter",
       "settings": {
         "color_scheme": "#99cfe2",
-        "newsletter_section_heading": "Subscribe to our emails",
-        "newsletter_section_desc": "Join our newsletter and gain privileged access to exclusive offers, sneak peeks, and 10% off your first order!",
-        "newsletter_button_label": "Subscribe to our emails"
+        "newsletter_section_heading": "Want 10% off your first purchase?",
+        "newsletter_section_desc": "Join our newsletter and gain privileged access to exclusive offers, sneak peeks, and <strong>10% off your first order!</strong>",
+        "newsletter_button_label": "yes, please!"
       }
     },
     "footer": {

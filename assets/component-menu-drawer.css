@@ -235,6 +235,12 @@ details[open].menu-opening > .menu-drawer__submenu {
   margin-bottom: 0;
 }
 
+@media screen and (max-width: 989px) {
+  details[open] summary {
+    color: #121212 !important;
+  }
+}
+
 @media screen and (min-width: 750px) {
   .menu-drawer__utility-links:has(ul:nth-child(2):empty) {
     display: none;
@@ -317,4 +323,43 @@ justify-content: space-between;
   font-size: 14px !important;
   padding-left: 5px;
   font-weight: 400;
+}
+
+
+/* PDP Css */
+
+/* Accordians */
+
+.product__accordion .accordion__content {
+  padding: 0;
+}
+
+.summary__title {
+  text-align: center;
+}
+
+
+slideshow-component.slider-mobile-gutter {
+  border-radius: 8px;
+  background-color: #F5F5F5;
+}
+
+.card__information h3 a {
+  font-size: 14px;
+}
+
+.card.card--card.card--media.color-background-1.gradient.card--horizontal {
+  margin: 0;
+  background-color: transparent;
+}
+
+button#quick-add-template--23998066032949__main8356202217781-submit {
+  background-color: #000;
+  color: #fff;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.header__menu-item span {
+  color: #0F0F0F;
 }

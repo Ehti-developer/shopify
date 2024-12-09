@@ -46,3 +46,20 @@ button.custom-primary__btn {
 .form-inner___section {
     width: 100%;
 }
+
+
+@media (max-width: 475px) {
+    p.announcement-bar__message.center.h5 span {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .newsletter-container__wrapper  h2 {
+        font-size: 24px;
+    }
+
+    .newsletter-container__wrapper {
+        gap: 80px;
+        padding: 40px 16px;
+    }
+}

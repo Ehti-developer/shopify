@@ -572,6 +572,7 @@
             "title_color": "",
             "alignment": "center",
             "background_color": "",
+            "feed_id": "",
             "html_area": ""
           }
         }
@@ -619,6 +620,7 @@
     },
     "footer_newsletter_bBGwPA": {
       "type": "footer-newsletter",
+      "disabled": true,
       "settings": {
         "color_scheme": "#99cfe2",
         "newsletter_section_heading": "Subscribe to our emails",
