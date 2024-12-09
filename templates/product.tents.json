@@ -46,13 +46,6 @@
           "type": "price",
           "settings": {}
         },
-        "text_kbVWCy": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.metafields.custom.features_product_details | metafield_text }}",
-            "text_style": "body"
-          }
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -311,6 +304,7 @@
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
+        "enable_metafields": false,
         "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 28

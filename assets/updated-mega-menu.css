@@ -360,7 +360,13 @@ details[open] summary {
   }
 
   .annoucement-bar__wrapper a.announcement-bar__link {
-     color: #000 !important;
-     font-weight: 700 !important;
-     text-decoration: underline !important;
-  }
+    color: #000 !important;
+    font-weight: 700 !important;
+    text-decoration: underline !important;
+    text-transform: uppercase;
+}
+
+p.announcement-bar__message.center.h5 span {
+    font-size: 13px;
+    font-weight: 500;
+}

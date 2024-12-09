@@ -6,6 +6,16 @@
     display: none;
 }
 
+
+svg.icon.icon-caret {
+    filter: brightness(0);
+}
+
+.hero-btn__shop a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
 /* Updates */
 
 section#banner-text__mobile h1 {
@@ -33,6 +43,10 @@ section#banner-text__mobile h1 {
     max-width: 257px;
     text-align: center;
     font-weight: bold;
+    transition: all ease-in-out .3s;
+    -moz-transition: all ease-in-out .3s;
+    -webkit-transition: all ease-in-out .3s;
+    -o-transition: all ease-in-out .3s;
 }
 
 .hero-section__text h1 {
@@ -65,7 +79,7 @@ section#banner-text__mobile h1 {
     font-size: 24px;
     color: #000;
     margin: 0;
-    line-height: 1.4;
+    line-height: 1.2;
 }
 
 .reviews-section__text {
@@ -148,7 +162,17 @@ a.top-tents__box {
     color: #fff;
     position: relative;
     background-position: center;
+    transition: all ease-in-out .3s;
+    -moz-transition: all ease-in-out .3s;
+    -webkit-transition: all ease-in-out .3s;
+    -o-transition: all ease-in-out .3s;
 }
+
+a.top-tents__box:hover {
+    transform: translateY(-10px);
+}
+
+
 
 #beach-tents {
     background-image: url(../images/neso-beech-tents.png);
@@ -290,6 +314,18 @@ section#how-it-works-section {
     max-width: 380px;
     width: 100%;
     margin: 0 auto;
+    transition: all ease-in-out .3s;
+    -moz-transition: all ease-in-out .3s;
+    -webkit-transition: all ease-in-out .3s;
+    -o-transition: all ease-in-out .3s;
+    border: 1px solid #000;
+    font-weight: 800;
+}
+
+.shop-tents-btn__wrap a:hover{
+    border: 1px solid #000;
+    color: #000;
+    background-color: #fff;
 }
 
 .setup-guide-box__text h1 {
@@ -358,6 +394,26 @@ section#more-collections {
 
 .collections-box__wrap a {
     text-decoration: none;
+    transition: all ease-in-out .3s;
+    -moz-transition: all ease-in-out .3s;
+    -webkit-transition: all ease-in-out .3s;
+    -o-transition: all ease-in-out .3s;
+}
+
+button#Subscribe:hover {
+    background-color: #fff;
+    color: #000 !important;
+}
+
+.collections-box__wrap{
+    transition: all ease-in-out .3s;
+    -moz-transition: all ease-in-out .3s;
+    -webkit-transition: all ease-in-out .3s;
+    -o-transition: all ease-in-out .3s;
+}
+
+.collections-box__wrap:hover {
+    transform: translateY(-10px);
 }
 
 .collection-description__section {
@@ -610,6 +666,10 @@ a.product-page__btn:hover .review-arrow__left img {
     text-transform: uppercase;
     text-decoration: none;
     color: #000;
+    transition: all ease-in-out .3s;
+    -moz-transition: all ease-in-out .3s;
+    -webkit-transition: all ease-in-out .3s;
+    -o-transition: all ease-in-out .3s;
 }
 
 .find-store__btn a:hover {
@@ -635,6 +695,10 @@ section#newsletter__section {
 
 .newsletter-field__wrap .test {
     width: 540px;
+}
+
+.field__label, .customer .field label {
+    top: calc(1.7rem + var(--inputs-border-width)) !important;
 }
 
 
@@ -671,7 +735,7 @@ section#newsletter__section {
     /* Banner */
 
     #hero-section {
-        background-position: center;
+        background-position: left;
     }
 
     /* steps */
@@ -732,9 +796,10 @@ section#newsletter__section {
 }
 
 @media screen and (max-width:767px) {
-  .store-location__text {
-    padding: 64px 16px;
-  }
+    .store-location__text {
+        padding: 0 0 66px;
+    }
+
     /* Topbar */
     #topbar-mobile__banner {
         display: block;
@@ -926,7 +991,7 @@ section#newsletter__section {
     /* Best seller */
 
     .best-seller-wrap__tents {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
 
@@ -977,6 +1042,12 @@ section#newsletter__section {
         height: 300px;
     }
 
+    /* Best Tents */
+
+    .best-seller-wrap__tents {
+        grid-template-columns: 1fr;
+    }
+
 }
 
 @media screen and (max-width:475px) {
@@ -1012,6 +1083,11 @@ section#newsletter__section {
         grid-template-columns: 1fr !important;
       gap: 40px !important;  
     }
+
+    #hero-section {
+        background-position: center;
+    }
   }
+
 
 

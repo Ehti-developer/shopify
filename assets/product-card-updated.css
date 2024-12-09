@@ -103,6 +103,11 @@ a.jdgm-carousel-item__product.jdgm--shop-review-has-image {
   padding-right: 14px !important;
 }
 
+.card__content a {
+  font-size: 24px !important;
+  color: #0F0F0F;
+}
+
 @media (max-width: 991px) {
   .grid__item:not(:last-child) {
     padding-right: 0px !important;
