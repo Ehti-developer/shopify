@@ -95,6 +95,16 @@ details[open].menu-opening > .menu-drawer__submenu {
   align-content: space-between;
   overflow-y: auto;
   height: 100%;
+  background-color: #F9F9F9;
+}
+
+a.menu-drawer__account.link.focus-inset.h5.medium-hide.large-up-hide svg {
+  max-width: 20px;
+  width: 100%;
+}
+
+.menu-drawer__account {
+  gap: 3px;
 }
 
 .menu-drawer__navigation {
@@ -216,7 +226,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .menu-drawer__utility-links {
   padding: 2rem;
-  background-color: rgba(var(--color-foreground), 0.03);
+  /* background-color: rgba(var(--color-foreground), 0.03); */
   position: relative;
 }
 
@@ -238,6 +248,13 @@ details[open].menu-opening > .menu-drawer__submenu {
 @media screen and (max-width: 989px) {
   details[open] summary {
     color: #121212 !important;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  .menu-drawer {
+    width: 100%;
   }
 }
 
