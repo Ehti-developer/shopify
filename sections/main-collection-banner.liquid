@@ -24,17 +24,18 @@
       {%- endif -%}
       </div>
       {%- if section.settings.show_collection_features -%}
-     
-      <div>
         {% if collection.metafields.custom.collection_features_details and collection.metafields.custom.collection_features_details.value.size > 0 %}
+      <div>
+       
           <ul class="collection-metafields__features">
             {% for feature in collection.metafields.custom.collection_features_details.value %}
               <li>{% render 'icon-check' %} {{ feature }}</li>
             {% endfor %}
           </ul>
-        {% endif %}
+        
         
       </div>
+    {% endif %}
     {%- endif -%}
       </div>
 
