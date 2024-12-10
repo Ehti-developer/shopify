@@ -134,7 +134,7 @@
     "cart_type": "drawer",
     "show_vendor": false,
     "show_cart_note": false,
-    "cart_drawer_collection": "",
+    "cart_drawer_collection": "tents",
     "checkout_logo_image": "shopify://shop_images/neso-final.png",
     "checkout_logo_size": "large",
     "sections": {
