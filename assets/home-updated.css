@@ -697,9 +697,9 @@ section#newsletter__section {
     width: 540px;
 }
 
-.field__label, .customer .field label {
+/* .field__label, .customer .field label {
     top: calc(1.7rem + var(--inputs-border-width)) !important;
-}
+} */
 
 
 

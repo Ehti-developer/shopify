@@ -5,6 +5,9 @@
   {% render 'cart-drawer' %}
 {% endcomment %}
 
+
+
+
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 
 <style>
@@ -312,7 +315,8 @@
                                 class="button button--tertiary"
                                 aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}"
                               >
-                                {% render 'icon-remove' %}
+                                REMOVE
+                                {% comment %} {% render 'icon-remove' %} {% endcomment %}
                               </button>
                             </cart-remove-button>
                           </div>
@@ -350,6 +354,9 @@
           <div id="CartDrawer-CartErrors" role="alert"></div>
         </form>
       </cart-drawer-items>
+
+         {% render 'cart-recommendations' %}
+
       <div class="drawer__footer">
         {%- if settings.show_cart_note -%}
           <details id="Details-CartDrawer">
@@ -426,6 +433,7 @@
               disabled
             {% endif %}
           >
+             {% render 'lock-icon' %}
             {{ 'sections.cart.checkout' | t }}
           </button>
         </div>
@@ -452,5 +460,10 @@
     document.querySelector('#checkout').addEventListener('click', function (event) {
       document.querySelector('#cart').submit();
     });
+
+
+ 
   });
+
+
 </script>
