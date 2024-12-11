@@ -69,3 +69,34 @@
 input::-webkit-search-decoration {
   -webkit-appearance: none;
 }
+
+ul.product-metafield__features {
+  list-style: none;
+  padding: 0; /* Optional: Removes extra space from default list styling */
+  display: flex;
+  gap: 5px;
+}
+
+ul.product-metafield__features li {
+  list-style: none; /* Ensures no markers are shown for individual items */
+  font-size: 14px !important;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-transform: uppercase;
+
+  padding-right: 5px;
+}
+ul.product-metafield__features li:not(:last-child) {
+  border-right: 1px solid #efefef;
+}
+.product-metafield__features {
+  margin: 0px !important;
+}
+
+@media (max-width: 1260px) {
+  .product-metafield__features {
+    flex-wrap: wrap;
+  }
+}

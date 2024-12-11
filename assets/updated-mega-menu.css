@@ -35,9 +35,64 @@
 }
 .mega-menu__list-grid {
     display: grid !important;
-    grid-template-columns: 293px 1fr 274px !important;
+    grid-template-columns: 293px 1fr!important;
     gap: 15px !important;
 }
+.mega-menu__list-grid div.inner-mega-menu_____grid {
+    display: grid;
+    grid-template-columns: 1fr 274px;
+    gap: 30px;
+}
+
+
+.mega-menu__single-level  div.inner-mega-menu_____grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.mega-menu__single-level {
+    display: grid !important;
+    grid-template-columns: 293px 1fr !important;
+    gap: 15px !important;
+}
+.mega-menu__single-level  .inner-mega-menu_____grid a {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    padding: 0px;
+}
+.mega-menu__single-level .inner-mega-menu_____grid a:hover {
+  color: #fff !important;
+}
+.mega-menu__single-level  .inner-mega-menu_____grid .second-collection___title {
+    position: relative;
+    margin-bottom: 0px;
+    z-index: 2;
+    color: #fff;
+    padding: 11px;
+    display: block;
+}
+.mega-menu__single-level  .inner-mega-menu_____grid a::before {
+    content: '';
+
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    background: linear-gradient(180deg, #00000047 48%, #00000091 100%);
+  }
+  .mega-menu__single-level  .mega-menu__link {
+       background-repeat: no-repeat;
+       height: 108px;
+      background-size: cover;
+  }
+  .mega-menu__single-level  .inner-mega-menu_____grid a {
+    height: 108px;
+  }
 .mega-menu-more___links .grandchild-menu__grid a {
     padding: 0px !important;
 }
@@ -235,7 +290,7 @@ a.mega-menu-updated__link span {
 .header-additional__links {
     display: grid;
     grid-template-columns: 140px  1fr 1fr 1fr 1fr;
-    align-items: center;
+    place-items: center;
 }
 .header-additional__links  a.find-store {
     display: block !important;
@@ -244,7 +299,7 @@ a.mega-menu-updated__link span {
     font-weight: 700 !important;
     text-transform: uppercase;
     text-decoration: none;
-  
+    font-size: 14px;
 }
 .store-text__wrap {
     margin-right: 20px;
@@ -313,9 +368,19 @@ details[open] summary {
 .exclusive-title {
     margin-top: 36px !important;
 }
+.header-additional__links a.find-store {
+    height: auto;
+}
+.header-additional__links a.find-store:hover {
+    text-decoration: underline;
+}
 @media (max-width: 1260px) {
     .sale-label__wrapper {
         display: none;
+    }
+    .header-additional__links  a.find-store {
+        
+        font-size: 1.1rem;
     }
 .link,
 .customer a {
@@ -324,8 +389,17 @@ details[open] summary {
 .header__heading-logo {
     max-width: 120px !important;
 }
+/* .inner-mega-menu_____grid {
+    grid-template-columns: 1fr 200px !important;
+    gap: 15px;
+} */
 .mega-menu__list-grid {
-    grid-template-columns: 220px 1fr 200px !important;
+    grid-template-columns: 230px 1fr !important;
+    gap: 15px;
+}
+.mega-menu__list-grid div.inner-mega-menu_____grid {
+    grid-template-columns: 1fr 230px !important;
+    gap: 15px;
 }
 }
 @media (max-width: 991px) {
@@ -369,4 +443,32 @@ details[open] summary {
 p.announcement-bar__message.center.h5 span {
     font-size: 13px;
     font-weight: 500;
+    letter-spacing: 0;
+}
+
+
+.header__menu-item:hover svg path {
+    fill: #65A0B5 !important
+}
+.header__menu-item svg.icon.icon-caret.menu-chveron {
+    height: 16px !important;
+    filter: none;
+    right: 0px;
+}
+details[open] summary svg.icon.icon-caret.menu-chveron path {
+    fill: #65A0B5 !important;
+}
+
+.header-additional__links svg {
+    width: 28px !important;
+}
+
+.header__menu-item,
+.header__menu-item svg path {
+    color: #0F0F0F;
+}
+@media (max-width: 989px) {
+    .header__heading-link  {
+         margin-right: 30px;
+    }
 }

@@ -4,7 +4,8 @@
 <style>
   .recomended-products___container{
     padding-top: 20px;
-    padding-bottom: 51px;
+    padding-bottom: 20px;
+    border-top: 1px solid #DEDEDE !important;
   }
 
   .recommended-product {
@@ -14,7 +15,6 @@
     align-items: center;
     border: 1px solid #9E9E9E;
     padding: 13px 15px;
-    border-radius: 8px;
   }
 
   .product-image img {
@@ -33,14 +33,14 @@
        margin: 0px;
   }
   .recommended-product .product-title {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1.4rem;
     margin: 0px;
   }
 
   .recommended-product .product-price {
     color: #373737;
     font-size: 1.4rem;
+    line-height: 1;
   }
 
   .recommended-product .swatch-container {
@@ -77,6 +77,8 @@
     font-size: 16px;
     font-weight: 700;
     height: 42px;
+    max-width: 147px;
+    font-family: 'Roboto';
   }
 
   .product-info__box  .add-to-cart:hover {
@@ -86,7 +88,7 @@
     overflow: hidden;
   }
   .recomended-products__title {
-    font-size: 24px;
+    font-size: 14px;
     margin-top: 0px;
     margin-bottom: 15px;
   }
@@ -106,7 +108,42 @@
 
       <!-- Product Information -->
       <div class="product-info__box">
+        <div>
+        
+        {%- if  product.metafields.reviews.rating.value != blank -%}
+          {% liquid
+            assign rating_decimal = 0
+            assign decimal = product.metafields.reviews.rating.value.rating | modulo: 1
+            if decimal >= 0.3 and decimal <= 0.7
+              assign rating_decimal = 0.5
+            elsif decimal > 0.7
+              assign rating_decimal = 1
+            endif
+          %}
+          <div class="rating-container">
+          <div
+            class="rating"
+            role="img"
+            aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: product.metafields.reviews.rating.value.scale_max }}"
+          >
+            <span
+              aria-hidden="true"
+              class="rating-star-color color-icon-{{ settings.accent_icons }}"
+              style="--rating: {{ product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"
+            ></span>
+          </div>
+
+          <p class="rating-count caption">
+            <span aria-hidden="true">({{ product.metafields.reviews.rating_count }})</span>
+            <span class="visually-hidden">
+              {{- product.metafields.reviews.rating_count }}
+              {{ 'accessibility.total_reviews' | t -}}
+            </span>
+          </p>
+          </div>
+        {%- endif -%}
         <h2 class="product-title">{{ product.title }}</h2>
+        </div>
         <p class="product-price">{{ product.price | money }}</p>
 
         <!-- Color Swatches -->
@@ -125,7 +162,7 @@
 
         <!-- Add to Cart Button -->
         <button class="add-to-cart" data-product-id="{{ product.variants.first.id }}">
-          Add to Cart
+          Add
         </button>
       </div>
 
@@ -148,30 +185,23 @@ document.addEventListener('DOMContentLoaded', function () {
     responsive: {
       0: { items: 1 },
       600: { items: 1 },
-      1000: { items: 1 }
+      1000: { items: 1.1 }
     }
   });
 
-  // Handle swatch selection
   document.addEventListener('click', function (event) {
     if (event.target.matches('.swatch')) {
       const swatch = event.target;
       const container = swatch.closest('.swatch-container');
       const productId = container.dataset.productId;
 
-      // Remove selected class from all swatches in the group
       container.querySelectorAll('.swatch').forEach((s) => s.classList.remove('selected'));
-
-      // Add selected class to the clicked swatch
       swatch.classList.add('selected');
-
-      // Update the Add to Cart button with the selected variant ID
       const addToCartButton = container.closest('.recommended-product').querySelector('.add-to-cart');
       addToCartButton.dataset.productId = swatch.dataset.variantId;
     }
   });
 
-  // Handle Add to Cart functionality
   document.addEventListener('click', function (event) {
     if (event.target.matches('.add-to-cart')) {
       const button = event.target;

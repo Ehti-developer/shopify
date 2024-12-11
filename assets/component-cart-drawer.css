@@ -383,3 +383,23 @@ cart-drawer-items::-webkit-scrollbar-thumb {
 cart-drawer-items::-webkit-scrollbar-track-piece {
   margin-top: 31px;
 }
+
+
+.rating-star-color::before {
+  content: '★★★★★';
+   color: #FFC025 !important;
+  font-size: 16px;
+}
+.rating-container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.rating-container .rating {
+  line-height: 0;
+}
+.rating-container .rating-count {
+ color: #71717A;
+ font-size: 11px;
+}
