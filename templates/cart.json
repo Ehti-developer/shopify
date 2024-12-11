@@ -9,6 +9,37 @@
  */
 {
   "sections": {
+    "1733928323d899e4e0": {
+      "type": "apps",
+      "blocks": {
+        "x_away_from_free_shipping_app_block_MTwHzR": {
+          "type": "shopify://apps/x-away-from-free-shipping/blocks/app-block/15056e41-113c-4f6b-8df2-0a063df30cb7",
+          "settings": {
+            "display_style": "bar_text",
+            "min_purchase": 5,
+            "progress_style": "solid_color",
+            "progess_bar_icon": "no_icon",
+            "show_pb_qualifie": true,
+            "show_msg_icon_before_qualifies": false,
+            "bar_width": 70,
+            "display_before_amt_text": "<p>You're only</p>",
+            "display_after_amt_text": "<p>away from free shipping</p>",
+            "display_success_msg": "<p>You qualify for free shipping!</p>",
+            "display_amt_color": "#000000",
+            "box_background": "",
+            "icon_color": "#000000",
+            "complete_color": "#4394CB",
+            "incomplete_color": "#EBEBEB"
+          }
+        }
+      },
+      "block_order": [
+        "x_away_from_free_shipping_app_block_MTwHzR"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "cart-items": {
       "type": "main-cart-items",
       "settings": {
@@ -61,43 +92,12 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "1733928323d899e4e0": {
-      "type": "apps",
-      "blocks": {
-        "x_away_from_free_shipping_app_block_MTwHzR": {
-          "type": "shopify://apps/x-away-from-free-shipping/blocks/app-block/15056e41-113c-4f6b-8df2-0a063df30cb7",
-          "settings": {
-            "display_style": "bar_text",
-            "min_purchase": 5,
-            "progress_style": "solid_color",
-            "progess_bar_icon": "no_icon",
-            "show_pb_qualifie": false,
-            "show_msg_icon_before_qualifies": false,
-            "bar_width": 70,
-            "display_before_amt_text": "<p>You're only</p>",
-            "display_after_amt_text": "<p>away from free shipping</p>",
-            "display_success_msg": "<p>You qualify for free shipping!</p>",
-            "display_amt_color": "#000000",
-            "box_background": "",
-            "icon_color": "#000000",
-            "complete_color": "#4394CB",
-            "incomplete_color": "#EBEBEB"
-          }
-        }
-      },
-      "block_order": [
-        "x_away_from_free_shipping_app_block_MTwHzR"
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
+    "1733928323d899e4e0",
     "cart-items",
     "cart-footer",
-    "featured-collection",
-    "1733928323d899e4e0"
+    "featured-collection"
   ]
 }
