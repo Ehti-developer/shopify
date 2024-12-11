@@ -1,0 +1,196 @@
+<link rel="stylesheet" href="{{ 'owl.carousel.min.css' | asset_url }}" type="text/css">
+<link rel="stylesheet" href="{{ 'owl.theme.default.min.css' | asset_url }}" type="text/css">
+
+<style>
+  .recomended-products___container{
+    padding-top: 20px;
+    padding-bottom: 51px;
+  }
+
+  .recommended-product {
+    display: grid;
+    grid-template-columns: 128px 1fr;
+    gap: 10px;
+    align-items: center;
+    border: 1px solid #9E9E9E;
+    padding: 13px 15px;
+    border-radius: 8px;
+  }
+
+  .product-image img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  .product-info__box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .product-info__box  * {
+       padding: 0px;
+       margin: 0px;
+  }
+  .recommended-product .product-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0px;
+  }
+
+  .recommended-product .product-price {
+    color: #373737;
+    font-size: 1.4rem;
+  }
+
+  .recommended-product .swatch-container {
+    display: flex;
+    gap: 8px;
+  }
+
+  .recommended-product .swatch {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s;
+    display: block !important;
+  }
+
+  .recommended-product .swatch:hover {
+    transform: scale(1.1);
+    border-color: #000;
+  }
+
+  .recommended-product .swatch.selected {
+    border-color: #000;
+  }
+
+  .product-info__box  .add-to-cart {
+    padding: 10px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    height: 42px;
+  }
+
+  .product-info__box  .add-to-cart:hover {
+    background-color: #0056b3;
+  }
+  .recomended-products___container {
+    overflow: hidden;
+  }
+  .recomended-products__title {
+    font-size: 24px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+  }
+</style>
+
+{% assign collection = collections[settings.cart_drawer_reomendation_products] %}
+<div class="recomended-products___container">
+    <h2 class="recomended-products__title">you might also like</h2>
+<div class="owl-carousel recommended-products">
+  {% for product in collection.products %}
+    <div class="recommended-product">
+
+      <!-- Product Image -->
+      <div class="product-image">
+        <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+      </div>
+
+      <!-- Product Information -->
+      <div class="product-info__box">
+        <h2 class="product-title">{{ product.title }}</h2>
+        <p class="product-price">{{ product.price | money }}</p>
+
+        <!-- Color Swatches -->
+        {% if product.variants.size > 1 %}
+          <div class="swatch-container" data-product-id="{{ product.id }}">
+            {% for variant in product.variants limit: 5 %}
+              <div
+                class="swatch"
+                data-variant-id="{{ variant.id }}"
+                style="background: {{ variant.metafields.color.value }}"
+                title="{{ variant.title }}"
+              ></div>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        <!-- Add to Cart Button -->
+        <button class="add-to-cart" data-product-id="{{ product.variants.first.id }}">
+          Add to Cart
+        </button>
+      </div>
+
+    </div>
+  {% endfor %}
+</div>
+</div>
+<script src="{{'owl.carousel.min.js'|asset_url}}" defer="defer"></script> 
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Initialize Owl Carousel
+  $('.recommended-products').owlCarousel({
+    items: 1, // Number of items to display
+    loop: true,
+    margin: 10,
+    nav: false,
+    dots: false,
+    responsive: {
+      0: { items: 1 },
+      600: { items: 1 },
+      1000: { items: 1 }
+    }
+  });
+
+  // Handle swatch selection
+  document.addEventListener('click', function (event) {
+    if (event.target.matches('.swatch')) {
+      const swatch = event.target;
+      const container = swatch.closest('.swatch-container');
+      const productId = container.dataset.productId;
+
+      // Remove selected class from all swatches in the group
+      container.querySelectorAll('.swatch').forEach((s) => s.classList.remove('selected'));
+
+      // Add selected class to the clicked swatch
+      swatch.classList.add('selected');
+
+      // Update the Add to Cart button with the selected variant ID
+      const addToCartButton = container.closest('.recommended-product').querySelector('.add-to-cart');
+      addToCartButton.dataset.productId = swatch.dataset.variantId;
+    }
+  });
+
+  // Handle Add to Cart functionality
+  document.addEventListener('click', function (event) {
+    if (event.target.matches('.add-to-cart')) {
+      const button = event.target;
+      const variantId = button.dataset.productId;
+
+      fetch('/cart/add.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: variantId, quantity: 1 })
+      })
+        .then((response) => response.json())
+        .then(() => {
+          alert('Product added to cart!');
+        })
+        .catch((error) => {
+          console.error('Error adding to cart:', error);
+        });
+    }
+  });
+});
+
+</script>
