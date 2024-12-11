@@ -232,7 +232,7 @@
       },
       "title": "Search results",
       "search_for": "Search for “{{ terms }}”",
-      "suggestions": "Suggestions",
+      "suggestions": "Popular Searches",
       "pages": "Pages"
     },
     "cart": {

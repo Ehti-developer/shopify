@@ -51,17 +51,18 @@
                     spellcheck="false"
                   {%- endif -%}
                 >
-                <label class="field__label" for="{{ input_id }}">{{ 'general.search.search' | t }}</label>
+                {% if search.terms == '' or search.terms == nil %}
+                  <label class="field__label" for="{{ input_id }}">{{ 'general.search.search' | t }}</label>
+                {% endif %}
+                
                 <input type="hidden" name="options[prefix]" value="last">
                 <button type="reset" class="reset__button field__button{% if search.terms == blank %} hidden{% endif %}" aria-label="{{ 'general.search.reset' | t }}">
                   <svg class="icon icon-close" aria-hidden="true" focusable="false">
                     <use xlink:href="#icon-reset">
                   </svg>
                 </button>
-                <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
-                  <svg class="icon icon-search" aria-hidden="true" focusable="false">
-                    <use href="#icon-search">
-                  </svg>
+                <button class="search__button field__button search___icon" aria-label="{{ 'general.search.search' | t }}">
+                 {% render 'icon-search-bar' %}
                 </button>
               </div>
 

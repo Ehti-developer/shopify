@@ -2741,7 +2741,7 @@ details[open] > .header__submenu {
 @media screen and (min-width: 990px) {
   .header__inline-menu {
     display: block;
-    margin-left: 10px;
+
 }
 
   .header--top-center .header__inline-menu {
@@ -2768,7 +2768,7 @@ details[open] > .header__submenu {
 }
 
 .header__menu-item:hover {
-  color: rgb(var(--color-foreground));
+  color: #65A0B5 !important;
 }
 
 .header__menu-item span {
