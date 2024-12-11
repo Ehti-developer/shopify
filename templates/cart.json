@@ -20,7 +20,7 @@
             "progress_style": "solid_color",
             "progess_bar_icon": "no_icon",
             "show_pb_qualifie": true,
-            "show_msg_icon_before_qualifies": false,
+            "show_msg_icon_before_qualifies": true,
             "bar_width": 70,
             "display_before_amt_text": "<p>You're only</p>",
             "display_after_amt_text": "<p>away from free shipping</p>",
