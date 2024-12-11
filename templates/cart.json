@@ -1,1 +1,103 @@
-{"sections":{"cart-items":{"type":"main-cart-items","settings":{"padding_top":36,"padding_bottom":36}},"cart-footer":{"type":"main-cart-footer","blocks":{"subtotal":{"type":"subtotal","settings":{}},"buttons":{"type":"buttons","settings":{}}},"block_order":["subtotal","buttons"],"settings":{}},"featured-collection":{"type":"featured-collection","settings":{"title":"Featured collection","heading_size":"h2","collection":"all","products_to_show":4,"columns_desktop":4,"show_view_all":true,"color_scheme":"background-1","image_ratio":"square","show_secondary_image":false,"show_vendor":false,"show_rating":false,"columns_mobile":"2","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}}},"order":["cart-items","cart-footer","featured-collection"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "cart-items": {
+      "type": "main-cart-items",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "cart-footer": {
+      "type": "main-cart-footer",
+      "blocks": {
+        "subtotal": {
+          "type": "subtotal",
+          "settings": {}
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "subtotal",
+        "buttons"
+      ],
+      "settings": {}
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured collection",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1733928323d899e4e0": {
+      "type": "apps",
+      "blocks": {
+        "x_away_from_free_shipping_app_block_MTwHzR": {
+          "type": "shopify://apps/x-away-from-free-shipping/blocks/app-block/15056e41-113c-4f6b-8df2-0a063df30cb7",
+          "settings": {
+            "display_style": "bar_text",
+            "min_purchase": 5,
+            "progress_style": "solid_color",
+            "progess_bar_icon": "no_icon",
+            "show_pb_qualifie": false,
+            "show_msg_icon_before_qualifies": false,
+            "bar_width": 70,
+            "display_before_amt_text": "<p>You're only</p>",
+            "display_after_amt_text": "<p>away from free shipping</p>",
+            "display_success_msg": "<p>You qualify for free shipping!</p>",
+            "display_amt_color": "#000000",
+            "box_background": "",
+            "icon_color": "#000000",
+            "complete_color": "#4394CB",
+            "incomplete_color": "#EBEBEB"
+          }
+        }
+      },
+      "block_order": [
+        "x_away_from_free_shipping_app_block_MTwHzR"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "cart-items",
+    "cart-footer",
+    "featured-collection",
+    "1733928323d899e4e0"
+  ]
+}
