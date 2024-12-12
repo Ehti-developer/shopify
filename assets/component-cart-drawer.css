@@ -73,7 +73,7 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
 .drawer__header {
   position: relative;
   background-color: rgb(var(--color-background));
-  padding: 1.5rem 0;
+  padding: 1.5rem 0 0rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
