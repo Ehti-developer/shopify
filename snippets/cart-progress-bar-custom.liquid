@@ -1,3 +1,4 @@
+{% if cart != empty and localization.market.metafields.custom.cart_progress_threshold_number != nil and settings.enable_cart_progress_bar %}
 
     {% assign progress_threshold_cents = localization.market.metafields.custom.cart_progress_threshold_number | times: 100 %}
     {% assign pre_goal_message_template = settings.cart_pre_goal_message %}
@@ -47,6 +48,7 @@
         {% endif %}
       </div>
     </div>
+  {% endif %}
 
   
   <style>
