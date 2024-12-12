@@ -1,3 +1,7 @@
+.menu-drawer__menu-item {
+    font-size: 1.6rem;
+}
+
 .header__active-menu-item {
     color: #65A0B5 !important;
 }
