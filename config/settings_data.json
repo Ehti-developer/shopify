@@ -136,6 +136,7 @@
     "show_cart_note": false,
     "cart_drawer_collection": "",
     "cart_drawer_reomendation_products": "tents",
+    "enable_cart_progress_bar": true,
     "checkout_logo_image": "shopify://shop_images/neso-final.png",
     "checkout_logo_size": "large",
     "sections": {
@@ -178,14 +179,6 @@
         "type": "shopify://apps/bogos-io-free-gift/blocks/app-embed/0432bba6-720a-4e95-be5a-b868386f7aa6",
         "disabled": false,
         "settings": {}
-      },
-      "13227387756798638731": {
-        "type": "shopify://apps/boost-free-shipping-banner/blocks/app-embed/4fe6532c-4952-4f65-ab94-a8ebc8e08073",
-        "disabled": false,
-        "settings": {
-          "product": "",
-          "colour": "#ff0000"
-        }
       }
     }
   },
