@@ -2589,3 +2589,24 @@ cart-remove-button .button {
   border-radius: var(--inputs-radius);
   min-height: 30px;
 }
+
+.drawer__header {
+  justify-content: center;
+}
+
+.drawer__header .drawer__heading {
+  font-size: 18px;
+}
+.drawer__close svg {
+  width: 14px !important;
+  height: 14px !important;
+}
+
+.empty-cart____title {
+  text-align: center;
+  font-size: 20px;
+}
+.empty-cart__text {
+   font-size: 18px !important;
+   margin-bottom: 12px;
+}

@@ -409,3 +409,25 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
  color: #71717A;
  font-size: 11px;
 }
+.drawer__inner-empty {
+  padding: 0px;
+}
+.empty__cart-drawer {
+  display: flex !important;
+}
+
+.empty-cart__btn {
+  width: 100%;
+  padding: 15px 0px 31px 0px ;
+}
+.empty-cart__btn a {
+  background: #000;
+  display: inline-block;
+  width: 100%;
+
+  padding: 14px;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  text-decoration: none;
+}

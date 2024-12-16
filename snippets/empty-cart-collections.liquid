@@ -1,0 +1,43 @@
+
+<section  class="card-collections">
+    <!-- Tent Cards -->
+    <div class="wrap__tents-collection">
+        {% for collection in card_collection limit:8 %}
+            {% if collection.image %}
+        <a
+        href="{{ collection.url }}"
+        class="top-tents__box top-tents__box-cart"
+        style="background-image: url({{ collection.image | img_url: 'master' }})"
+        >
+          <div class="tents-description__section">
+            <h2>{{ collection.title }}</h2>
+          </div>
+        </a>
+    {% endif %}
+      {% endfor %}
+    </div>
+
+</section>
+
+<style>
+    .card-collections .top-tents__box-cart {
+        height: 210px;
+        border-radius: 5px !important;
+    }
+    .top-tents__box-cart .tents-description__section h2 {
+        font-size: 15px !important;
+        color: #fff;
+    }
+    .card-collections  a.top-tents__box:hover {
+        transform: translateY(0px) !important;
+    }
+    .wrap__tents-collection {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px !important
+    }
+    .card-collections a.top-tents__box::after,
+    .card-collections a.top-tents__box::before {
+        border-radius: 5px !important;
+    }
+</style>

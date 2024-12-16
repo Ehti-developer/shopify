@@ -476,4 +476,16 @@ details[open] summary svg.icon.icon-caret.menu-chveron path {
     .header__heading-link  {
          margin-right: 30px;
     }
+    .sale-mene__link span:first-child {
+        display: block;
+    }
+
+    .sale-label__wrapper {
+        display: block !important;
+        line-height: 1;
+    }
+    .sale-mene__link {
+        justify-content: flex-start !important;
+        
+    }
 }
