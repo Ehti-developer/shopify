@@ -343,6 +343,21 @@
     "shogun-below": {
       "type": "shogun-below",
       "settings": {}
+    },
+    "1734478369bca485b1": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_ugc_media_grid_9NRBRG": {
+          "type": "shopify://apps/judge-me-reviews/blocks/ugc_media_grid/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_ugc_media_grid_9NRBRG"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -355,6 +370,7 @@
     "1683923822c8175181",
     "best_selling_tents_QMT7YC",
     "related-products",
-    "shogun-below"
+    "shogun-below",
+    "1734478369bca485b1"
   ]
 }
