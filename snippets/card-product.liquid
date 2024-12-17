@@ -282,7 +282,9 @@
             {% assign limit = 6 %}
 
             {% for option in card_product.variants limit: limit %}
-              <div>
+              {% if option.metafields.color.value != blank %}
+              <div> 
+             
                 <div
                   class="variant-color__code"
                   style="
@@ -290,7 +292,9 @@
                     width: 32px;
                   "
                 ></div>
+
               </div>
+              {% endif %}
               {% assign shown_colors = shown_colors | plus: 1 %}
             {% endfor %}
 

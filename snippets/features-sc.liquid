@@ -13,11 +13,11 @@
     {% endif %}
     {% if feature.text %}
       <div class="characteristic-wrap__description">
-          <p>{{ feature.text }}</p>
+          <h3>{{ feature.text }}</h3>
       </div>
     {% endif %}
   </div>
-      {% endfor %}
+      {% endfor %}  
 </div>
 
 <style>
@@ -36,7 +36,7 @@
 .product-details__wrap img {
     box-shadow: none !important;
 }
-.characteristic-wrap__description p {
+.characteristic-wrap__description h3 {
     max-width: 129px;
     margin: 0 auto;
     text-transform: uppercase;

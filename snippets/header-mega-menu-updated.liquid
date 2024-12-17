@@ -269,9 +269,10 @@
                                         {% endif %}
                                         style="
                                           {% if grandchildlink.url contains '/products/' %}
-                                            {% assign mega_menu_image = product.metafields.custom.mega_menu_image %}
                                             {% assign product_handle = grandchildlink.url | split: '/products/' | last %}
                                             {% assign product = all_products[product_handle] %}
+                                            {% assign mega_menu_image = product.metafields.custom.mega_menu_image %}
+
                                             {% if mega_menu_image %}
                                               background-image: url('{{ mega_menu_image | img_url: 'medium' }}');
                                                {% else %}

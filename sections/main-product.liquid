@@ -356,6 +356,41 @@
                   </span>
                 </p>
               {%- endif -%}
+              {%- when 'brand_logo' -%}
+               {% if block.settings.enable_show_off_brand %}
+                <div class="custom-brand-logo___card">
+                        <h2>{{ block.settings.pro__title }}</h2>
+                        <p>{{ block.settings.pro__subtitle }}</p>
+                        <a href="{{ block.settings.pro__url }}">{{ block.settings.pro__button-label }}</a>
+                </div>
+                {% endif %}
+
+                  {% when 'meta_fields' %}
+                    {% if block.settings.enable_metafiled %}
+
+                <div class="product-features___wrapper">
+                  {% if card_product.metafields.custom.features_product_details
+                    and card_product.metafields.custom.features_product_details.value.size > 0
+                  %}
+                    <ul class="product-metafield__features">
+                      {% for feature in card_product.metafields.custom.features_product_details.value limit: 3 %}
+                        <li>
+                          {% if forloop.index == 1 %}
+                            {% render 'icon-redix-size' %}
+                          {% elsif forloop.index == 2 %}
+                            {% render 'icon-person-light' %}
+      
+                          {% else %}
+                            {% render 'icon-sun-light' %}
+                          {% endif %}
+      
+                          {{ feature }}
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+                </div>
+                {% endif %}
             {%- when 'complementary' -%}
               <product-recommendations class="complementary-products quick-add-hidden no-js-hidden{% if block.settings.make_collapsible_row %} is-accordion{% endif %}{% if block.settings.enable_quick_add %} complementary-products-contains-quick-add{% endif %}" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ block.settings.product_list_limit }}&intent=complementary">
                 {%- if recommendations.performed and recommendations.products_count > 0 -%}
@@ -398,6 +433,7 @@
                                       section_id: section.id,
                                       horizontal_class: true,
                                       horizontal_quick_add: true
+                                      show_rating: section.settings.show_rating,
                                     %}
                                   </li>
                                 {%- endfor -%}
@@ -441,6 +477,8 @@
                   <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
                 {%- endif -%}
               </product-recommendations>
+
+           
             {%- when 'icon-with-text' -%}
               {% render 'icon-with-text',
                 block: block
@@ -1031,6 +1069,61 @@
         }
       ]
     },
+    {
+      "type": "brand_logo",
+      "name": "Brand Logo",
+      "limit": 1,
+      "settings": [
+        {
+        "type": "text",
+      "id": "pro__title",
+    
+      "label": "Title"
+      },
+      {
+        "type": "inline_richtext",
+      "id": "pro__subtitle",
+    
+      "label": "Sub Title"
+      },
+      {
+        "type": "text",
+      "id": "pro__button-label",
+    
+      "label": "Button Label"
+      },
+      {
+        "type": "url",
+      "id": "pro__url",
+    
+      "label": "URL"
+      },
+      {
+      "type": "checkbox",
+      "id": "enable_show_off_brand",
+      "default": false,
+      "label": "Show of your brand"
+    },
+],
+    },
+
+        {
+      "type": "meta_fields",
+      "name": "Meta Fields",
+      "limit": 1,
+      "settings": [
+
+      {
+      "type": "checkbox",
+      "id": "enable_metafields",
+      "default": false,
+      "label": "Show Meta Fields"
+    },
+     
+      ]
+    },
+       
+
     {
       "type": "complementary",
       "name": "t:sections.main-product.blocks.complementary_products.name",
@@ -2056,6 +2149,8 @@
       "default": "hide",
       "label": "t:sections.main-product.settings.mobile_thumbnails.label"
     },
+
+   
     {
       "type": "checkbox",
       "id": "hide_variants",

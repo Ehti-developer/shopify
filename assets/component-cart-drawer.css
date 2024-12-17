@@ -443,6 +443,7 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 .side-cart___upper-wrapper .empty-cart__text {
   margin-top: 0px !important;
   text-align: center;
+  margin-bottom: 10px;
 }
 .drawer__inner-empty {
   padding: 20px 16px 15px 16px;
@@ -466,4 +467,29 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 
 .is-empty .drawer__inner {
   display: flex !important;
+}
+.empty-cart__subtext {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.drawer__header .drawer__heading {
+  margin-bottom: 0px;
+}
+/* .drawer.active .side-cart___upper-wrapper {
+  padding-bottom: 0px;
+} */
+
+.drawer__cart-items-wrapper thead {
+  display: none;
+}
+
+.drawer__close {
+  right: 0px !important;
+  top: 5px;
+}
+.drawer__header {
+  padding: 14px 16px;
+  border-bottom: 1px solid #DEDEDE;
 }

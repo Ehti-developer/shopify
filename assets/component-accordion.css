@@ -56,3 +56,22 @@
 .accordion__content img {
   max-width: 100%;
 }
+.product__accordion .accordion__content {
+  padding: 0px;
+}
+.product__accordion .accordion__content p {
+  color: #000;
+  font-size: 16px;
+}
+.complementary-products__container .card-title____wrapper a {
+  font-size: 14px !important;
+  margin-bottom: 14px;
+}
+.complementary-products__container  .card-information .price__container {
+  margin-bottom: 14px;
+
+}
+.complementary-products__container  .card-information .price__container p {
+  font-size: 14px !important;
+  color: #000 !important;
+}
