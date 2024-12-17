@@ -796,6 +796,21 @@ section#newsletter__section {
 }
 
 @media screen and (max-width:767px) {
+    .newsletter-container__wrapper h2,
+    .newsletter-container__wrapper p  {
+        text-align: center;
+
+    }
+    .newsletter-container__wrapper h2 {
+        font-size: 27px !important;
+        margin-top: 0px !important;
+    }
+    .newsletter-container__wrapper {
+        padding: 20px 16px !important;
+    }
+    .newsletter-container__wrapper p  { 
+        margin-bottom: 0px;
+    }
     .store-location__text {
         padding: 0 0 66px;
     }
@@ -1081,7 +1096,10 @@ section#newsletter__section {
   @media (max-width: 767px) {
     .newsletter-container__wrapper {
         grid-template-columns: 1fr !important;
-      gap: 40px !important;  
+      gap: 18px !important;  
+    }
+    .newsletter-container__wrapper p {
+        margin-bottom: 0px !important;
     }
 
     #hero-section {

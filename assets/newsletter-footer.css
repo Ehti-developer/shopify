@@ -7,13 +7,20 @@
 }
 .newsletter-container__wrapper  h2 {
     font-size: 40px;
+    margin-top: 0px;
     margin-bottom: 15px;
+    max-width: 524px;
 }
 .newsletter-container__wrapper  p {
     font-size: 16px;
     color: #000;
+    margin-bottom: 0px;
 }
-
+.unsubscribe-text {
+    font-size: 14px;
+    color: #646464 !important;
+    text-align: center;
+}
 button.custom-primary__btn {
     background: #000;
     padding: 14px 28px;
@@ -60,6 +67,6 @@ button.custom-primary__btn {
 
     .newsletter-container__wrapper {
         gap: 80px;
-        padding: 40px 16px;
+       
     }
 }

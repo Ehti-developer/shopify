@@ -40,12 +40,21 @@
           {% render 'icon-close' %}
         </button>
       </div>
+      <div class="side-cart___upper-wrapper">
       {%- if cart == empty -%}
-
+        <button
+          class="drawer__close"
+          type="button"
+          onclick="this.closest('cart-drawer').close()"
+          aria-label="{{ 'accessibility.close' | t }}"
+        >
+          {% render 'icon-close' %}
+        </button>
    
           <h2 class="empty-cart__text">Your Cart (0)</h2>
       {% endif %}
       {% render 'cart-progress-bar-custom' %}
+      </div>
       {%- if cart == empty -%}
         <div class="drawer__inner-empty">
           {% comment %} <div class="cart-drawer__warnings center{% if settings.cart_drawer_collection != blank %} cart-drawer__warnings--has-collection{% endif %}">
@@ -84,7 +93,7 @@
         <a href="/collections/neso-beach-tents">Shop Beach Tents</a>
       </div>
       {%- endif -%}
-
+    
       <cart-drawer-items
         {% if cart == empty %}
           class=" is-empty"

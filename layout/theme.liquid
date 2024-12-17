@@ -51,6 +51,10 @@
         <!-- Include the CSS file only on the homepage -->
         <link rel="stylesheet" href="{{ 'home-reviews.css' | asset_url }}" type="text/css">
         {% endif %}
+        {% if template == 'index' or template == 'product' %}
+          <!-- Include the CSS file only on the homepage -->
+          <link rel="stylesheet" href="{{ 'home-updated.css' | asset_url }}" type="text/css">
+          {% endif %}
       
     <!-- FontAwesome -->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -315,6 +319,12 @@
   {% render 'shogun-head' %}
 {% include 'pagefly-app-header' %}</head>
 
+
+<link rel="stylesheet" href="{{ 'owl.carousel.min.css' | asset_url }}" type="text/css">
+<link rel="stylesheet" href="{{ 'owl.theme.default.min.css' | asset_url }}" type="text/css">
+
+
+
   <body class="gradient {% if collection %} has-collection{% endif %}">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCWSR5S9"
@@ -441,6 +451,7 @@ for (var i = 0; i < atcButtons.length; i++) {
 </script>
     {%  endif %}
   
-  
+    <script src="{{'owl.carousel.min.js'|asset_url}}" defer="defer"></script> 
+
   </body>
 </html>
