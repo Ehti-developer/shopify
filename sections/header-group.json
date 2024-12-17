@@ -46,7 +46,7 @@
       "type": "header",
       "settings": {
         "logo_position": "middle-center",
-        "sale_label": "Up to -25%",
+        "sale_label": "Up to 25%",
         "menu": "main-primary-menu",
         "menu_type_desktop": "mega",
         "sticky_header_type": "always",

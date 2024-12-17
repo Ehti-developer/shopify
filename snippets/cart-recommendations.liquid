@@ -89,6 +89,9 @@
     height: 42px;
     max-width: 147px;
     font-family: 'Roboto';
+    text-decoration: none;
+    text-align: center;
+    line-height: 24px;
   }
 
   .product-info__box  .add-to-cart:hover {
@@ -173,9 +176,9 @@
         {% endif %}
 
         <!-- Add to Cart Button -->
-        <button class="add-to-cart" data-product-id="{{ product.variants.first.id }}">
-          Add
-        </button>
+        <a class="add-to-cart" href="{{ product.url }}">
+          View
+        </a>
       </div>
 
     </div>
@@ -186,19 +189,30 @@
 <script>
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Initialize Owl Carousel
-  $('.recommended-products').owlCarousel({
-    items: 1, // Number of items to display
-    loop: true,
-    margin: 10,
-    nav: false,
-    dots: false,
-    responsive: {
-      0: { items: 1 },
-      600: { items: 1 },
-      1000: { items: 1.1 }
+  function initOwlCarousel() {
+    $('.recommended-products').owlCarousel({
+      items: 1, // Number of items to display
+      loop: true,
+      margin: 10,
+      nav: false,
+      dots: false,
+      responsive: {
+        0: { items: 1 },
+        600: { items: 1 },
+        1000: { items: 1.1 }
+      }
+    });
+  }
+  const cartDrawer = document.querySelector('cart-drawer');
+  const observer = new MutationObserver(() => {
+    if (cartDrawer.classList.contains('active')) {
+      initOwlCarousel();
     }
   });
+
+  // Start observing for class changes
+  observer.observe(cartDrawer, { attributes: true, attributeFilter: ['class'] });
+ 
 
   document.addEventListener('click', function (event) {
     if (event.target.matches('.swatch')) {

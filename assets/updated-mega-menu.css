@@ -463,10 +463,10 @@ p.announcement-bar__message.center.h5 span {
 details[open] summary svg.icon.icon-caret.menu-chveron path {
     fill: #65A0B5 !important;
 }
-
+/* 
 .header-additional__links svg {
     width: 28px !important;
-}
+} */
 
 .header__menu-item,
 .header__menu-item svg path {

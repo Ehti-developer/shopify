@@ -40,8 +40,9 @@
           {% render 'icon-close' %}
         </button>
       </div>
-      <div class="side-cart___upper-wrapper">
       {%- if cart == empty -%}
+      <div class="side-cart___upper-wrapper">
+     
         <button
           class="drawer__close"
           type="button"
@@ -52,9 +53,14 @@
         </button>
    
           <h2 class="empty-cart__text">Your Cart (0)</h2>
+          <p class="empty-cart__subtext">Your cart is empty.</p>
+          </div>
       {% endif %}
+      
+      {%- if cart != empty -%}
       {% render 'cart-progress-bar-custom' %}
-      </div>
+      {% endif %}
+
       {%- if cart == empty -%}
         <div class="drawer__inner-empty">
           {% comment %} <div class="cart-drawer__warnings center{% if settings.cart_drawer_collection != blank %} cart-drawer__warnings--has-collection{% endif %}">
