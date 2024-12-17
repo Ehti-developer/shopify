@@ -1,5 +1,4 @@
-<link rel="stylesheet" href="{{ 'owl.carousel.min.css' | asset_url }}" type="text/css">
-<link rel="stylesheet" href="{{ 'owl.theme.default.min.css' | asset_url }}" type="text/css">
+
 
 <style>
   .recomended-products___container{
@@ -35,6 +34,17 @@
   .recommended-product .product-title {
     font-size: 1.4rem;
     margin: 0px;
+    color: #313131 !important;
+  }
+  .recommended-product .product-title a {
+    text-decoration: none;
+
+    color: #313131
+  }
+  .recommended-product .product-title a:hover {
+    text-decoration: underline !important;
+
+    color: #313131
   }
 
   .recommended-product .product-price {
@@ -103,7 +113,9 @@
 
       <!-- Product Image -->
       <div class="product-image">
+        <a href="{{ product.url }}">
         <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+        </a>
       </div>
 
       <!-- Product Information -->
@@ -142,7 +154,7 @@
           </p>
           </div>
         {%- endif -%}
-        <h2 class="product-title">{{ product.title }}</h2>
+      <h2 class="product-title">  <a href="{{ product.url }}">{{ product.title }}</a></h2> 
         </div>
         <p class="product-price">{{ product.price | money }}</p>
 
@@ -170,7 +182,6 @@
   {% endfor %}
 </div>
 </div>
-<script src="{{'owl.carousel.min.js'|asset_url}}" defer="defer"></script> 
 
 <script>
 
@@ -214,7 +225,7 @@ document.addEventListener('DOMContentLoaded', function () {
       })
         .then((response) => response.json())
         .then(() => {
-          alert('Product added to cart!');
+          console.error('Product Added to cart');
         })
         .catch((error) => {
           console.error('Error adding to cart:', error);

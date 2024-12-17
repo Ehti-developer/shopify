@@ -1,0 +1,47 @@
+
+<div class="product-details__wrap">
+
+{% for feature in shop.metaobjects.features.values %}
+  <div class="product-characteristic__wrap">
+    {% if feature.icon %}
+      <div class="image-wrap">
+      
+      <img src="{{ feature.icon | img_url: '200x200' }}" srcset="{{ feature.icon | img_url: '400x400' }} 2x">
+
+     
+      </div>
+    {% endif %}
+    {% if feature.text %}
+      <div class="characteristic-wrap__description">
+          <p>{{ feature.text }}</p>
+      </div>
+    {% endif %}
+  </div>
+      {% endfor %}
+</div>
+
+<style>
+
+
+.product-characteristic__wrap {
+    text-align: center;
+}
+
+.product-details__wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+   
+    gap: 38px;
+}
+.product-details__wrap img {
+    box-shadow: none !important;
+}
+.characteristic-wrap__description p {
+    max-width: 129px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #000;
+}
+
+</style>

@@ -102,17 +102,18 @@
                   {%- else -%}
                     <a
                       href="{{ link.url }}"
-                      class="menu-drawer__menu-item list-menu__item  {% if link.title == 'SALE' %} sale-mene__link {% endif %} link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"
+                      class="menu-drawer__menu-item list-menu__item  {% if link.title == 'SAMPLE SALE' %} sale-mene__link {% endif %} link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"
                       {% if link.current %}
                         aria-current="page"
                       {% endif %}
                     >
                       <span>
                       {{ link.title | escape }}
-                      {% if link.title == 'SALE' %}
+                      
+                      </span>
+                      {% if link.title == 'SAMPLE SALE' %}
                         <span class="sale-label__wrapper">{{ sale_label }}</span>
                       {% endif %}
-                      </span>
                     </a>
                   {%- endif -%}
                 </li>

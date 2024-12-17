@@ -90,45 +90,60 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Sizes and Specs",
-            "icon": "ruler",
+            "icon": "none",
             "content": "<p>{{ product.metafields.custom.sizes_and_specs | metafield_tag }}</p>",
-            "page": ""
+            "page": "",
+            "show_metaobject": false
           }
         },
         "collapsible-row-0": {
           "type": "collapsible_tab",
           "settings": {
             "heading": "Materials",
-            "icon": "leather",
+            "icon": "none",
             "content": "<p>{{ product.metafields.custom.materials | metafield_tag }}</p>",
-            "page": ""
+            "page": "",
+            "show_metaobject": false
           }
         },
         "collapsible-row-1": {
           "type": "collapsible_tab",
           "settings": {
             "heading": "Shipping & Returns",
-            "icon": "truck",
+            "icon": "none",
             "content": "<p>{{ product.metafields.custom.shipping_and_returns | metafield_tag }}</p>",
-            "page": ""
+            "page": "",
+            "show_metaobject": false
           }
         },
         "4d9bfb7f-7a91-4d97-abcb-90a925b41607": {
           "type": "collapsible_tab",
           "settings": {
             "heading": "What's Included",
-            "icon": "check_mark",
+            "icon": "none",
             "content": "<p>{{ product.metafields.custom.what_s_included | metafield_tag }}</p>",
-            "page": ""
+            "page": "",
+            "show_metaobject": false
           }
         },
         "collapsible-row-3": {
           "type": "collapsible_tab",
           "settings": {
             "heading": "Care Instructions",
-            "icon": "heart",
+            "icon": "none",
             "content": "<p>{{ product.metafields.descriptors.care_guide | metafield_tag }}</p>",
-            "page": ""
+            "page": "",
+            "show_metaobject": false
+          }
+        },
+        "collapsible_tab_rNXU7Y": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "none",
+            "content": "",
+            "page": "",
+            "show_metaobject": true
           }
         },
         "share": {
@@ -155,6 +170,7 @@
         "collapsible-row-1",
         "4d9bfb7f-7a91-4d97-abcb-90a925b41607",
         "collapsible-row-3",
+        "collapsible_tab_rNXU7Y",
         "share"
       ],
       "settings": {
