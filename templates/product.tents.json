@@ -164,6 +164,10 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "selleasy_lb_upsell_fbt_block_jU83wr": {
+          "type": "shopify://apps/selleasy/blocks/lb-upsell-fbt-block/790c1a03-a71f-4bc1-9869-00dad526d3c2",
+          "settings": {}
         }
       },
       "block_order": [
@@ -185,7 +189,8 @@
         "collapsible-row-1",
         "4d9bfb7f-7a91-4d97-abcb-90a925b41607",
         "collapsible-row-3",
-        "share"
+        "share",
+        "selleasy_lb_upsell_fbt_block_jU83wr"
       ],
       "settings": {
         "enable_sticky_info": true,
