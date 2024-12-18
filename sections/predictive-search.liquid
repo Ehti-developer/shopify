@@ -201,7 +201,7 @@
                       {% if product.metafields.custom.features_product_details
                         and product.metafields.custom.features_product_details.value.size > 0
                       %}
-                      <div class="product-features___wrapper">
+                      {% comment %} <div class="product-features___wrapper">
                       
                           <ul class="product-metafield__features">
                             {% for feature in product.metafields.custom.features_product_details.value limit: 3 %}
@@ -220,7 +220,7 @@
                             {% endfor %}
                           </ul>
                        
-                      </div>
+                      </div> {% endcomment %}
                     {% endif %}
                     </div>
                   </a>

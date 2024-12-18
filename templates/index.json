@@ -25,21 +25,37 @@
         "slide_PNjyB9": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/company-logo.svg",
-            "description": "\"A durable, four-cornered tent that handles that inevitable wind and provides ample shade coverage with minimal set-up\""
+            "image": "shopify://shop_images/Frame_1000006638.png",
+            "description": "“This lightweight portable beach tent is a no-brainer choice over standard sun umbrellas”"
           }
         },
         "slide_z9za3j": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/company-logo.svg",
-            "description": "\"A durable, four-cornered tent that handles that inevitable wind and provides ample shade coverage with minimal set-up\""
+            "image": "shopify://shop_images/Frame_1000006640.png",
+            "description": "“This lightweight beach tent is ridiculously easy to set up”"
+          }
+        },
+        "slide_rc4KrT": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Frame_1000006637.png",
+            "description": "“small enough to fit in your carry-on suitcase.”"
+          }
+        },
+        "slide_qP8W8W": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Frame_1000006639.png",
+            "description": "“This lightweight canopy weighs just 4 pounds and folds up small enough to fit in a beach bag.”"
           }
         }
       },
       "block_order": [
         "slide_PNjyB9",
-        "slide_z9za3j"
+        "slide_z9za3j",
+        "slide_rc4KrT",
+        "slide_qP8W8W"
       ],
       "settings": {}
     },
@@ -49,7 +65,7 @@
         "tent_tAPrfp": {
           "type": "tent",
           "settings": {
-            "link": "",
+            "link": "shopify://collections/tents",
             "image": "shopify://shop_images/neso-beech-tents.png",
             "heading": "NESO BEACH TENTS",
             "description": "Available in three sizes and a range of vibrant colors, these lightweight, UPF 50+ sunshades set up effortlessly—perfect for your next beach day or outdoor adventure."
@@ -69,7 +85,7 @@
           "settings": {
             "link": "shopify://collections/neso-party-tent",
             "image": "shopify://shop_images/party-tents.png",
-            "heading": "neso party tents",
+            "heading": "NESO PARTY TENTS",
             "description": "Spacious sunshade for large groups, with flexible anchoring for any terrain—perfect for beach days and outdoor gatherings."
           }
         }

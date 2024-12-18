@@ -56,6 +56,10 @@
           <link rel="stylesheet" href="{{ 'home-updated.css' | asset_url }}" type="text/css">
    
       
+          {% if collection.title == "Neso Beach Tents" %}
+            <link rel="stylesheet" href="{{ 'collections-updated.css' | asset_url }}" type="text/css">
+            {% endif %}
+
     <!-- FontAwesome -->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
