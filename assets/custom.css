@@ -2610,3 +2610,10 @@ cart-remove-button .button {
    font-size: 18px !important;
    margin-bottom: 12px;
 }
+.jdgm-ugc-media-title {
+  display: none !important;
+}
+.jdgm-ugc-media-wrapper {
+  padding: 0px;
+  margin: 0px !important;
+}

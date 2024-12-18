@@ -213,39 +213,6 @@ document.addEventListener('DOMContentLoaded', function () {
   // Start observing for class changes
   observer.observe(cartDrawer, { attributes: true, attributeFilter: ['class'] });
  
-
-  document.addEventListener('click', function (event) {
-    if (event.target.matches('.swatch')) {
-      const swatch = event.target;
-      const container = swatch.closest('.swatch-container');
-      const productId = container.dataset.productId;
-
-      container.querySelectorAll('.swatch').forEach((s) => s.classList.remove('selected'));
-      swatch.classList.add('selected');
-      const addToCartButton = container.closest('.recommended-product').querySelector('.add-to-cart');
-      addToCartButton.dataset.productId = swatch.dataset.variantId;
-    }
-  });
-
-  document.addEventListener('click', function (event) {
-    if (event.target.matches('.add-to-cart')) {
-      const button = event.target;
-      const variantId = button.dataset.productId;
-
-      fetch('/cart/add.js', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ id: variantId, quantity: 1 })
-      })
-        .then((response) => response.json())
-        .then(() => {
-          console.error('Product Added to cart');
-        })
-        .catch((error) => {
-          console.error('Error adding to cart:', error);
-        });
-    }
-  });
 });
 
 </script>
