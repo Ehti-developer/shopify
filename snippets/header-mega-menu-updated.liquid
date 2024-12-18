@@ -194,12 +194,12 @@
                   {% elsif link.title == 'Accessories' %}
                     <div class="mega-menu__info">
                       <div>
-                        <h2>Access, portable and functional.</h2>
+                        <h2>Access, Compact and Operational.</h2>
                         <p>Ergonomic • Waterproof • Lightweight</p>
                       </div>
-                      <div class="mega-menu__btn-wrapper">
+                      {% comment %} <div class="mega-menu__btn-wrapper">
                         <a href="/collections/furniture" class="shop-all___btn">shop all Furniture</a>
-                      </div>
+                      </div> {% endcomment %}
                     </div>
                   {% endif %}
                   <div class="inner-mega-menu_____grid">
@@ -220,6 +220,7 @@
 
                               style="
                                                             {% if childlink.url contains '/products/' %}
+                                                            
                                                               {% assign mega_menu_image = product.metafields.custom.mega_menu_image %}
                                                               {% assign product_handle = childlink.url | split: '/products/' | last %}
                                                               {% assign product = all_products[product_handle] %}

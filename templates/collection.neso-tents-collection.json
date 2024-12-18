@@ -180,7 +180,7 @@
         "tent_RbcyeK": {
           "type": "tent",
           "settings": {
-            "link": "",
+            "link": "shopify://collections/sidelines-series",
             "image": "shopify://shop_images/image.png",
             "heading": "SIDELINES SERIES TENTS",
             "description": "Versatile sunshades for any setting, with multiple anchoring options—ideal for parks, fields, and beyond."
@@ -189,7 +189,7 @@
         "tent_rbDTqB": {
           "type": "tent",
           "settings": {
-            "link": "",
+            "link": "shopify://collections/neso-party-tent",
             "image": "shopify://shop_images/neso-party-tent.png",
             "heading": "neso party tents",
             "description": "Spacious sunshade for large groups, with flexible anchoring for any terrain—perfect for beach days and outdoor gatherings."
