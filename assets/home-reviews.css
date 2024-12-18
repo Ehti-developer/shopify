@@ -262,6 +262,10 @@ a.jdgm-carousel-item__product.jdgm--shop-review-has-image::after {
   z-index: 1;
 }
 
+.jdgm-carousel--gallery-theme .jdgm-carousel-item__inner-wrapper {
+  box-shadow: unset !important;
+}
+
 @media screen and (max-width: 1024px) {
   .jdgm-carousel-item {
     width: 49% !important;
