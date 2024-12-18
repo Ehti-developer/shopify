@@ -20,10 +20,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "judge_me_reviews_preview_badge_NdzPUr": {
-          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        },
         "vendor": {
           "type": "text",
           "settings": {
@@ -42,6 +38,10 @@
             "text_style": "subtitle"
           }
         },
+        "judge_me_reviews_preview_badge_NdzPUr": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
         "price": {
           "type": "price",
           "settings": {}
@@ -54,7 +54,6 @@
         },
         "quantity_selector": {
           "type": "quantity_selector",
-          "disabled": true,
           "settings": {}
         },
         "buy_buttons": {
@@ -62,16 +61,6 @@
           "settings": {
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": false
-          }
-        },
-        "brand_logo_bhLmJx": {
-          "type": "brand_logo",
-          "settings": {
-            "pro__title": "Show Off Your Brand",
-            "pro__subtitle": "Customize your tent with your logo for <strong>$25!</strong>",
-            "pro__button-label": "View Custom Logo Quotation",
-            "pro__url": "shopify://pages/custom-logos",
-            "enable_show_off_brand": true
           }
         },
         "0d34492b-64de-4bd7-b880-459011b7bec2": {
@@ -89,24 +78,12 @@
         },
         "description": {
           "type": "description",
-          "disabled": true,
           "settings": {}
         },
         "custom_liquid_GYRX4C": {
           "type": "custom_liquid",
-          "disabled": true,
           "settings": {
             "custom_liquid": "<div style=\"text-align: left; margin-top: 1.5em;\" data-mce-style=\"text-align: left; margin-top: 1.5em;\"><img alt=\"SCF Seal of approval\" src=\"https://cdn.shopify.com/s/files/1/2403/5817/files/skin-cancer-foundation-logo.jpg?v=1684191612\" style=\"border-style: none; height: 100px; display: block; float: left; margin-right: 15px;\" data-mce-style=\"border-style: none; height: 100px; display: block; float: left; margin-right: 15px;\"> The Skin Cancer Foundation recommends this product as an effective UV protectant.</div>"
-          }
-        },
-        "collapsible_tab_rNXU7Y": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Product Details",
-            "icon": "none",
-            "content": "<p>Our signature beach tent, anchored with sand or rocks, designed for ultimate ease.</p>",
-            "page": "",
-            "show_metaobject": true
           }
         },
         "collapsible-row-2": {
@@ -159,38 +136,42 @@
             "show_metaobject": false
           }
         },
+        "collapsible_tab_rNXU7Y": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "none",
+            "content": "",
+            "page": "",
+            "show_metaobject": true
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
             "share_label": "Share"
           }
-        },
-        "selleasy_lb_upsell_fbt_block_jU83wr": {
-          "type": "shopify://apps/selleasy/blocks/lb-upsell-fbt-block/790c1a03-a71f-4bc1-9869-00dad526d3c2",
-          "settings": {}
         }
       },
       "block_order": [
-        "judge_me_reviews_preview_badge_NdzPUr",
         "vendor",
         "title",
         "caption",
+        "judge_me_reviews_preview_badge_NdzPUr",
         "price",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "brand_logo_bhLmJx",
         "0d34492b-64de-4bd7-b880-459011b7bec2",
         "description",
         "custom_liquid_GYRX4C",
-        "collapsible_tab_rNXU7Y",
         "collapsible-row-2",
         "collapsible-row-0",
         "collapsible-row-1",
         "4d9bfb7f-7a91-4d97-abcb-90a925b41607",
         "collapsible-row-3",
-        "share",
-        "selleasy_lb_upsell_fbt_block_jU83wr"
+        "collapsible_tab_rNXU7Y",
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -348,21 +329,6 @@
     "shogun-below": {
       "type": "shogun-below",
       "settings": {}
-    },
-    "1734478369bca485b1": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_ugc_media_grid_9NRBRG": {
-          "type": "shopify://apps/judge-me-reviews/blocks/ugc_media_grid/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_ugc_media_grid_9NRBRG"
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
@@ -375,7 +341,6 @@
     "1683923822c8175181",
     "best_selling_tents_QMT7YC",
     "related-products",
-    "shogun-below",
-    "1734478369bca485b1"
+    "shogun-below"
   ]
 }
