@@ -46,6 +46,18 @@
           "type": "price",
           "settings": {}
         },
+        "meta_fields_meNt9p": {
+          "type": "meta_fields",
+          "settings": {
+            "enable_metafields": true
+          }
+        },
+        "add_additonal_product_7VGVVa": {
+          "type": "add_additonal_product",
+          "settings": {
+            "enable_addition_product": true
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -176,6 +188,8 @@
         "title",
         "caption",
         "price",
+        "meta_fields_meNt9p",
+        "add_additonal_product_7VGVVa",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
@@ -301,7 +315,7 @@
         "tent_8jAiXE": {
           "type": "tent",
           "settings": {
-            "link": "",
+            "link": "shopify://collections/sidelines-series",
             "image": "shopify://shop_images/image.png",
             "heading": "SIDELINES SERIES TENTS",
             "description": "Versatile sunshades for any setting, with multiple anchoring options—ideal for parks, fields, and beyond."
@@ -310,7 +324,7 @@
         "tent_BNGE9T": {
           "type": "tent",
           "settings": {
-            "link": "",
+            "link": "shopify://collections/neso-party-tent",
             "image": "shopify://shop_images/neso-party-tent.png",
             "heading": "neso party tents",
             "description": "Spacious sunshade for large groups, with flexible anchoring for any terrain—perfect for beach days and outdoor gatherings."
