@@ -1595,8 +1595,91 @@
         "id": "all_collection_url",
         "label": "Collection URL",
       },  
-    ]
+    ],
+ 
   },
+
+   
+  {
+    "name": "Cart Drawer Best Products",
+    "settings": [
+      {
+        "type": "text",
+        "id": "best_products_title",
+        "label": "Section Title",
+        "default": "Best Products"
+      },
+      {
+        "type": "image_picker",
+        "id": "product_1_image",
+        "label": "Product 1 Image"
+      },
+      {
+        "type": "text",
+        "id": "product_1_title",
+        "label": "Product 1 Title",
+        "default": "Product 1"
+      },
+      {
+        "type": "url",
+        "id": "product_1_url",
+        "label": "Product 1 URL",
+      },
+      {
+        "type": "image_picker",
+        "id": "product_2_image",
+        "label": "Product 2 Image"
+      },
+      {
+        "type": "text",
+        "id": "product_2_title",
+        "label": "Product 2 Title",
+      },
+      {
+        "type": "url",
+        "id": "product_2_url",
+        "label": "Product 2 URL",
+      },
+      {
+        "type": "image_picker",
+        "id": "product_3_image",
+        "label": "Product 3 Image"
+      },
+      {
+        "type": "text",
+        "id": "product_3_title",
+        "label": "Product 3 Title",
+        "default": "Product 3"
+      },
+      {
+        "type": "url",
+        "id": "product_3_url",
+        "label": "Product 3 URL",
+      },
+      {
+        "type": "image_picker",
+        "id": "product_4_image",
+        "label": "Product 4 Image"
+      },
+      {
+        "type": "text",
+        "id": "product_4_title",
+        "label": "Product 4 Title",
+        "default": "Product 4"
+      },
+      {
+        "type": "url",
+        "id": "product_4_url",
+        "label": "Product 4 URL",
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_cart_collection",
+        "label": "Show Collection Section",
+        "default": false
+      },
+    ]
+  },    
     {
         "name": "Cart Progress Bar",
         "settings": [

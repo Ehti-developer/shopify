@@ -30,7 +30,7 @@
       data-post-goal-message="{{ post_goal_message | escape }}"
       data-currency-format="
         {% if settings.currency_code_enabled %}
-          {{ shop.money_with_currency_format | escape }}
+          {{ shop.money_format | escape }}
         {% else %}
           {{ shop.money_format | escape }}
         {% endif %}
@@ -75,12 +75,15 @@
     #cart-progress-wrapper.full #cart-progress-bar {
       --progress-bar-color: {{ settings.cart_progress_bar_full_color }};
       --progress-bar-border-color: {{ settings.cart_progress_bar_full_color }};
+      width: 100%;
     }
-    
+    #cart-progress-wrapper {
+      width: 100%;
+    }
     .goal-message {
       text-align: center;
       margin: 0px auto 10px;
-      font-size: 15px;
+      font-size: 14px;
       color: {{ settings.cart_progress_bar_text_color }};
     }
   
