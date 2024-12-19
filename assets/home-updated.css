@@ -394,9 +394,15 @@ section#more-collections {
   -o-transition: all ease-in-out 0.3s;
 }
 
-button#Subscribe:hover {
+/* button#Subscribe:hover {
   background-color: #fff;
   color: #000 !important;
+} */
+
+button#Subscribe:hover {
+  background-color: #0088cc;
+  color: #fff !important;
+  border-color: transparent;
 }
 
 .collections-box__wrap {
@@ -417,6 +423,7 @@ button#Subscribe:hover {
 
 .collections-box__wrap a:hover h3 {
   color: #0088cc;
+  text-decoration: underline;
 }
 
 .more-collection__text h1 {

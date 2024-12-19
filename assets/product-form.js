@@ -190,7 +190,6 @@ if (!customElements.get("product-form")) {
           }
           config.body = formData;
 
-          // Add the main product to the cart
           const mainProductResponse = await fetch(
             `${routes.cart_add_url}`,
             config
@@ -203,7 +202,6 @@ if (!customElements.get("product-form")) {
             return;
           }
 
-          // Add the selected add-on product to the cart
           const addonProductsWrapper = document.querySelector(
             ".addon-products__wrapper"
           );
@@ -214,7 +212,6 @@ if (!customElements.get("product-form")) {
           if (selectedAddon) {
             const addonVariantId = selectedAddon.value;
 
-            // Add the add-on product to the cart after the main product
             await fetch("/cart/add.js", {
               method: "POST",
               headers: { "Content-Type": "application/json" },
@@ -225,7 +222,6 @@ if (!customElements.get("product-form")) {
             });
           }
 
-          // Render cart contents after both products have been added
           if (!this.cart) {
             window.location = window.routes.cart_url;
             return;

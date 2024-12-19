@@ -459,6 +459,13 @@ details[open] summary svg.icon.icon-caret.menu-chveron path {
 .header__menu-item svg path {
   color: #0f0f0f;
 }
+
+.mega-menu__link:hover .grand-child___title,
+.mega-menu__link--active .grand-child___title {
+  color: #0088cc !important;
+  text-decoration: underline;
+}
+
 @media (max-width: 989px) {
   .header__heading-link {
     margin-right: 30px;
