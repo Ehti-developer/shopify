@@ -43,14 +43,14 @@
       {%- if cart == empty -%}
       <div class="side-cart___upper-wrapper">
      
-        <button
+        {% comment %} <button
           class="drawer__close"
           type="button"
           onclick="this.closest('cart-drawer').close()"
           aria-label="{{ 'accessibility.close' | t }}"
         >
           {% render 'icon-close' %}
-        </button>
+        </button> {% endcomment %}
    
           <h2 class="empty-cart__text">Your Cart (0)</h2>
           <p class="empty-cart__subtext">Your cart is empty.</p>
@@ -90,7 +90,8 @@
 
              <h2 class="empty-cart____title">{{ settings.empty_cart_title_x }}</h2>
             <div class="cart-drawer___collection">
-              {% render 'empty-cart-collections', card_collection: collections %}
+              {%  render 'empty-cart-collections' %}
+              {% comment %} {% render 'empty-cart-collections', card_collection: collections %} {% endcomment %}
             </div>
           {% comment %} {%- endif -%} {% endcomment %}
         </div>

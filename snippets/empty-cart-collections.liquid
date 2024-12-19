@@ -1,23 +1,61 @@
 
-<section  class="card-collections">
-    <!-- Tent Cards -->
-    <div class="wrap__tents-collection">
-        {% for collection in card_collection limit:6 %}
-            {% if collection.image %}
-        <a
-        href="{{ collection.url }}"
+<section class="card-collections">
+  <!-- Tent Cards -->
+  <div class="wrap__tents-collection">
+    <!-- Product 1 -->
+    {% if settings.product_1_image %}
+      <a
+        href="{{ settings.product_1_url }}"
         class="top-tents__box top-tents__box-cart"
-        style="background-image: url({{ collection.image | img_url: 'master' }})"
-        >
-          <div class="tents-description__section">
-            <h2>{{ collection.title }}</h2>
-          </div>
-        </a>
+        style="background-image: url({{ settings.product_1_image | img_url: 'master' }})"
+      >
+        <div class="tents-description__section">
+          <h2>{{ settings.product_1_title }}</h2>
+        </div>
+      </a>
     {% endif %}
-      {% endfor %}
-    </div>
-
+    
+    <!-- Product 2 -->
+    {% if settings.product_2_image %}
+      <a
+        href="{{ settings.product_2_url }}"
+        class="top-tents__box top-tents__box-cart"
+        style="background-image: url({{ settings.product_2_image | img_url: 'master' }})"
+      >
+        <div class="tents-description__section">
+          <h2>{{ settings.product_2_title }}</h2>
+        </div>
+      </a>
+    {% endif %}
+    
+    <!-- Product 3 -->
+    {% if settings.product_3_image %}
+      <a
+        href="{{ settings.product_3_url }}"
+        class="top-tents__box top-tents__box-cart"
+        style="background-image: url({{ settings.product_3_image | img_url: 'master' }})"
+      >
+        <div class="tents-description__section">
+          <h2>{{ settings.product_3_title }}</h2>
+        </div>
+      </a>
+    {% endif %}
+    
+    <!-- Product 4 -->
+    {% if settings.product_4_image %}
+      <a
+        href="{{ settings.product_4_url }}"
+        class="top-tents__box top-tents__box-cart"
+        style="background-image: url({{ settings.product_4_image | img_url: 'master' }})"
+      >
+        <div class="tents-description__section">
+          <h2>{{ settings.product_4_title }}</h2>
+        </div>
+      </a>
+    {% endif %}
+  </div>
 </section>
+
 
 <style>
     .card-collections .top-tents__box-cart {
