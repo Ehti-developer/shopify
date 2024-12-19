@@ -22,7 +22,7 @@
                   </div>
                   <div class="collection-description__section">
                     <h3>{{ collection.title }}</h3>
-                    <p>{{ collection.products_count }} product</p>
+                    <p>{{ collection.products_count }} {% if collection.products_count == 1 %} product {% else %} products {% endif %}</p>
                   </div>
                 </a>
               </div>

@@ -38,6 +38,7 @@
         },
         "slide_rc4KrT": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Frame_1000006637.png",
             "description": "“small enough to fit in your carry-on suitcase.”"
@@ -83,7 +84,7 @@
         "tent_EUWYUh": {
           "type": "tent",
           "settings": {
-            "link": "shopify://collections/neso-party-tent",
+            "link": "shopify://products/neso-party-tent-1",
             "image": "shopify://shop_images/party-tents.png",
             "heading": "NESO PARTY TENTS",
             "description": "Spacious sunshade for large groups, with flexible anchoring for any terrain—perfect for beach days and outdoor gatherings."

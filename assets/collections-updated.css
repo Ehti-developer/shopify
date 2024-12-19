@@ -6,7 +6,7 @@
   height: unset !important;
 }
 
-/* Homepage Reviews */
+/* Collection page Reviews */
 
 a.jdgm-carousel-item__product.jdgm--shop-review-has-image {
   display: flex;
@@ -226,10 +226,6 @@ a.jdgm-carousel-item__product.jdgm--shop-review-has-image::after {
 .jdgm-carousel__right-arrow,
 .jdgm-carousel__left-arrow {
   border: 4px none #99cfe2 !important;
-}
-
-#shopify-section-template--24115100483893__17333349688d355799 {
-  background-color: #f9f7f4;
 }
 
 #customers_reviews {
