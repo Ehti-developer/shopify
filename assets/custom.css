@@ -2728,3 +2728,7 @@ cart-remove-button .button {
 facet-filters-form  .product-count {
   align-self: center !important;
 }
+
+.empty-cart__btn a {
+  text-transform: uppercase !important;
+}
