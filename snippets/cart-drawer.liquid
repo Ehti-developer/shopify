@@ -27,79 +27,79 @@
       aria-label="{{ 'sections.cart.title' | t }}"
       tabindex="-1"
     >
-  
+    <div class="drawer__header">
+      <h2 class="drawer__heading">{{ 'sections.cart.title' | t }}</h2>
+      <button
+        class="drawer__close"
+        type="button"
+        onclick="this.closest('cart-drawer').close()"
+        aria-label="{{ 'accessibility.close' | t }}"
+      >
+        {% render 'icon-close' %}
+      </button>
+    </div>
+    {%- if cart == empty -%}
+    <div class="side-cart___upper-wrapper">
    
-      <div class="drawer__header">
-        <h2 class="drawer__heading">{{ 'sections.cart.title' | t }}</h2>
-        <button
-          class="drawer__close"
-          type="button"
-          onclick="this.closest('cart-drawer').close()"
-          aria-label="{{ 'accessibility.close' | t }}"
-        >
-          {% render 'icon-close' %}
-        </button>
-      </div>
-      {%- if cart == empty -%}
-      <div class="side-cart___upper-wrapper">
-     
-        {% comment %} <button
-          class="drawer__close"
-          type="button"
-          onclick="this.closest('cart-drawer').close()"
-          aria-label="{{ 'accessibility.close' | t }}"
-        >
-          {% render 'icon-close' %}
-        </button> {% endcomment %}
-   
-          <h2 class="empty-cart__text">Your Cart (0)</h2>
-          <p class="empty-cart__subtext">Your cart is empty.</p>
-          </div>
-      {% endif %}
-      
-      {%- if cart != empty -%}
-      {% render 'cart-progress-bar-custom' %}
-      {% endif %}
-
-      {%- if cart == empty -%}
-        <div class="drawer__inner-empty">
-          {% comment %} <div class="cart-drawer__warnings center{% if settings.cart_drawer_collection != blank %} cart-drawer__warnings--has-collection{% endif %}">
-            <div class="cart-drawer__empty-content">
-              <h2 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h2> {% endcomment %}
-              {% comment %} <button
-                class="drawer__close"
-                type="button"
-                onclick="this.closest('cart-drawer').close()"
-                aria-label="{{ 'accessibility.close' | t }}"
-              >
-                {% render 'icon-close' %}
-              </button> {% endcomment %}
-              {% comment %} <a href="{{ routes.all_products_collection_url }}" class="button">
-                {{ 'general.continue_shopping' | t }}
-              </a> {% endcomment %}
-
-                {% comment %} {%- if shop.customer_accounts_enabled and customer == null -%}
-                  <p class="cart__login-title h3">{{ 'sections.cart.login.title' | t }}</p>
-                  <p class="cart__login-paragraph">
-                    {{ 'sections.cart.login.paragraph_html' | t: link: routes.account_login_url }}
-                  </p>
-                {%- endif -%} {% endcomment %}
-            {% comment %} </div>
-          </div> {% endcomment %}
-          {% comment %} {%- if settings.cart_drawer_collection != blank -%} {% endcomment %}
-
-             <h2 class="empty-cart____title">{{ settings.empty_cart_title_x }}</h2>
-            <div class="cart-drawer___collection">
-              {%  render 'empty-cart-collections' %}
-              {% comment %} {% render 'empty-cart-collections', card_collection: collections %} {% endcomment %}
-            </div>
-          {% comment %} {%- endif -%} {% endcomment %}
+      {% comment %} <button
+        class="drawer__close"
+        type="button"
+        onclick="this.closest('cart-drawer').close()"
+        aria-label="{{ 'accessibility.close' | t }}"
+      >
+        {% render 'icon-close' %}
+      </button> {% endcomment %}
+ 
+        <h2 class="empty-cart__text">Your Cart (0)</h2>
+        <p class="empty-cart__subtext">Your cart is empty.</p>
         </div>
+    {% endif %}
+    
 
-        <div class="empty-cart__btn">
-        <a href="/collections/neso-beach-tents">Shop Beach Tents</a>
+    {% render 'cart-progress-bar-custom' %}
+
+
+    {%- if cart == empty -%}
+      <div class="drawer__inner-empty">
+        {% comment %} <div class="cart-drawer__warnings center{% if settings.cart_drawer_collection != blank %} cart-drawer__warnings--has-collection{% endif %}">
+          <div class="cart-drawer__empty-content">
+            <h2 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h2> {% endcomment %}
+            {% comment %} <button
+              class="drawer__close"
+              type="button"
+              onclick="this.closest('cart-drawer').close()"
+              aria-label="{{ 'accessibility.close' | t }}"
+            >
+              {% render 'icon-close' %}
+            </button> {% endcomment %}
+            {% comment %} <a href="{{ routes.all_products_collection_url }}" class="button">
+              {{ 'general.continue_shopping' | t }}
+            </a> {% endcomment %}
+
+              {% comment %} {%- if shop.customer_accounts_enabled and customer == null -%}
+                <p class="cart__login-title h3">{{ 'sections.cart.login.title' | t }}</p>
+                <p class="cart__login-paragraph">
+                  {{ 'sections.cart.login.paragraph_html' | t: link: routes.account_login_url }}
+                </p>
+              {%- endif -%} {% endcomment %}
+          {% comment %} </div>
+        </div> {% endcomment %}
+        {% comment %} {%- if settings.cart_drawer_collection != blank -%} {% endcomment %}
+
+           <h2 class="empty-cart____title">{{ settings.empty_cart_title_x }}</h2>
+          <div class="cart-drawer___collection">
+            {%  render 'empty-cart-collections' %}
+            {% comment %} {% render 'empty-cart-collections', card_collection: collections %} {% endcomment %}
+          </div>
+        {% comment %} {%- endif -%} {% endcomment %}
       </div>
-      {%- endif -%}
+
+      <div class="empty-cart__btn">
+      <a href="/collections/neso-beach-tents">Shop Beach Tents</a>
+    </div>
+    {%- endif -%}
+   
+
     
       <cart-drawer-items
         {% if cart == empty %}
