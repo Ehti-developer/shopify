@@ -2689,13 +2689,6 @@ cart-remove-button .button {
   margin: 0 auto;
 }
 
-.has-produtc_detail .product  .product__media-wrapper {
-  max-width: 54% !important;
-}
-
-.has-produtc_detail .product  .product__info-wrapper {
-  max-width: 46% !important;
-}
 .has-produtc_detail .product  .product__info-wrapper  .addon-products__wrapper {
   margin-bottom: 20px !important;
 }
@@ -2731,4 +2724,15 @@ facet-filters-form  .product-count {
 
 .empty-cart__btn a {
   text-transform: uppercase !important;
+}
+
+@media(min-width: 1024px) {
+
+.has-produtc_detail .product  .product__media-wrapper {
+  max-width: 54% !important;
+}
+
+.has-produtc_detail .product  .product__info-wrapper {
+  max-width: 46% !important;
+}
 }
