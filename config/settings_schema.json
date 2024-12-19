@@ -1671,7 +1671,13 @@
         "type": "url",
         "id": "product_4_url",
         "label": "Product 4 URL",
-      }
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_cart_collection",
+        "label": "Show Collection Section",
+        "default": false
+      },
     ]
   },    
     {

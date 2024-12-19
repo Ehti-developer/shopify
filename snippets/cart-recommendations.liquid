@@ -67,6 +67,10 @@
     transition: transform 0.2s, border-color 0.2s;
     display: block !important;
   }
+  .swatch.active {
+  border-color: #000;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
 
   .recommended-product .swatch:hover {
     transform: scale(1.1);
@@ -92,10 +96,12 @@
     text-decoration: none;
     text-align: center;
     line-height: 24px;
+    width: 100%;
+    margin-top: 10px;
   }
 
   .product-info__box  .add-to-cart:hover {
-    background-color: #0056b3;
+    background-color: #0088cc;
   }
   .recomended-products___container {
     overflow: hidden;
@@ -105,6 +111,11 @@
     margin-top: 0px;
     margin-bottom: 15px;
   }
+  /* .tents-description__section {
+    position: relative;
+    z-index: 1;
+    padding: 16px;
+} */
 </style>
 
 {% assign collection = collections[settings.cart_drawer_reomendation_products] %}
@@ -160,59 +171,34 @@
       <h2 class="product-title">  <a href="{{ product.url }}">{{ product.title }}</a></h2> 
         </div>
         <p class="product-price">{{ product.price | money }}</p>
-
-        <!-- Color Swatches -->
-        {% if product.variants.size > 1 %}
-          <div class="swatch-container" data-product-id="{{ product.id }}">
-            {% for variant in product.variants limit: 5 %}
-              <div
-                class="swatch"
-                data-variant-id="{{ variant.id }}"
-                style="background: {{ variant.metafields.color.value }}"
-                title="{{ variant.title }}"
-              ></div>
-            {% endfor %}
-          </div>
-        {% endif %}
-
+        
         <!-- Add to Cart Button -->
-        <a class="add-to-cart" href="{{ product.url }}">
-          View
-        </a>
+        <a href="{{ product.url }}" class="add-to-cart">View</a>
+    
+      
       </div>
-
+  
     </div>
   {% endfor %}
 </div>
 </div>
 
 <script>
+  document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.swatch').forEach(swatch => {
+    swatch.addEventListener('click', function () {
+      const variantId = this.getAttribute('data-variant-id');
+      const form = this.closest('form');
+      const variantInput = form.querySelector('.variant-id');
 
-document.addEventListener('DOMContentLoaded', function () {
-  function initOwlCarousel() {
-    $('.recommended-products').owlCarousel({
-      items: 1, // Number of items to display
-      loop: true,
-      margin: 10,
-      nav: false,
-      dots: false,
-      responsive: {
-        0: { items: 1 },
-        600: { items: 1 },
-        1000: { items: 1.1 }
-      }
+      // Update hidden input value
+      variantInput.value = variantId;
+
+      // Highlight the selected swatch
+      this.parentElement.querySelectorAll('.swatch').forEach(s => s.classList.remove('active'));
+      this.classList.add('active');
     });
-  }
-  const cartDrawer = document.querySelector('cart-drawer');
-  const observer = new MutationObserver(() => {
-    if (cartDrawer.classList.contains('active')) {
-      initOwlCarousel();
-    }
   });
-
-  // Start observing for class changes
-  observer.observe(cartDrawer, { attributes: true, attributeFilter: ['class'] });
- 
 });
 
 </script>

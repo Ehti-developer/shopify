@@ -2569,10 +2569,10 @@ cart-remove-button .button {
 .predictive-search .price {
   margin-top: 10px;
 }
-.price__container {
+/* .price__container {
   margin-bottom: 10px;
-}
-.price__container .price-item  {
+} */
+.has-collection .price__container .price-item  {
   font-size: 16px;
   color: #373737;
 }
@@ -2609,6 +2609,8 @@ cart-remove-button .button {
 .empty-cart__text {
    font-size: 18px !important;
    margin-bottom: 12px;
+   text-align: center;
+   margin-top: 0px;
 }
 .jdgm-ugc-media-title {
   display: none !important;
@@ -2642,4 +2644,87 @@ cart-remove-button .button {
 }
 .menu-drawer__account {
   margin-bottom: 10px !important;
+}
+
+.product-form__buttons > button:hover{
+  background: #0088cc !important;
+}
+
+.product__info-wrapper  .product__title{
+   margin-top: 7px !important;
+   margin-bottom: 10px;
+}
+ 
+.product__info-wrapper  .product__title h1 {
+  font-size: 36px !important;
+}
+
+.product__info-wrapper  .no-js-hidden {
+  margin-top: 0px !important;
+  margin-bottom: 10px !important;
+}
+
+.product__info-wrapper .no-js-hidden * {
+  margin:0px !important;
+}
+
+.product__info-container > * + * {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+.product__info-wrapper  .jdgm-prev-badge__text {
+  color: #000;
+  border-bottom: 1px solid #000;
+  padding-left: 3px;
+}
+.product__info-wrapper  .price__regular {
+  color: #373737 !important;
+  font-size: 24px !important;
+}
+/* .price__container .price-item {
+  font-size: 24px !important;
+} */
+.has-produtc_detail .product {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.has-produtc_detail .product  .product__media-wrapper {
+  max-width: 54% !important;
+}
+
+.has-produtc_detail .product  .product__info-wrapper {
+  max-width: 46% !important;
+}
+.has-produtc_detail .product  .product__info-wrapper  .addon-products__wrapper {
+  margin-bottom: 20px !important;
+}
+
+.has-produtc_detail .product  .product__info-wrapper  .product__text {
+  color: #000;
+  font-size: 16px;
+}
+.has-produtc_detail .product  .product__info-wrapper .product-metafield__features li {
+  color: #000;
+  font-size: 16px !important;
+}
+
+
+.has-produtc_detail .product  .product__info-wrapper  .custom-brand-logo___card a {
+  font-size: 14px !important;
+}
+.has-produtc_detail .product  .product__info-wrapper  .custom-brand-logo___card {
+  margin-bottom: 35px;
+}
+
+.has-produtc_detail .product  .product__info-wrapper slideshow-component .price__container .price__regular .price-item {
+  font-size: 14px !important;
+}
+.has-produtc_detail .product  .product__info-wrapper slideshow-component .price__container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+facet-filters-form  .product-count {
+  align-self: center !important;
 }

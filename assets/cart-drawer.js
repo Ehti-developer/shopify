@@ -124,3 +124,39 @@ class CartDrawerItems extends CartItems {
 }
 
 customElements.define('cart-drawer-items', CartDrawerItems);
+
+
+
+
+
+// Function to initialize the Owl Carousel
+function initOwlCarousel() {
+  $('.recommended-products').owlCarousel({
+    items: 1, // Number of items to display
+    loop: true,
+    margin: 10,
+    nav: false,
+    dots: false,
+    responsive: {
+      0: { items: 1 },
+      600: { items: 1 },
+      1000: { items: 1.1 }
+    }
+  });
+}
+
+// Select the cart-drawer element
+const cartDrawer = document.querySelector('cart-drawer');
+
+// Create a MutationObserver to watch for changes to the 'class' attribute
+const observer = new MutationObserver(() => {
+  if (cartDrawer.classList.contains('active')) {
+    // Initialize the carousel only when the cart-drawer is active
+    initOwlCarousel();
+  }
+});
+
+// Start observing the cart-drawer for class changes
+if (cartDrawer) {
+  observer.observe(cartDrawer, { attributes: true, attributeFilter: ['class'] });
+}

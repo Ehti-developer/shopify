@@ -9,7 +9,7 @@
         class="top-tents__box top-tents__box-cart"
         style="background-image: url({{ settings.product_1_image | img_url: 'master' }})"
       >
-        <div class="tents-description__section">
+        <div class="tents-description__wrapper">
           <h2>{{ settings.product_1_title }}</h2>
         </div>
       </a>
@@ -22,7 +22,7 @@
         class="top-tents__box top-tents__box-cart"
         style="background-image: url({{ settings.product_2_image | img_url: 'master' }})"
       >
-        <div class="tents-description__section">
+        <div class="tents-description__wrapper">
           <h2>{{ settings.product_2_title }}</h2>
         </div>
       </a>
@@ -35,7 +35,7 @@
         class="top-tents__box top-tents__box-cart"
         style="background-image: url({{ settings.product_3_image | img_url: 'master' }})"
       >
-        <div class="tents-description__section">
+        <div class="tents-description__wrapper">
           <h2>{{ settings.product_3_title }}</h2>
         </div>
       </a>
@@ -48,7 +48,7 @@
         class="top-tents__box top-tents__box-cart"
         style="background-image: url({{ settings.product_4_image | img_url: 'master' }})"
       >
-        <div class="tents-description__section">
+        <div class="tents-description__wrapper">
           <h2>{{ settings.product_4_title }}</h2>
         </div>
       </a>
@@ -62,7 +62,7 @@
         height: 210px;
         border-radius: 5px !important;
     }
-    .top-tents__box-cart .tents-description__section h2 {
+    .top-tents__box-cart .tents-description__wrapper h2 {
         font-size: 15px !important;
         color: #fff;
     }
@@ -77,5 +77,11 @@
     .card-collections a.top-tents__box::after,
     .card-collections a.top-tents__box::before {
         border-radius: 5px !important;
+    }
+
+    .tents-description__wrapper {
+      position: relative;
+    z-index: 1;
+    padding: 16px;
     }
 </style>
