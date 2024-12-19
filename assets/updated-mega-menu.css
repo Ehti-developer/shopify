@@ -3,7 +3,7 @@
 }
 
 .header__active-menu-item {
-  color: #65a0b5 !important;
+  color: #0088cc !important;
 }
 .mega-menu-updated__links .list-menu {
   align-items: center;
@@ -152,8 +152,9 @@
   text-transform: capitalize;
 }
 .shop-all___btn:hover {
-  background: transparent;
-  color: #000 !important;
+  background-color: #0088cc;
+  color: #fff !important;
+  border-color: transparent;
 }
 .mega-menu__list-grid .child-menu-meta-image {
   width: 100%;
@@ -359,7 +360,7 @@ a.mega-menu-updated__link span {
   justify-content: center;
 }
 details[open] summary {
-  color: #65a0b5 !important;
+  color: #0088cc !important;
 }
 .exclusive-title {
   margin-top: 36px !important;
@@ -379,7 +380,7 @@ details[open] summary {
   }
   .link,
   .customer a {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
   }
   .header__heading-logo {
     max-width: 120px !important;
@@ -458,6 +459,13 @@ details[open] summary svg.icon.icon-caret.menu-chveron path {
 .header__menu-item svg path {
   color: #0f0f0f;
 }
+
+.mega-menu__link:hover .grand-child___title,
+.mega-menu__link--active .grand-child___title {
+  color: #0088cc !important;
+  text-decoration: underline;
+}
+
 @media (max-width: 989px) {
   .header__heading-link {
     margin-right: 30px;

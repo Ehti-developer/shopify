@@ -119,7 +119,9 @@
       "block_order": [
         "judge_me_reviews_featured_carousel_phpNa7"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "{background-color: #f9f7f4;}"
+      ],
       "settings": {
         "include_margins": true
       }

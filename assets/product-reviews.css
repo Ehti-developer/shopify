@@ -1,0 +1,123 @@
+.jdgm-rev[data-verified-buyer="true"] .jdgm-rev__icon.jdgm-rev__icon:after,
+.jdgm-rev__buyer-badge.jdgm-rev__buyer-badge {
+  color: #3689a6 !important;
+  background-color: transparent !important;
+}
+
+.jdgm-rev__author {
+  color: #373737 !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  font-family: "Roboto", sans-serif !important;
+}
+
+.jdgm-row-extra {
+  display: none;
+}
+
+.jdgm-rev__title {
+  color: #373737 !important;
+  font-size: 16px !important;
+  font-family: "Roboto" !important;
+}
+
+.jdgm-rev__body > p {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif !important;
+}
+
+.jdgm--leex-script-loaded .jdgm-rev {
+  background-color: white;
+  box-shadow: unset !important;
+  border: 1px solid #0000001a !important;
+}
+
+.jdgm--leex-script-loaded .jdgm-rev-widg__header,
+.jdgm--leex-script-loaded .jdgm-rev-widg__actions {
+  border-radius: unset !important;
+  box-shadow: unset !important;
+}
+
+.jdgm-rev {
+  border-radius: unset !important;
+}
+
+.jdgm-rev__buyer-badge-wrapper {
+  margin-left: -4px !important;
+}
+
+.jdgm-histogram__row {
+  height: 6px !important;
+  cursor: pointer;
+}
+
+.jdgm-widget:not(.jdgm-review-widget--small, .jdgm-review-widget--medium)
+  .jdgm-row-stars
+  > div {
+  gap: 2px;
+}
+
+.jdgm-rev-widg__header {
+  text-align: left !important;
+}
+
+.jdgm-widget:not(.jdgm-review-widget--small, .jdgm-review-widget--medium)
+  .jdgm-row-stars {
+  justify-content: space-between !important;
+}
+
+.jdgm-widget-actions-wrapper {
+  display: none !important;
+}
+
+.jdgm-widget input.jdgm-review-search {
+  border-radius: unset !important;
+}
+
+.jdgm-row-search .jdgm-review-search:not([type="submit"]) {
+  border: 1px solid #dedede !important;
+  height: 56px !important;
+}
+
+.jdgm--leex-script-loaded .jdgm-row-actions {
+  display: none;
+}
+
+.jdgm-row-search {
+  border: none !important;
+}
+
+a.jdgm-btn.jdgm-btn--solid.jdgm-paginate__load-more {
+  background: transparent;
+  color: black;
+  border-radius: unset;
+  border: 1px solid black;
+  padding: 22px 114px;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 700;
+}
+
+span.jdgm-chip {
+  border-radius: unset !important;
+  border-color: #dedede;
+  color: black !important;
+}
+
+.jdgm-chip.active {
+  background-color: #dedede !important;
+}
+
+.jdgm-gallery__thumbnail {
+  border-radius: unset !important;
+}
+
+.jdgm-rev-widg__summary-text {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  .jdgm-rev-widg__header {
+    text-align: center !important;
+  }
+}
