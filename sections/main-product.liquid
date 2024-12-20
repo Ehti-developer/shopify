@@ -11,6 +11,7 @@
   {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
+
   {%- style -%}
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -170,25 +171,28 @@
                 {%- endif -%}
               </p>
             {%- when 'add_additonal_product' -%}
+              <div class="addon-product-title">
+                <p class="addOnProductTitle" id="addOnProductTitle">
+                  Tent Set-up: <span class="addon-product-title-text">2 Pole Set-up</span>
+                </p>
+                  <p class="help-me-choose">Help me choose</p>
+              </div>
               <div class="addon-products__wrapper">
-                {% for addon_product in collections.extra-poles.products %}
+                 {% for addon_product in shop.metaobjects.additional_product.values %}
+                  {% assign product_details = all_products[addon_product.add_product] %}
                   <div class="addon-products__wrap">
-                    <label for="product-{{ forloop.index }}">
+                    <label for="{{  addon_product.title }}">
                       <input 
                         type="radio" 
-                        id="product-{{ forloop.index }}" 
+                        id="{{ addon_product.title }}" 
                         name="fav_product" 
-                        value="{{ addon_product.variants.first.id }}" 
+                        value="{{ product_details.variants.first.id }}" 
                         {% if forloop.first %}checked{% endif %}
                       >
                       {{ addon_product.title }}
                     </label>
                   </div>
-           
                 {% endfor %}
-
-                <script>console.log({{ shop.metaobjects.additional_product.values | json }})</script>
-
                 </div>
             {%- when 'description' -%}
               {%- if product.description != blank -%}
@@ -701,70 +705,25 @@
     }
   </script>
 
- {% comment %} <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const addToCartButton = document.querySelector("#ProductSubmitButton-template--24115101270325__main");
-  const addonProductsWrapper = document.querySelector(".addon-products__wrapper");
-
-  console.log("addToCartButton",addToCartButton);
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const titleElement = document.getElementById("addOnProductTitle");
+      const radioButtons = document.querySelectorAll('input[name="fav_product"]');
   
+      radioButtons.forEach(radio => {
+        radio.addEventListener("change", (event) => {
+          const selectedTitle = event.target.id
 
-  addToCartButton.addEventListener("click", async (event) => {
-    event.preventDefault(); // Prevent the default form submission behavior
-
-    const mainProductForm = document.querySelector("form[action='/cart/add']");
-    const formData = new FormData(mainProductForm);
-
-    console.log(mainProductForm, "maindd");
-    
-
-    // Show loading spinner
-    const spinner = addToCartButton.querySelector(".loading-overlay__spinner");
-    spinner.classList.remove("hidden");
-
-    try {
-      // Add the main product to the cart
-      await fetch("/cart/add.js", {
-        method: "POST",
-        body: formData,
-      });
-
-      // Get the selected add-on product
-      const selectedAddon = addonProductsWrapper.querySelector(
-        'input[name="fav_product"]:checked'
-      );
-
-      console.log(selectedAddon, "selectedaddon");
-      
-
-      if (selectedAddon) {
-        const addonVariantId = selectedAddon.value;
-
-        // Add the selected add-on product to the cart
-        await fetch("/cart/add.js", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            id: addonVariantId,
-            quantity: 1,
-          }),
+          console.log(selectedTitle);
+          
+          if (selectedTitle) {
+            titleElement.textContent = `Tent Set-up: ${selectedTitle}`;
+          }
         });
-      }
+      });
+    });
+  </script>
 
-      // Redirect to the cart page
-      // window.location.href = "/cart";
-    } catch (error) {
-      console.error("Error adding products to the cart:", error);
-      alert("There was an issue adding products to the cart. Please try again.");
-    } finally {
-      // Hide the loading spinner
-      spinner.classList.add("hidden");
-    }
-  });
-});
-
-
-  </script> {% endcomment %}
 </section>
 
 {% schema %}
