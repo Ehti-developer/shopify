@@ -173,6 +173,8 @@
                 {%- endif -%}
               </p>
             {%- when 'add_additonal_product' -%}
+              {% if product.title != "Neso Party Tent" %}
+
               <div class="addon-product-title">
                 <p class="addOnProductTitle" id="addOnProductTitle">
                   Tent Set-up: <span class="addon-product-title-text">2 Pole Set-up</span>
@@ -215,6 +217,7 @@
                      </label>
                    </div>
                  </div>
+                 {% endif %}
             {%- when 'description' -%}
               {%- if product.description != blank -%}
                 <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
