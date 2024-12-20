@@ -1,141 +1,102 @@
 <!-- Display product image -->
 <div>
   <h2 class="addon-section____title">pairs well with</h2>
-<div class="addon-product______wrapper">
-  <div class="addon-product___image">
-    {% if product.featured_image %}
-      <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
-    {% else %}
-      <p>No image available</p>
-    {% endif %}
-  </div>
-  <div class="addon-product___info">
-    {%- if product.metafields.reviews.rating.value != blank -%}
-      {% liquid
-        assign rating_decimal = 0
-        assign decimal = product.metafields.reviews.rating.value.rating | modulo: 1
-        if decimal >= 0.3 and decimal <= 0.7
-          assign rating_decimal = 0.5
-        elsif decimal > 0.7
-          assign rating_decimal = 1
-        endif
-      %}
-      <div class="rating-wrapper-main">
-        <div>
-          <div
-            class="rating"
-            role="img"
-            aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: product.metafields.reviews.rating.value.scale_max }}"
-          >
-            <span
-              aria-hidden="true"
-              class="rating-star color-icon-{{ settings.accent_icons }}"
-              style="--rating: {{ product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"
-            ></span>
-          </div>
-          <p class="rating-text caption">
-            <span aria-hidden="true">
-              {{- product.metafields.reviews.rating.value }} /
-              {{ product.metafields.reviews.rating.value.scale_max -}}
-            </span>
-          </p>
-          <p class="rating-count caption">
-            <span aria-hidden="true">({{ product.metafields.reviews.rating_count }})</span>
-
-            <span class="visually-hidden">
-              {{- product.metafields.reviews.rating_count }}
-              {{ 'accessibility.total_reviews' | t -}}
-            </span>
-          </p>
-        </div>
-        {% if product.metafields.custom.pole_setup_count %}
-          <div class="beach-tents-setup"> <p>{{ product.metafields.custom.pole_setup_count }} </p></div>
-        {% endif %}
-      </div>
-    {%- endif -%}
-    <h2>{{ product.title }}</h2>
-          <p id="product-price-{{ product.id }}">{{ product.selected_or_first_available_variant.price | money }}</p>
-
-    <additional-product-form>
-      {%- form 'product',
-        product,
-        id: product_form_id,
-        class: 'form',
-        novalidate: 'novalidate',
-        data-type: 'add-to-cart-form'
-      -%}
-        <div class="variant-and-button-wrap">
-          {% if product.variants.size > 1 %}
-            <!-- If the product has more than 1 variant, show a dropdown menu -->
-            <div class="variant-btn__wrap">
-              <select id="variant-select-{{ product.id }}" name="id">
-                {% for variant in product.variants %}
-                  <option
-                    value="{{ variant.id }}"
-                    {% if variant.id == product.selected_or_first_available_variant.id %}
-                      selected
-                    {% endif %}
-                  >
-                    {{ variant.title }}
-                  </option>
-                {% endfor %}
-              </select>
-            </div>
-          {% else %}
-            <!--
-              If the product has only one variant, hide the dropdown and automatically use the first available variant
-            -->
-            <input
-              type="hidden"
-              name="id"
-              value="{{ product.selected_or_first_available_variant.id }}"
+  <div class="addon-product______wrapper">
+    <div class="addon-product___image">
+      {% if product.featured_image %}
+        <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+      {% else %}
+        <p>No image available</p>
+      {% endif %}
+    </div>
+    <div class="addon-product___info">
+      {%- if product.metafields.reviews.rating.value != blank -%}
+        {% liquid
+          assign rating_decimal = 0
+          assign decimal = product.metafields.reviews.rating.value.rating | modulo: 1
+          if decimal >= 0.3 and decimal <= 0.7
+            assign rating_decimal = 0.5
+          elsif decimal > 0.7
+            assign rating_decimal = 1
+          endif
+        %}
+        <div class="rating-wrapper-main">
+          <div>
+            <div
+              class="rating"
+              role="img"
+              aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: product.metafields.reviews.rating.value.scale_max }}"
             >
-          {% endif %}
-
-          <!-- Add the button within the same wrapper -->
-          <button
-            id="{{ product_form_id }}-submit"
-            type="submit"
-            name="add"
-            class="addon-cart__button"
-            aria-haspopup="dialog"
-            aria-labelledby="{{ product_form_id }}-submit title-{{ product.id }}"
-            aria-live="polite"
-            data-sold-out-message="true"
-            {% if product.selected_or_first_available_variant.available == false %}
-              disabled
-            {% endif %}
-          >
-            <span>
-              {%- if product.selected_or_first_available_variant.available -%}
-                Add
-              {%- else -%}
-                {{ 'products.product.sold_out' | t }}
-              {%- endif -%}
-            </span>
-            <span class="sold-out-message hidden">
-              {{ 'products.product.sold_out' | t }}
-            </span>
-
-            <div class="loading-overlay__spinner hidden">
-              <svg
+              <span
                 aria-hidden="true"
-                focusable="false"
-                class="spinner"
-                viewBox="0 0 66 66"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-              </svg>
+                class="rating-star color-icon-{{ settings.accent_icons }}"
+                style="--rating: {{ product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"
+              ></span>
             </div>
-          </button>
+            <p class="rating-text caption">
+              <span aria-hidden="true">
+                {{- product.metafields.reviews.rating.value }} /
+                {{ product.metafields.reviews.rating.value.scale_max -}}
+              </span>
+            </p>
+            <p class="rating-count caption">
+              <span aria-hidden="true">({{ product.metafields.reviews.rating_count }})</span>
+            </p>
+          </div>
         </div>
-      {%- endform -%}
-    </additional-product-form>
+      {%- endif -%}
+
+      <h2>{{ product.title }}</h2>
+      <p id="product-price-{{ product.id }}">{{ product.selected_or_first_available_variant.price | money }}</p>
+
+      <additional-product-form>
+        {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate' -%}
+          <div class="variant-and-button-wrap">
+            {% if product.variants.size > 1 %}
+              <div class="variant-btn__wrap">
+                <select id="variant-select-{{ product.id }}" name="id">
+                  {% for variant in product.variants %}
+                    <option
+                      value="{{ variant.id }}"
+                      data-price="{{ variant.price | money }}"
+                      {% if variant.id == product.selected_or_first_available_variant.id %}
+                        selected
+                      {% endif %}
+                    >
+                      {{ variant.title }}
+                    </option>
+                  {% endfor %}
+                </select>
+              </div>
+            {% else %}
+              <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+            {% endif %}
+
+            <button
+              id="{{ product_form_id }}-submit"
+              type="submit"
+              name="add"
+              class="addon-cart__button"
+              {% if product.selected_or_first_available_variant.available == false %}
+                disabled
+              {% endif %}
+            >
+              <span>
+                {%- if product.selected_or_first_available_variant.available -%}
+                  Add
+                {%- else -%}
+                  {{ 'products.product.sold_out' | t }}
+                {%- endif -%}
+              </span>
+            </button>
+          </div>
+        {%- endform -%}
+      </additional-product-form>
+    </div>
   </div>
 </div>
-</div>
 
+<!-- JavaScript for Dynamic Price Update -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     var variantSelect = document.getElementById("variant-select-{{ product.id }}");
