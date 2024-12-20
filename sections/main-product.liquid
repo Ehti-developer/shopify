@@ -28,6 +28,7 @@
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'additional-product-form.js' | asset_url }}" defer="defer"></script>
   {% if section.settings.image_zoom == 'hover' %}
     <script id="EnableZoomOnHover-main" src="{{ 'magnify.js' | asset_url }}" defer="defer"></script>
   {% endif %}
@@ -178,7 +179,7 @@
                 </p>
                   <p class="help-me-choose">Help me choose</p>
               </div>
-              <div class="addon-products__wrapper">
+              {% comment %} <div class="addon-products__wrapper">
                  {% for addon_product in shop.metaobjects.additional_product.values %}
                   {% assign product_details = all_products[addon_product.add_product] %}
                   <div class="addon-products__wrap">
@@ -194,7 +195,34 @@
                     </label>
                   </div>
                 {% endfor %}
-                </div>
+                </div> {% endcomment %}
+
+                <div class="addon-products__wrapper">
+                  <div class="addon-products__wrap">
+                     <label for="2 Pole Setup">
+                       <input 
+                         type="radio" 
+                         id="2 Pole Setup"
+                         name="fav_product" 
+                         value="" 
+                         checked
+                       >
+                       2 Pole Setup
+                     </label>
+                   </div>
+                   {% assign product_details = all_products[product.metafields.custom.extra_product] %}
+                   <div class="addon-products__wrap">
+                     <label for="4 Pole Setup">
+                       <input 
+                         type="radio" 
+                         id="4 Pole Setup"
+                         name="fav_product" 
+                         value="{{ product_details.variants.first.id }}" 
+                       >
+                       4 Pole Setup <span style="float: right;">+{{product_details.price | money }}</span>
+                     </label>
+                   </div>
+                 </div>
             {%- when 'description' -%}
               {%- if product.description != blank -%}
                 <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
