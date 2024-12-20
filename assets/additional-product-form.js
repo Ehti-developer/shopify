@@ -1,6 +1,6 @@
-if (!customElements.get("product-form")) {
+if (!customElements.get("additional-product-form")) {
   customElements.define(
-    "product-form",
+    "additional-product-form",
     class ProductForm extends HTMLElement {
       constructor() {
         super();
@@ -67,46 +67,18 @@ if (!customElements.get("product-form")) {
             return;
           }
 
-          const addonProductsWrapper = document.querySelector(
-            ".addon-products__wrapper"
-          );
-          const selectedAddon = addonProductsWrapper?.querySelector(
-            'input[id="4 Pole Setup"]:checked'
-          );
-
-          if (selectedAddon) {
-            const addonVariantId = selectedAddon.value;
-
-            const response = await fetch("/cart/add.js", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({
-                id: addonVariantId,
-                quantity: 1,
-                sections: this.cart
-                  .getSectionsToRender()
-                  .map((section) => section.id),
-              }),
-            });
-
-            const addonProduct = await response.json();
-            this.cart.renderContents(addonProduct);
-          }
-
           if (!this.cart) {
             window.location = window.routes.cart_url;
             return;
           }
 
-          if (!selectedAddon) {
-            publish(PUB_SUB_EVENTS.cartUpdate, {
-              source: "product-form",
-              productVariantId: formData.get("id"),
-            });
+          publish(PUB_SUB_EVENTS.cartUpdate, {
+            source: "additional-product-form",
+            productVariantId: formData.get("id"),
+          });
 
-            // Render the main product response to the cart
-            this.cart.renderContents(mainProductData);
-          }
+          // Render the main product response to the cart
+          this.cart.renderContents(mainProductData);
         } catch (error) {
           console.error("Error adding products to cart:", error);
           this.handleErrorMessage(
