@@ -177,25 +177,15 @@
                 <p class="addOnProductTitle" id="addOnProductTitle">
                   Tent Set-up: <span class="addon-product-title-text">2 Pole Set-up</span>
                 </p>
-                  <p class="help-me-choose">Help me choose</p>
-              </div>
-              {% comment %} <div class="addon-products__wrapper">
-                 {% for addon_product in shop.metaobjects.additional_product.values %}
-                  {% assign product_details = all_products[addon_product.add_product] %}
-                  <div class="addon-products__wrap">
-                    <label for="{{  addon_product.title }}">
-                      <input 
-                        type="radio" 
-                        id="{{ addon_product.title }}" 
-                        name="fav_product" 
-                        value="{{ product_details.variants.first.id }}" 
-                        {% if forloop.first %}checked{% endif %}
-                      >
-                      {{ addon_product.title }}
-                    </label>
+                  <button class="help-me-choose" id="myBtn">Help me choose</button>
+                  <div id="myModal" class="modal">
+                  <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <img src="{{ "help-me-choose.png" |  asset_url }}"/>
                   </div>
-                {% endfor %}
-                </div> {% endcomment %}
+                </div>
+              </div>
+             
 
                 <div class="addon-products__wrapper">
                   <div class="addon-products__wrap">
@@ -759,6 +749,33 @@
         });
       });
     });
+  </script>
+
+  <script>
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
   </script>
 
 </section>
