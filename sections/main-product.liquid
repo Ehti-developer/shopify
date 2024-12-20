@@ -57,7 +57,8 @@
 
   <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
-      {% render 'product-media-gallery', variant_images: variant_images %}
+
+      {% render 'product-media-gallery', variant_images: variant_images, product: product %}
     </div>
     <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}">
       <product-info
@@ -171,25 +172,27 @@
               </p>
             {%- when 'add_additonal_product' -%}
               <div class="addon-products__wrapper">
-                {% for addon_product in collections.extra-poles.products %}
+                {% for addon_product in collections['extra-poles'].products %}
                   <div class="addon-products__wrap">
                     <label for="product-{{ forloop.index }}">
-                      <input 
-                        type="radio" 
-                        id="product-{{ forloop.index }}" 
-                        name="fav_product" 
-                        value="{{ addon_product.variants.first.id }}" 
-                        {% if forloop.first %}checked{% endif %}
+                      <input
+                        type="radio"
+                        id="product-{{ forloop.index }}"
+                        name="fav_product"
+                        value="{{ addon_product.variants.first.id }}"
+                        {% if forloop.first %}
+                          checked
+                        {% endif %}
                       >
                       {{ addon_product.title }}
                     </label>
                   </div>
-           
                 {% endfor %}
 
-                <script>console.log({{ shop.metaobjects.additional_product.values | json }})</script>
-
-                </div>
+                <script>
+                  console.log({{ shop.metaobjects.additional_product.values | json }})
+                </script>
+              </div>
             {%- when 'description' -%}
               {%- if product.description != blank -%}
                 <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
@@ -423,6 +426,14 @@
                   {% endif %}
                 </div>
               {% endif %}
+            {% when 'add_recommended__products' %}
+              {% if block.settings.enable_recommended_products %}
+                {% assign product = all_products['sidelines-conversion-kit-various-sizes'] %}
+            
+                  {% render 'addon-product', product: product %}
+               
+              {% endif %}
+
             {%- when 'complementary' -%}
               <product-recommendations
                 class="complementary-products quick-add-hidden no-js-hidden{% if block.settings.make_collapsible_row %} is-accordion{% endif %}{% if block.settings.enable_quick_add %} complementary-products-contains-quick-add{% endif %}"
@@ -701,70 +712,72 @@
     }
   </script>
 
- {% comment %} <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const addToCartButton = document.querySelector("#ProductSubmitButton-template--24115101270325__main");
-  const addonProductsWrapper = document.querySelector(".addon-products__wrapper");
+  {% comment %}
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const addToCartButton = document.querySelector("#ProductSubmitButton-template--24115101270325__main");
+      const addonProductsWrapper = document.querySelector(".addon-products__wrapper");
 
-  console.log("addToCartButton",addToCartButton);
-  
+      console.log("addToCartButton",addToCartButton);
 
-  addToCartButton.addEventListener("click", async (event) => {
-    event.preventDefault(); // Prevent the default form submission behavior
 
-    const mainProductForm = document.querySelector("form[action='/cart/add']");
-    const formData = new FormData(mainProductForm);
+      addToCartButton.addEventListener("click", async (event) => {
+        event.preventDefault(); // Prevent the default form submission behavior
 
-    console.log(mainProductForm, "maindd");
-    
+        const mainProductForm = document.querySelector("form[action='/cart/add']");
+        const formData = new FormData(mainProductForm);
 
-    // Show loading spinner
-    const spinner = addToCartButton.querySelector(".loading-overlay__spinner");
-    spinner.classList.remove("hidden");
+        console.log(mainProductForm, "maindd");
 
-    try {
-      // Add the main product to the cart
-      await fetch("/cart/add.js", {
-        method: "POST",
-        body: formData,
+
+        // Show loading spinner
+        const spinner = addToCartButton.querySelector(".loading-overlay__spinner");
+        spinner.classList.remove("hidden");
+
+        try {
+          // Add the main product to the cart
+          await fetch("/cart/add.js", {
+            method: "POST",
+            body: formData,
+          });
+
+          // Get the selected add-on product
+          const selectedAddon = addonProductsWrapper.querySelector(
+            'input[name="fav_product"]:checked'
+          );
+
+          console.log(selectedAddon, "selectedaddon");
+
+
+          if (selectedAddon) {
+            const addonVariantId = selectedAddon.value;
+
+            // Add the selected add-on product to the cart
+            await fetch("/cart/add.js", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                id: addonVariantId,
+                quantity: 1,
+              }),
+            });
+          }
+
+          // Redirect to the cart page
+          // window.location.href = "/cart";
+        } catch (error) {
+          console.error("Error adding products to the cart:", error);
+          alert("There was an issue adding products to the cart. Please try again.");
+        } finally {
+          // Hide the loading spinner
+          spinner.classList.add("hidden");
+        }
       });
-
-      // Get the selected add-on product
-      const selectedAddon = addonProductsWrapper.querySelector(
-        'input[name="fav_product"]:checked'
-      );
-
-      console.log(selectedAddon, "selectedaddon");
-      
-
-      if (selectedAddon) {
-        const addonVariantId = selectedAddon.value;
-
-        // Add the selected add-on product to the cart
-        await fetch("/cart/add.js", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            id: addonVariantId,
-            quantity: 1,
-          }),
-        });
-      }
-
-      // Redirect to the cart page
-      // window.location.href = "/cart";
-    } catch (error) {
-      console.error("Error adding products to the cart:", error);
-      alert("There was an issue adding products to the cart. Please try again.");
-    } finally {
-      // Hide the loading spinner
-      spinner.classList.add("hidden");
-    }
-  });
-});
+    });
 
 
-  </script> {% endcomment %}
+      </script>
+  {% endcomment %}
 </section>
 
 {% schema %}
@@ -1280,7 +1293,19 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       ]
     },
-
+    {
+      "type": "add_recommended__products",
+      "name": "Recommended Products",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "enable_recommended_products",
+          "default": false,
+          "label": "Show Product Recommendations"
+        }
+      ]
+    },
     {
       "type": "complementary",
       "name": "t:sections.main-product.blocks.complementary_products.name",
@@ -1553,6 +1578,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       ]
     },
+
     {
       "type": "icon-with-text",
       "name": "t:sections.main-product.blocks.icon_with_text.name",
