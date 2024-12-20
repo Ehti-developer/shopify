@@ -93,6 +93,12 @@
             "enable_show_off_brand": true
           }
         },
+        "add_recommended_products_8XNWDk": {
+          "type": "add_recommended__products",
+          "settings": {
+            "enable_recommended_products": true
+          }
+        },
         "0d34492b-64de-4bd7-b880-459011b7bec2": {
           "type": "complementary",
           "settings": {
@@ -198,6 +204,7 @@
         "quantity_selector",
         "buy_buttons",
         "brand_logo_7YmVTA",
+        "add_recommended_products_8XNWDk",
         "0d34492b-64de-4bd7-b880-459011b7bec2",
         "description",
         "custom_liquid_GYRX4C",

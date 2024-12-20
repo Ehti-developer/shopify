@@ -217,7 +217,7 @@
                               {% if childlink.current %}
                                 aria-current="page"
                               {% endif %}
-
+                              {% if forloop.index != 2 or childlink.links.size == 0 %}
                               style="
                                                             {% if childlink.url contains '/products/' %}
                                                             
@@ -237,8 +237,11 @@
                                 {% endif %}
                                                             {% endif %}
                               "
+                              {% endif %}
                             >
-                              <h2 class="second-collection___title">{{ childlink.title | escape }}</h2>
+                            {% if forloop.index != 1 or childlink.links.size == 0 %}
+                              <h2 class="second-collection___title">{{ childlink.title | escape }} </h2>
+                              {% endif %}
                             </a>
                           </div>
 

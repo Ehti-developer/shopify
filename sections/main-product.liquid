@@ -58,7 +58,8 @@
 
   <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
-      {% render 'product-media-gallery', variant_images: variant_images %}
+
+      {% render 'product-media-gallery', variant_images: variant_images, product: product %}
     </div>
     <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}">
       <product-info
@@ -427,6 +428,14 @@
                   {% endif %}
                 </div>
               {% endif %}
+            {% when 'add_recommended__products' %}
+              {% if block.settings.enable_recommended_products %}
+                {% assign product = all_products['sidelines-conversion-kit-various-sizes'] %}
+            
+                  {% render 'addon-product', product: product %}
+               
+              {% endif %}
+
             {%- when 'complementary' -%}
               <product-recommendations
                 class="complementary-products quick-add-hidden no-js-hidden{% if block.settings.make_collapsible_row %} is-accordion{% endif %}{% if block.settings.enable_quick_add %} complementary-products-contains-quick-add{% endif %}"
@@ -1239,7 +1248,19 @@
         }
       ]
     },
-
+    {
+      "type": "add_recommended__products",
+      "name": "Recommended Products",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "enable_recommended_products",
+          "default": false,
+          "label": "Show Product Recommendations"
+        }
+      ]
+    },
     {
       "type": "complementary",
       "name": "t:sections.main-product.blocks.complementary_products.name",
@@ -1512,6 +1533,7 @@
         }
       ]
     },
+
     {
       "type": "icon-with-text",
       "name": "t:sections.main-product.blocks.icon_with_text.name",

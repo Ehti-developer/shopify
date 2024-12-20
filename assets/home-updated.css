@@ -266,7 +266,7 @@ section#how-it-works-section {
   flex-direction: column;
   padding: 24px 16px;
   gap: 10px;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .how-it-works-section__boxes {
@@ -339,6 +339,7 @@ section#how-it-works-section {
   font-size: 16px;
   color: #000;
   margin: 0;
+  line-height: 1.3;
 }
 
 .how-it-works-section__boxes .setup-guide__box:nth-child(even) img {

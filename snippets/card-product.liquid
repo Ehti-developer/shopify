@@ -52,10 +52,10 @@
         class="card__inner {% if card_product.metafields.custom.mega_menu_image  %} product-metafield___image {% endif %} {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard'%} ratio {% endif %}"
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
       >
-        {%- if card_product.featured_media[1] == null -%}
+        {%- if card_product.featured_media[1] == nul -%}
         {% endif %}
 
-        {%- assign meta_image = card_product.metafields.custom.product_feature_image -%}
+        {%- assign meta_image = card_product.metafields.custom.mega_menu_image -%}
         {%- if meta_image -%}
           <img
             class="product-meta___image"
@@ -197,38 +197,30 @@
                 assign rating_decimal = 1
               endif
             %}
-            <div class="rating-wrapper-main">
-              <div>
-                <div
-                  class="rating"
-                  role="img"
-                  aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: card_product.metafields.reviews.rating.value, rating_max: card_product.metafields.reviews.rating.value.scale_max }}"
-                >
-                  <span
-                    aria-hidden="true"
-                    class="rating-star color-icon-{{ settings.accent_icons }}"
-                    style="--rating: {{ card_product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ card_product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"
-                  ></span>
-                </div>
-                <p class="rating-text caption">
-                  <span aria-hidden="true">
-                    {{- card_product.metafields.reviews.rating.value }} /
-                    {{ card_product.metafields.reviews.rating.value.scale_max -}}
-                  </span>
-                </p>
-                <p class="rating-count caption">
-                  <span aria-hidden="true">({{ card_product.metafields.reviews.rating_count }})</span>
-
-                  <span class="visually-hidden">
-                    {{- card_product.metafields.reviews.rating_count }}
-                    {{ 'accessibility.total_reviews' | t -}}
-                  </span>
-                </p>
-              </div>
-              {% if card_product.metafields.custom.pole_setup_count %}
-                <div class="beach-tents-setup"> <p>{{ card_product.metafields.custom.pole_setup_count }} </p></div>
-              {% endif %}
+            <div
+              class="rating"
+              role="img"
+              aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: card_product.metafields.reviews.rating.value, rating_max: card_product.metafields.reviews.rating.value.scale_max }}"
+            >
+              <span
+                aria-hidden="true"
+                class="rating-star color-icon-{{ settings.accent_icons }}"
+                style="--rating: {{ card_product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ card_product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"
+              ></span>
             </div>
+            <p class="rating-text caption">
+              <span aria-hidden="true">
+                {{- card_product.metafields.reviews.rating.value }} /
+                {{ card_product.metafields.reviews.rating.value.scale_max -}}
+              </span>
+            </p>
+            <p class="rating-count caption">
+              <span aria-hidden="true">({{ card_product.metafields.reviews.rating_count }})</span>
+              <span class="visually-hidden">
+                {{- card_product.metafields.reviews.rating_count }}
+                {{ 'accessibility.total_reviews' | t -}}
+              </span>
+            </p>
           {%- endif -%}
 
           <h3
@@ -259,59 +251,60 @@
               <p class="caption-large dark">{{ card_product.metafields.custom.mega_menu_description | escape }}</p>
             {%- endif -%}
           </div>
-          {%- if enable_metafields -%}
-            <div class="product-features___wrapper">
-              {% if card_product.metafields.custom.features_product_details
-                and card_product.metafields.custom.features_product_details.value.size > 0
-              %}
-                <ul class="product-metafield__features">
-                  {% for feature in card_product.metafields.custom.features_product_details.value limit: 3 %}
-                    <li>
-                      {% if forloop.index == 1 %}
-                        {% render 'icon-redix-size' %}
-                      {% elsif forloop.index == 2 %}
-                        {% render 'icon-person-light' %}
+          {%- if  enable_metafields -%}
+          <div class="product-features___wrapper">
+            {% if card_product.metafields.custom.features_product_details
+              and card_product.metafields.custom.features_product_details.value.size > 0
+            %}
+              <ul class="product-metafield__features">
+                {% for feature in card_product.metafields.custom.features_product_details.value limit: 3 %}
+                  <li>
+                    {% if forloop.index == 1 %}
+                      {% render 'icon-redix-size' %}
+                    {% elsif forloop.index == 2 %}
+                      {% render 'icon-person-light' %}
 
-                      {% else %}
-                        {% render 'icon-sun-light' %}
-                      {% endif %}
+                    {% else %}
+                      {% render 'icon-sun-light' %}
+                    {% endif %}
 
-                      {{ feature }}
-                    </li>
-                  {% endfor %}
-                </ul>
+                    {{ feature }}
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
+      
+         
+          <div class="color-swatches__product">
+            {% assign shown_colors = 0 %}
+            {% assign total_colors = card_product.variants.size %}
+            {% assign limit = 6 %}
+
+            {% for option in card_product.variants limit: limit %}
+              {% if option.metafields.color.value != blank %}
+              <div> 
+             
+                <div
+                  class="variant-color__code"
+                  style="
+                    background: {{ option.metafields.color.value }};     height:32px ;
+                    width: 32px;
+                  "
+                ></div>
+
+              </div>
               {% endif %}
-            </div>
+              {% assign shown_colors = shown_colors | plus: 1 %}
+            {% endfor %}
 
-            <div class="color-swatches__product">
-              {% assign shown_colors = 0 %}
-              {% assign total_colors = card_product.variants.size %}
-              {% assign limit = 6 %}
+            {% assign remaining_count = total_colors | minus: shown_colors %}
 
-              {% for option in card_product.variants limit: limit %}
-                {% if option.metafields.color.value != blank %}
-                <div> 
-               
-                  <div
-                    class="variant-color__code"
-                    style="
-                      background: {{ option.metafields.color.value }};     height:32px ;
-                      width: 32px;
-                    "
-                  ></div>
-  
-                </div>
-                {% endif %}
-                {% assign shown_colors = shown_colors | plus: 1 %}
-              {% endfor %}
-
-              {% assign remaining_count = total_colors | minus: shown_colors %}
-
-              {% if remaining_count > 0 %}
-                <div class="more-text">+{{ remaining_count }} more</div>
-              {% endif %}
-            </div>
-          {%- endif -%}
+            {% if remaining_count > 0 %}
+              <div class="more-text">+{{ remaining_count }} more</div>
+            {% endif %}
+          </div>
+        {%- endif -%}
         </div>
         {%- if show_quick_add -%}
           <div class="quick-add no-js-hidden">

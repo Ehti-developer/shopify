@@ -72,6 +72,8 @@ class CartDrawer extends HTMLElement {
     setTimeout(() => {
       this.querySelector('#CartDrawer-Overlay').addEventListener('click', this.close.bind(this));
       this.open();
+      initOwlCarousel();
+
     });
   }
 
@@ -125,13 +127,16 @@ class CartDrawerItems extends CartItems {
 
 customElements.define('cart-drawer-items', CartDrawerItems);
 
-
-
-
-
-// Function to initialize the Owl Carousel
 function initOwlCarousel() {
-  $('.recommended-products').owlCarousel({
+  const $carousel = $('.recommended-products');
+
+  if ($carousel.hasClass('owl-loaded')) {
+    $carousel.trigger('destroy.owl.carousel');
+    $carousel.removeClass('owl-loaded'); // Ensure re-initialization is clean
+  }
+
+
+  $carousel.owlCarousel({
     items: 1, // Number of items to display
     loop: true,
     margin: 10,
@@ -148,11 +153,11 @@ function initOwlCarousel() {
 // Select the cart-drawer element
 const cartDrawer = document.querySelector('cart-drawer');
 
-// Create a MutationObserver to watch for changes to the 'class' attribute
+
 const observer = new MutationObserver(() => {
   if (cartDrawer.classList.contains('active')) {
-    // Initialize the carousel only when the cart-drawer is active
-    initOwlCarousel();
+
+    setTimeout(() => initOwlCarousel(), 0);
   }
 });
 
