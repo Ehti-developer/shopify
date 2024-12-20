@@ -54,7 +54,8 @@
       </div>
     {%- endif -%}
     <h2>{{ product.title }}</h2>
-    <p>{{ product.price | money }}</p>
+          <p id="product-price-{{ product.id }}">{{ product.selected_or_first_available_variant.price | money }}</p>
+
     <additional-product-form>
       {%- form 'product',
         product,
