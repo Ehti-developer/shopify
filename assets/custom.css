@@ -2736,3 +2736,15 @@ facet-filters-form  .product-count {
   max-width: 46% !important;
 }
 }
+a.jdgm-btn.jdgm-btn--solid.jdgm-paginate__load-more {
+  text-transform: uppercase;
+}
+.jdgm-ugc-media__load-more-btn {
+   display: none !important;
+}
+.has-produtc_detail .product-form__input span {
+  padding-right: 6px;
+}
+.template-search__search .field__label {
+  top: 13px !important;
+}
