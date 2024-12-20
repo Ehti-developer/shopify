@@ -143,8 +143,8 @@
 
     variantSelect.addEventListener("change", function () {
       var selectedOption = variantSelect.options[variantSelect.selectedIndex];
-      var newPrice = selectedOption.getAttribute("data-price");
-      priceElement.textContent = newPrice;
+      var newPrice = selectedOption.getAttribute("data-price");  <!-- Price update logic here -->
+      priceElement.textContent = newPrice;                       <!-- Reflect updated price -->
     });
   });
 </script>
