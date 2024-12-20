@@ -2872,7 +2872,9 @@ background: #99CFE2;
     right: 26px;
     top: 24px;
 }
-
+.addon-product______wrapper {
+  margin-bottom: 40px;
+}
 
 @media(max-width: 1024px) {
 
