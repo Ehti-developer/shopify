@@ -189,7 +189,7 @@
 
                 <div class="addon-products__wrapper">
                   <div class="addon-products__wrap">
-                     <label for="2 Pole Setup">
+                     <label for="2 Pole Setup"  style="display: flex; height: 100%;">
                        <input 
                          type="radio" 
                          id="2 Pole Setup"
@@ -202,14 +202,16 @@
                    </div>
                    {% assign product_details = all_products[product.metafields.custom.extra_product] %}
                    <div class="addon-products__wrap">
-                     <label for="4 Pole Setup">
+                     <label for="4 Pole Setup" style="display: flex; height: 100%;">
                        <input 
                          type="radio" 
                          id="4 Pole Setup"
                          name="fav_product" 
                          value="{{ product_details.variants.first.id }}" 
                        >
-                       4 Pole Setup <span style="float: right;">+{{product_details.price | money }}</span>
+                       <div class="poll-price-main">
+                       4 Pole Setup <span>+{{product_details.price | money }}</span>
+                       </div>
                      </label>
                    </div>
                  </div>

@@ -1800,6 +1800,10 @@ a.product__text {
   animation-duration: 0.4s;
 }
 
+.modal-content img {
+  width: 100%;
+}
+
 /* Add Animation */
 @-webkit-keyframes animatetop {
   from {
@@ -1852,4 +1856,16 @@ a.product__text {
   padding: 2px 16px;
   background-color: #5cb85c;
   color: white;
+}
+
+.poll-price-main {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+  .poll-price-main {
+    display: block;
+  }
 }
