@@ -71,6 +71,8 @@
               <select id="variant-select-{{ product.id }}" name="id">
                 {% for variant in product.variants %}
                   <option
+                     data-price="{{ variant.price | money }}"
+
                     value="{{ variant.id }}"
                     {% if variant.id == product.selected_or_first_available_variant.id %}
                       selected
