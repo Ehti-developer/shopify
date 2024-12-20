@@ -171,7 +171,19 @@
       <h2 class="product-title">  <a href="{{ product.url }}">{{ product.title }}</a></h2> 
         </div>
         <p class="product-price">{{ product.price | money }}</p>
-        
+        {% if product.variants.size > 1 %}
+          <div class="swatch-container" data-product-id="{{ product.id }}">
+            {% for variant in product.variants limit: 5 %}
+              <div
+                class="swatch"
+                data-variant-id="{{ variant.id }}"
+                style="background: {{ variant.metafields.color.value }}"
+                title="{{ variant.title }}"
+              ></div>
+            {% endfor %}
+          </div>
+        {% endif %}
+
         <!-- Add to Cart Button -->
         <a href="{{ product.url }}" class="add-to-cart">View</a>
     
