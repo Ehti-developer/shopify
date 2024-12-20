@@ -1714,6 +1714,9 @@ a.product__text {
   background: #000 !important;
   color: #fff !important;
   border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: capitalize;
 }
 .product-form__buttons > button::after,
 .product-form__buttons > button::before {
