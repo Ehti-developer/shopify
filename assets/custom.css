@@ -2669,8 +2669,8 @@ cart-remove-button .button {
 }
 
 .product__info-container > * + * {
-  margin-top: 0px;
-  margin-bottom: 10px;
+  margin-top: 0px !important;
+  margin-bottom: 10px !important;
 }
 .product__info-wrapper  .jdgm-prev-badge__text {
   color: #000;
@@ -2680,6 +2680,8 @@ cart-remove-button .button {
 .product__info-wrapper  .price__regular {
   color: #373737 !important;
   font-size: 24px !important;
+  letter-spacing: 0;
+  line-height: 1;
 }
 /* .price__container .price-item {
   font-size: 24px !important;
@@ -2696,18 +2698,26 @@ cart-remove-button .button {
 .has-produtc_detail .product  .product__info-wrapper  .product__text {
   color: #000;
   font-size: 16px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.has-produtc_detail .product  .price__regular .price-item--regular {
+  line-height: 1;
 }
 .has-produtc_detail .product  .product__info-wrapper .product-metafield__features li {
   color: #000;
   font-size: 16px !important;
 }
 
-
 .has-produtc_detail .product  .product__info-wrapper  .custom-brand-logo___card a {
   font-size: 14px !important;
 }
+.has-produtc_detail .product .product__info-wrapper .custom-brand-logo___card a:hover {
+  color: #0088cc;
+}
 .has-produtc_detail .product  .product__info-wrapper  .custom-brand-logo___card {
-  margin-bottom: 35px;
+  margin-bottom: 35px !important;
 }
 
 .has-produtc_detail .product  .product__info-wrapper slideshow-component .price__container .price__regular .price-item {
@@ -2721,7 +2731,12 @@ cart-remove-button .button {
 facet-filters-form  .product-count {
   align-self: center !important;
 }
-
+.shopify-payment-button__more-options {
+  color: #000 !important;
+}
+.shopify-payment-button__more-options:hover{
+  color: #0088cc !important;
+}
 .empty-cart__btn a {
   text-transform: uppercase !important;
 }
@@ -2781,6 +2796,7 @@ a.jdgm-btn.jdgm-btn--solid.jdgm-paginate__load-more {
   border: 1px solid #000;
   border-radius: 5px;
   background: transparent;
+  text-transform: uppercase;
   width: 100%;
   -webkit-appearance: none;
     -moz-appearance: none;
@@ -2792,6 +2808,8 @@ a.jdgm-btn.jdgm-btn--solid.jdgm-paginate__load-more {
     background-size: 12px 12px; /* Resize the chevron icon */
     background-color: transparent; /* White background */
     background-origin: padding-box;
+    font-size: 13px;
+    font-weight: 700;
 }
 .addon-product______wrapper .variant-btn__wrap select:focus-visible {
   box-shadow: none;

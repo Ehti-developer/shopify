@@ -147,7 +147,7 @@
   display: inline-block;
   text-align: center;
   border: 1px solid #000;
-  transition: 0.4s ease-in-out;
+  transition: 0.2s ease-in-out;
   position: relative;
   text-transform: capitalize;
 }
@@ -440,7 +440,7 @@ p.announcement-bar__message.center.h5 span {
 }
 
 .header__menu-item:hover svg path {
-  fill: #65a0b5 !important;
+  fill: #0088CC !important;
 }
 .header__menu-item svg.icon.icon-caret.menu-chveron {
   height: 16px !important;
@@ -448,7 +448,7 @@ p.announcement-bar__message.center.h5 span {
   right: 0px;
 }
 details[open] summary svg.icon.icon-caret.menu-chveron path {
-  fill: #65a0b5 !important;
+  fill: #0088CC !important;
 }
 /* 
 .header-additional__links svg {
