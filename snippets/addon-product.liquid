@@ -135,3 +135,16 @@
   </div>
 </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var variantSelect = document.getElementById("variant-select-{{ product.id }}");
+    var priceElement = document.getElementById("product-price-{{ product.id }}");
+
+    variantSelect.addEventListener("change", function () {
+      var selectedOption = variantSelect.options[variantSelect.selectedIndex];
+      var newPrice = selectedOption.getAttribute("data-price");
+      priceElement.textContent = newPrice;
+    });
+  });
+</script>
